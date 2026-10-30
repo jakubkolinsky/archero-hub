@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ArcheroHub
 
-## Getting Started
+An Archero build planner and tier-list hub that helps players compare mode-specific rankings, assemble builds, and plan account progression.
 
-First, run the development server:
+## Included MVP
+
+- Inventory-style, responsive build planner with mode-specific recommendations
+- Browser-local owned-item tracking that filters item choices
+- Dedicated tier-list and curated-build pages
+- Item scores (0–100), tiers, strengths, weaknesses, and mode recommendations
+- Versioned PostgreSQL/Supabase foundation for items, statistics, rankings, builds, and build slots
+- Google-authenticated admin workspace at `/admin` for curator-managed equipment, patches, and rankings
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Database
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Apply both files in `supabase/migrations/` to a new Supabase project. They provide:
 
-## Learn More
+- `heroes` and `equipment` catalogs
+- `modes` for Chapter Push, Farming, PvP, and Hero Duo
+- versioned `tier_lists`
+- mode-specific `rankings`, including a database-level check that a ranking points to exactly one hero or equipment record
+- public read-only row-level-security policies for active and published data
+- a curator-only `admins` allowlist and write policies
 
-To learn more about Next.js, take a look at the following resources:
+## Admin setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Enable Google in Supabase Auth and add `http://localhost:3000/admin` as a redirect URL.
+2. Create `.env.local` with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
+   ```
 
-## Deploy on Vercel
+3. Sign in once, then run this in the Supabase SQL editor:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```sql
+   insert into admins (user_id)
+   select id from auth.users where email = 'you@example.com';
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Only allowlisted accounts can add equipment, create patches, or publish rankings. Stripe checkout remains an intentional UI handoff until Stripe keys and product IDs are configured.
+
+The public planner currently uses a curated local catalog so it works before Supabase is connected. Once the project is configured, the `items`, `tier_rankings`, `builds`, and `build_slots` tables provide the production data model for replacing those drafts.
+
+## Historical data provenance
+
+The schema includes `catalog_sources`, `source_records`, `calculator_rule_sets`, and `calculator_rules` for auditable catalog and calculator work. The initial source is the [LuhCaran Archero Wiki](https://wiki-archero.luhcaran.fr/en/), a legacy reference current through January 2024. Its [open-source project is MIT licensed](https://github.com/enzo405/public-archero-wiki-docker), but the hosted site's terms prohibit copying its content. Use it to independently verify factual mechanics; write original descriptions, do not mirror image assets, and keep source attribution on every reviewed fact.
+
+## Verified catalog seed
+
+`202610240002_seed_verified_catalog.sql` adds equipment corroborated by current official or recent patch-note sources, with source URL and patch/version stored on every seeded row. `202610240003_expand_hero_catalog.sql` adds 32 heroes, labeling them `current-official`, `historical-official`, or `community-correlated` so the catalog remains auditable. Both intentionally leave rankings empty for curator review.
+
+## Validate
+
+```bash
+npm run lint
+npm run build
+```
+
+## Stack
+
+- Next.js + TypeScript
+- Tailwind CSS
+- Supabase PostgreSQL (schema included)
+- Vercel-ready deployment
