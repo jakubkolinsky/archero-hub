@@ -52,6 +52,12 @@ Only allowlisted accounts can add equipment, create patches, or publish rankings
 
 The public planner currently uses a curated local catalog so it works before Supabase is connected. Once the project is configured, the `items`, `tier_rankings`, `builds`, and `build_slots` tables provide the production data model for replacing those drafts.
 
+## Master game catalog
+
+`202611040001_expand_master_game_catalog.sql` expands the catalog without replacing the MVP tables. It adds normalized categories and rarity levels; per-rarity stat values and unlockable item abilities; fusion rules and their requirements; dragon and relic details; and authenticated users' saved builds. New item categories include totems and skins, so the catalog can support future features without changing the item model again.
+
+Items remain the canonical record for every collectible, including heroes, dragons, relics, skins, and hero assists. Category-specific tables only hold mechanics unique to that category. Facts that can change by game version retain optional `source_record_id` provenance.
+
 ## Historical data provenance
 
 The schema includes `catalog_sources`, `source_records`, `calculator_rule_sets`, and `calculator_rules` for auditable catalog and calculator work. The initial source is the [LuhCaran Archero Wiki](https://wiki-archero.luhcaran.fr/en/), a legacy reference current through January 2024. Its [open-source project is MIT licensed](https://github.com/enzo405/public-archero-wiki-docker), but the hosted site's terms prohibit copying its content. Use it to independently verify factual mechanics; write original descriptions, do not mirror image assets, and keep source attribution on every reviewed fact.
