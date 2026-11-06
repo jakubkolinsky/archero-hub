@@ -21,11 +21,13 @@ export const categories = [
   "Rune",
   "Hero",
   "Hero Assist",
+  "Totem",
+  "Skin",
 ] as const;
 
 export type GameMode = (typeof gameModes)[number];
 export type Category = (typeof categories)[number];
-export type Tier = "SS" | "S" | "A" | "B" | "C" | "D";
+export type Tier = "SS" | "S" | "A" | "B" | "C" | "D" | "Unranked";
 
 export type Item = {
   id: string;
@@ -39,6 +41,7 @@ export type Item = {
   bestModes: GameMode[];
   accent: string;
   meta: "Top meta" | "Strong" | "Situational";
+  imageUrl?: string | null;
 };
 
 export type Build = {

@@ -1,7 +1,14 @@
 import Link from "next/link";
+import { connection } from "next/server";
 import { BuildPlanner } from "@/components/build-planner";
+import { getCatalogItems } from "@/lib/catalog-database";
 
-export default function Home() {
+export const instant = false;
+
+export default async function Home() {
+  await connection();
+  const catalogItems = await getCatalogItems();
+
   return <main className="min-h-screen bg-[#090b11] text-[#f7f1e7]">
     <div className="border-b border-white/10 bg-[#0d1017]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-5 sm:px-8">
@@ -15,7 +22,7 @@ export default function Home() {
       <h1 className="mt-4 max-w-3xl text-4xl font-black tracking-[-.045em] sm:text-6xl">The build planner for every Archero run.</h1>
       <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-400">Compare the current meta, customize a full loadout, and keep recommendations grounded in the equipment you own.</p>
     </header>
-    <BuildPlanner />
+    <BuildPlanner catalogItems={catalogItems} />
     <section id="guides" className="border-t border-white/10 bg-[#0d1017]"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-16 sm:px-8 md:grid-cols-3"><Feature number="01" title="Mode-first rankings" text="A weapon can dominate bosses and still be a weak farming choice. Every score is tied to a mode." /><Feature number="02" title="Builds, not lists" text="Tier lists are useful context. Full builds show how the pieces actually fit together." /><Feature number="03" title="Account-aware next" text="Ownership filtering works locally today; personal profiles and upgrade calculations come next." /></div></section>
     <footer id="support" className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-5 py-9 text-sm text-stone-500 sm:flex-row sm:px-8"><p>Unofficial fan project. Not affiliated with Habby.</p><p>Support Hosting and Future Development</p></footer>
   </main>;

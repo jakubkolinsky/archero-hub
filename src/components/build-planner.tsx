@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Build, GameMode, Item, builds, gameModes, itemById, items, slotDefinitions } from "@/lib/catalog";
+import Image from "next/image";
+import { Build, GameMode, Item, builds, gameModes, slotDefinitions } from "@/lib/catalog";
 
-const tierColor: Record<Item["tier"], string> = { SS: "bg-amber-300 text-stone-950", S: "bg-orange-500 text-white", A: "bg-sky-400 text-slate-950", B: "bg-violet-400 text-slate-950", C: "bg-slate-500 text-white", D: "bg-slate-700 text-white" };
+const tierColor: Record<Item["tier"], string> = { SS: "bg-amber-300 text-stone-950", S: "bg-orange-500 text-white", A: "bg-sky-400 text-slate-950", B: "bg-violet-400 text-slate-950", C: "bg-slate-500 text-white", D: "bg-slate-700 text-white", Unranked: "bg-stone-700 text-stone-200" };
 
-export function BuildPlanner() {
+export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
   const [mode, setMode] = useState<GameMode>("Chapter Push");
   const [owned, setOwned] = useState<string[]>([]);
   const [ownedOnly, setOwnedOnly] = useState(false);
@@ -28,7 +29,7 @@ export function BuildPlanner() {
   const slots = { ...recommendedBuild.slots, ...overrides };
   const activeSlot = slotDefinitions.find((slot) => slot.id === selectedSlot);
   const choices = activeSlot
-    ? items.filter((item) => item.category === activeSlot.category && (!ownedOnly || owned.includes(item.id))).sort((a, b) => b.score - a.score)
+    ? catalogItems.filter((item) => item.category === activeSlot.category && (!ownedOnly || owned.includes(item.id))).sort((a, b) => b.score - a.score)
     : [];
 
   function changeMode(nextMode: GameMode) {
@@ -58,11 +59,11 @@ export function BuildPlanner() {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {slotDefinitions.map((slot) => {
-              const item = itemById(slots[slot.id]);
+              const item = catalogItems.find((catalogItem) => catalogItem.id === slots[slot.id]);
               const unavailable = ownedOnly && item && !owned.includes(item.id);
               return <button key={slot.id} onClick={() => setSelectedSlot(slot.id)} className={`rounded-2xl border p-3 text-left transition hover:-translate-y-0.5 ${unavailable ? "border-rose-400/50 bg-rose-400/[.06]" : "border-white/10 bg-white/[.035] hover:border-amber-400/50"}`}>
                 <span className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-500">{slot.label}</span>
-                {item ? <><span className={`mt-3 grid size-11 place-items-center rounded-xl bg-gradient-to-br ${item.accent} text-lg font-black text-white`}>{item.name.charAt(0)}</span><span className="mt-3 block truncate text-sm font-bold">{item.name}</span><span className="mt-1 block text-xs text-stone-500">{item.tier} · {item.score} score</span></> : <span className="mt-6 block text-sm text-stone-500">Choose item</span>}
+                {item ? <><ItemIcon item={item} size={44} /><span className="mt-3 block truncate text-sm font-bold">{item.name}</span><span className="mt-1 block text-xs text-stone-500">{item.tier} · {item.score} score</span></> : <span className="mt-6 block text-sm text-stone-500">Choose item</span>}
               </button>;
             })}
           </div>
@@ -88,5 +89,13 @@ export function BuildPlanner() {
 }
 
 function ItemChoice({ item, owned, onChoose, onToggleOwned }: { item: Item; owned: boolean; onChoose: () => void; onToggleOwned: () => void }) {
-  return <article className="rounded-2xl border border-white/10 bg-black/15 p-4"><div className="flex gap-3"><div className={`grid size-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${item.accent} text-lg font-black text-white`}>{item.name.charAt(0)}</div><div className="min-w-0 flex-1"><div className="flex items-center justify-between gap-2"><h3 className="truncate font-bold">{item.name}</h3><span className={`rounded px-1.5 py-0.5 text-xs font-black ${tierColor[item.tier]}`}>{item.tier}</span></div><p className="mt-1 text-xs text-stone-500">{item.score}/100 · {item.meta}</p></div></div><p className="mt-3 text-sm leading-5 text-stone-400">{item.description}</p><div className="mt-4 flex items-center justify-between gap-3"><button onClick={onToggleOwned} className={`text-xs font-bold ${owned ? "text-emerald-300" : "text-stone-500 hover:text-stone-300"}`}>{owned ? "Owned" : "Mark owned"}</button><button onClick={onChoose} className="rounded-lg bg-amber-400 px-3 py-2 text-xs font-bold text-stone-950 hover:bg-amber-300">Use in build</button></div></article>;
+  return <article className="rounded-2xl border border-white/10 bg-black/15 p-4"><div className="flex gap-3"><ItemIcon item={item} size={48} /><div className="min-w-0 flex-1"><div className="flex items-center justify-between gap-2"><h3 className="truncate font-bold">{item.name}</h3><span className={`rounded px-1.5 py-0.5 text-xs font-black ${tierColor[item.tier]}`}>{item.tier}</span></div><p className="mt-1 text-xs text-stone-500">{item.score}/100 · {item.meta}</p></div></div><p className="mt-3 text-sm leading-5 text-stone-400">{item.description}</p><div className="mt-4 flex items-center justify-between gap-3"><button onClick={onToggleOwned} className={`text-xs font-bold ${owned ? "text-emerald-300" : "text-stone-500 hover:text-stone-300"}`}>{owned ? "Owned" : "Mark owned"}</button><button onClick={onChoose} className="rounded-lg bg-amber-400 px-3 py-2 text-xs font-bold text-stone-950 hover:bg-amber-300">Use in build</button></div></article>;
+}
+
+function ItemIcon({ item, size }: { item: Item; size: number }) {
+  if (item.imageUrl) {
+    return <Image src={item.imageUrl} alt="" width={size} height={size} className="mt-3 size-11 shrink-0 rounded-xl object-contain" />;
+  }
+
+  return <span className={`mt-3 grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${item.accent} text-lg font-black text-white`}>{item.name.charAt(0)}</span>;
 }
