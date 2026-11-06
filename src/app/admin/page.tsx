@@ -115,9 +115,13 @@ export default function AdminPage() {
   async function saveIcon() {
     if (!supabase || !selectedItem || !selectedMediaPath) return;
 
-    const { error } = await supabase.from("items").update({ image_url: selectedMediaPath }).eq("id", selectedItem.id);
+    const { data, error } = await supabase.from("items").update({ image_url: selectedMediaPath }).eq("id", selectedItem.id).select("id, image_url").maybeSingle();
     if (error) {
       setMessage(error.message);
+      return;
+    }
+    if (!data) {
+      setMessage("Icon was not saved. Add your signed-in account to the Supabase admins allowlist.");
       return;
     }
 
@@ -134,17 +138,21 @@ export default function AdminPage() {
       return;
     }
 
-    const { error } = await supabase.from("tier_rankings").upsert({
+    const { data, error } = await supabase.from("tier_rankings").upsert({
       item_id: selectedItemId,
       mode_id: selectedModeId,
       tier_list_id: selectedTierListId,
       tier,
       score: numericScore,
       notes: notes.trim() || null,
-    }, { onConflict: "item_id,mode_id,tier_list_id" });
+    }, { onConflict: "item_id,mode_id,tier_list_id" }).select("item_id").maybeSingle();
 
     if (error) {
       setMessage(error.message);
+      return;
+    }
+    if (!data) {
+      setMessage("Ranking was not saved. Add your signed-in account to the Supabase admins allowlist.");
       return;
     }
 
