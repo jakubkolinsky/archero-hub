@@ -40,10 +40,10 @@ export function TierListExplorer({
   publishedTierRankings: PublishedTierRanking[];
 }) {
   const [selectedCategory, setSelectedCategory] = useState<Category | "All">("All");
-  const defaultTierListId = publishedTierLists.find((tierList) => tierList.gameVersion === "6.10.2")?.id ?? "current";
+  const defaultTierListId = publishedTierLists.find((tierList) => tierList.gameVersion === "6.10.2")?.id ?? publishedTierLists[0]?.id ?? "";
   const [selectedTierListId, setSelectedTierListId] = useState(defaultTierListId);
   const rankedItems = useMemo(() => {
-    if (selectedTierListId === "current") {
+    if (!selectedTierListId) {
       return catalogItems;
     }
 
@@ -73,8 +73,7 @@ export function TierListExplorer({
       <div className="flex flex-col items-center gap-4 border-b border-white/15 pb-4">
         <label className="flex items-center gap-3 text-xs font-bold uppercase tracking-wide text-stone-300">Ranking version
           <select value={selectedTierListId} onChange={(event) => setSelectedTierListId(event.target.value)} className="rounded-md border border-white/15 bg-[#151515] px-3 py-2 text-xs font-bold text-white outline-none focus:border-[#ff3e47]">
-            <option value="current">Current community draft</option>
-            {publishedTierLists.map((tierList) => <option key={tierList.id} value={tierList.id}>{tierList.gameVersion} historical · {tierList.title}</option>)}
+            {publishedTierLists.map((tierList) => <option key={tierList.id} value={tierList.id}>{tierList.gameVersion} starting point · {tierList.title}</option>)}
           </select>
         </label>
         <div className="flex flex-wrap justify-center gap-1">{[{ label: "All categories", category: "All" as const }, ...boardCategories].map((entry) => <button key={entry.category} onClick={() => setSelectedCategory(entry.category)} className={`rounded-md px-3 py-2 text-xs font-bold uppercase tracking-wide transition ${selectedCategory === entry.category ? "bg-[#ff3e47] text-white" : "text-stone-300 hover:bg-white/10 hover:text-white"}`}>{entry.label}</button>)}</div>
