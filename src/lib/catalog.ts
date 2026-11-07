@@ -16,6 +16,7 @@ export const categories = [
   "Locket",
   "Book",
   "Dragon",
+  "Spirit",
   "Relic",
   "Glyph",
   "Rune",

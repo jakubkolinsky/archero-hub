@@ -45,6 +45,7 @@ const categoryBySlug: Record<string, Category> = {
   locket: "Locket",
   book: "Book",
   dragon: "Dragon",
+  spirit: "Spirit",
   relic: "Relic",
   glyph: "Glyph",
   rune: "Rune",

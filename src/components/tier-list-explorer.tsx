@@ -10,6 +10,7 @@ const boardCategories: { label: string; category: Category }[] = [
   { label: "Weapons", category: "Weapon" },
   { label: "Heroes", category: "Hero" },
   { label: "Pets", category: "Pet" },
+  { label: "Spirits", category: "Spirit" },
   { label: "Dragons", category: "Dragon" },
   { label: "Armor", category: "Armor" },
   { label: "Rings", category: "Ring" },
