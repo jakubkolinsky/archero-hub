@@ -40,8 +40,7 @@ export function TierListExplorer({
   publishedTierRankings: PublishedTierRanking[];
 }) {
   const [selectedCategory, setSelectedCategory] = useState<Category | "All">("All");
-  const defaultTierListId = publishedTierLists.find((tierList) => tierList.gameVersion === "6.10.2")?.id ?? publishedTierLists[0]?.id ?? "";
-  const [selectedTierListId, setSelectedTierListId] = useState(defaultTierListId);
+  const selectedTierListId = publishedTierLists.find((tierList) => tierList.gameVersion === "6.10.2")?.id ?? publishedTierLists[0]?.id ?? "";
   const rankedItems = useMemo(() => {
     if (!selectedTierListId) {
       return catalogItems;
@@ -70,14 +69,7 @@ export function TierListExplorer({
     </header>
 
     <section className="mx-auto max-w-7xl px-4 py-5 sm:px-8">
-      <div className="flex flex-col items-center gap-4 border-b border-white/15 pb-4">
-        <label className="flex items-center gap-3 text-xs font-bold uppercase tracking-wide text-stone-300">Ranking version
-          <select value={selectedTierListId} onChange={(event) => setSelectedTierListId(event.target.value)} className="rounded-md border border-white/15 bg-[#151515] px-3 py-2 text-xs font-bold text-white outline-none focus:border-[#ff3e47]">
-            {publishedTierLists.map((tierList) => <option key={tierList.id} value={tierList.id}>{tierList.gameVersion} starting point · {tierList.title}</option>)}
-          </select>
-        </label>
-        <div className="flex flex-wrap justify-center gap-1">{[{ label: "All categories", category: "All" as const }, ...boardCategories].map((entry) => <button key={entry.category} onClick={() => setSelectedCategory(entry.category)} className={`rounded-md px-3 py-2 text-xs font-bold uppercase tracking-wide transition ${selectedCategory === entry.category ? "bg-[#ff3e47] text-white" : "text-stone-300 hover:bg-white/10 hover:text-white"}`}>{entry.label}</button>)}</div>
-      </div>
+      <div className="flex flex-wrap justify-center gap-1 border-b border-white/15 pb-4">{[{ label: "All categories", category: "All" as const }, ...boardCategories].map((entry) => <button key={entry.category} onClick={() => setSelectedCategory(entry.category)} className={`rounded-md px-3 py-2 text-xs font-bold uppercase tracking-wide transition ${selectedCategory === entry.category ? "bg-[#ff3e47] text-white" : "text-stone-300 hover:bg-white/10 hover:text-white"}`}>{entry.label}</button>)}</div>
       <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] font-bold uppercase tracking-wide text-stone-400"><Legend color="bg-[#f23843]" label="SS" /><Legend color="bg-[#ff7d76]" label="S" /><Legend color="bg-[#ffbe63]" label="A" /><Legend color="bg-[#e6df64]" label="B" /><Legend color="bg-[#8dda93]" label="C" /><Legend color="bg-stone-600" label="Unranked" /></div>
 
       <div className="mt-7 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
