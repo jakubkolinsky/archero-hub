@@ -88,7 +88,9 @@ export function TierListExplorer({
 }
 
 function TierBoard({ title, items }: { title: string; items: Item[] }) {
-  return <section><h2 className="mb-2 text-center text-lg font-black uppercase tracking-wide text-white">{title}</h2><div className="border border-white/10 bg-[#151515]">{tiers.map((tier) => <TierRow key={tier} tier={tier} items={items.filter((item) => item.tier === tier).sort((a, b) => b.score - a.score)} />)}</div></section>;
+  const visibleTiers = tiers.filter((tier) => tier !== "SS" || items.some((item) => item.tier === tier));
+
+  return <section><h2 className="mb-2 text-center text-lg font-black uppercase tracking-wide text-white">{title}</h2><div className="border border-white/10 bg-[#151515]">{visibleTiers.map((tier) => <TierRow key={tier} tier={tier} items={items.filter((item) => item.tier === tier).sort((a, b) => b.score - a.score)} />)}</div></section>;
 }
 
 function TierRow({ tier, items }: { tier: Item["tier"]; items: Item[] }) {
