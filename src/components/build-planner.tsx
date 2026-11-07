@@ -1,10 +1,18 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
 import { Build, GameMode, Item, builds, gameModes, slotDefinitions } from "@/lib/catalog";
 
-const tierColor: Record<Item["tier"], string> = { SS: "bg-amber-300 text-stone-950", S: "bg-orange-500 text-white", A: "bg-sky-400 text-slate-950", B: "bg-violet-400 text-slate-950", C: "bg-slate-500 text-white", D: "bg-slate-700 text-white", Unranked: "bg-stone-700 text-stone-200" };
+const tierColors: Record<Item["tier"], string> = {
+  SS: "bg-[#ff555e] text-[#1f1718]",
+  S: "bg-[#ff7d76] text-[#1f1718]",
+  A: "bg-[#ffbe63] text-[#1f1718]",
+  B: "bg-[#e6df64] text-[#1f1718]",
+  C: "bg-[#8dda93] text-[#172118]",
+  D: "bg-[#6fc0e7] text-[#132129]",
+  Unranked: "bg-stone-600 text-white",
+};
 
 export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
   const [mode, setMode] = useState<GameMode>("Chapter Push");
@@ -31,6 +39,8 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
   const choices = activeSlot
     ? catalogItems.filter((item) => item.category === activeSlot.category && (!ownedOnly || owned.includes(item.id))).sort((a, b) => b.score - a.score)
     : [];
+  const equippedItems = slotDefinitions.map((slot) => catalogItems.find((item) => item.id === slots[slot.id])).filter((item): item is Item => Boolean(item));
+  const averageScore = equippedItems.length ? Math.round(equippedItems.reduce((total, item) => total + item.score, 0) / equippedItems.length) : 0;
 
   function changeMode(nextMode: GameMode) {
     setMode(nextMode);
@@ -43,59 +53,77 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
   }
 
   return (
-    <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
-      <div className="mb-6 rounded-2xl border border-white/10 bg-[#161922] p-4">
-        <p className="mb-3 text-xs font-bold uppercase tracking-[.2em] text-amber-400">Game mode</p>
+    <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-8">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-y border-white/10 py-3">
         <div className="flex flex-wrap gap-2">
-          {gameModes.map((item) => <button key={item} onClick={() => changeMode(item)} className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${mode === item ? "bg-amber-400 text-stone-950" : "bg-white/[.06] text-stone-400 hover:bg-white/[.1] hover:text-white"}`}>{item}</button>)}
+          {gameModes.map((item) => <button key={item} onClick={() => changeMode(item)} className={`rounded-md px-3 py-1.5 text-xs font-bold uppercase tracking-wide transition ${mode === item ? "bg-[#ff3e47] text-white" : "text-stone-400 hover:bg-white/10 hover:text-white"}`}>{item}</button>)}
         </div>
+        <label className="flex cursor-pointer items-center gap-2 text-xs font-semibold text-stone-400"><input checked={ownedOnly} onChange={(event) => setOwnedOnly(event.target.checked)} type="checkbox" className="size-3.5 accent-[#ff3e47]" /> Owned only</label>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1.35fr_.65fr]">
-        <div className="rounded-3xl border border-white/10 bg-[#12151d] p-4 sm:p-6">
-          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-            <div><p className="text-xs font-bold uppercase tracking-[.2em] text-amber-400">Recommended setup</p><h2 className="mt-2 text-2xl font-bold">{recommendedBuild.name}</h2></div>
-            <label className="flex cursor-pointer items-center gap-2 text-sm text-stone-300"><input checked={ownedOnly} onChange={(event) => setOwnedOnly(event.target.checked)} type="checkbox" className="size-4 accent-amber-400" /> Owned items only</label>
+      <div className="grid gap-5 xl:grid-cols-[1fr_290px]">
+        <section className="border border-white/10 bg-[#242424] p-4 shadow-2xl shadow-black/20 sm:p-6">
+          <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/10 pb-5">
+            <div><p className="text-[11px] font-bold uppercase tracking-[.2em] text-[#ff555e]">Recommended loadout</p><h1 className="mt-1 text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">{recommendedBuild.name}</h1><p className="mt-2 max-w-xl text-sm text-stone-400">{recommendedBuild.description}</p></div>
+            <div className="border-l-2 border-[#ff3e47] pl-4 text-right"><p className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-500">Build score</p><p className="mt-1 text-3xl font-black text-white">{averageScore}<span className="text-sm text-stone-500">/100</span></p></div>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {slotDefinitions.map((slot) => {
-              const item = catalogItems.find((catalogItem) => catalogItem.id === slots[slot.id]);
-              const unavailable = ownedOnly && item && !owned.includes(item.id);
-              return <button key={slot.id} onClick={() => setSelectedSlot(slot.id)} className={`rounded-2xl border p-3 text-left transition hover:-translate-y-0.5 ${unavailable ? "border-rose-400/50 bg-rose-400/[.06]" : "border-white/10 bg-white/[.035] hover:border-amber-400/50"}`}>
-                <span className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-500">{slot.label}</span>
-                {item ? <><ItemIcon item={item} size={44} /><span className="mt-3 block truncate text-sm font-bold">{item.name}</span><span className="mt-1 block text-xs text-stone-500">{item.tier} · {item.score} score</span></> : <span className="mt-6 block text-sm text-stone-500">Choose item</span>}
-              </button>;
-            })}
-          </div>
-        </div>
 
-        <aside className="rounded-3xl border border-white/10 bg-[#161922] p-6">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-amber-400">Build brief</p>
-          <h2 className="mt-3 text-2xl font-bold">{recommendedBuild.name}</h2>
-          <p className="mt-4 text-sm leading-6 text-stone-400">{recommendedBuild.description}</p>
-          <div className="mt-7 space-y-5 text-sm"><div><p className="font-bold text-emerald-300">Strengths</p><p className="mt-1 leading-6 text-stone-400">{recommendedBuild.strengths}</p></div><div><p className="font-bold text-rose-300">Weaknesses</p><p className="mt-1 leading-6 text-stone-400">{recommendedBuild.weaknesses}</p></div></div>
-          <p className="mt-8 border-t border-white/10 pt-5 text-xs leading-5 text-stone-500">Click any slot to compare alternatives. Ownership is stored only in this browser until accounts are added.</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-[1.05fr_1fr]">
+            <div className="border border-white/10 bg-[#181818] p-4">
+              <p className="text-[10px] font-bold uppercase tracking-[.18em] text-stone-500">Hero</p>
+              <LoadoutSlot slot={slotDefinitions[0]} item={catalogItems.find((catalogItem) => catalogItem.id === slots.hero)} unavailable={ownedOnly && !owned.includes(slots.hero)} onClick={() => setSelectedSlot("hero")} large />
+              <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/10 pt-4 text-xs"><Stat label="Attack" value="Pending" /><Stat label="HP" value="Pending" /></div>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {slotDefinitions.slice(1).map((slot) => {
+                const item = catalogItems.find((catalogItem) => catalogItem.id === slots[slot.id]);
+                return <LoadoutSlot key={slot.id} slot={slot} item={item} unavailable={item ? ownedOnly && !owned.includes(item.id) : false} onClick={() => setSelectedSlot(slot.id)} />;
+              })}
+            </div>
+          </div>
+        </section>
+
+        <aside className="border border-white/10 bg-[#202020] p-5">
+          <p className="text-[11px] font-bold uppercase tracking-[.18em] text-[#ff555e]">Build brief</p>
+          <h2 className="mt-2 text-xl font-black uppercase text-white">{mode}</h2>
+          <div className="mt-6 space-y-5 text-sm"><div><p className="font-bold text-[#8dda93]">Strengths</p><p className="mt-1 leading-6 text-stone-400">{recommendedBuild.strengths}</p></div><div><p className="font-bold text-[#ff7d76]">Watch out</p><p className="mt-1 leading-6 text-stone-400">{recommendedBuild.weaknesses}</p></div></div>
+          <div className="mt-7 border-y border-white/10 py-4"><p className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-500">Inventory</p><p className="mt-1 text-sm font-bold text-white">{owned.length} items marked owned</p><p className="mt-1 text-xs leading-5 text-stone-500">Choose any slot to browse items. Your inventory stays in this browser.</p></div>
+          <p className="mt-5 text-xs leading-5 text-stone-500">Hover an item for its current tier, score, and verified notes. Attack and HP calculations will unlock as the stat catalog is reviewed.</p>
         </aside>
       </div>
 
-      {activeSlot && <div className="fixed inset-0 z-50 grid place-items-center bg-black/75 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="item-picker-title">
-        <div className="max-h-[85vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-white/10 bg-[#161922] p-6 shadow-2xl">
-          <div className="flex items-start justify-between gap-4"><div><p className="text-xs font-bold uppercase tracking-[.2em] text-amber-400">{activeSlot.category}</p><h2 id="item-picker-title" className="mt-2 text-2xl font-bold">Choose {activeSlot.label}</h2></div><button onClick={() => setSelectedSlot(null)} className="rounded-lg px-3 py-2 text-stone-400 hover:bg-white/10 hover:text-white" aria-label="Close item picker">Close</button></div>
-          {choices.length ? <div className="mt-6 grid gap-3 sm:grid-cols-2">{choices.map((item) => <ItemChoice key={item.id} item={item} owned={owned.includes(item.id)} onChoose={() => { setOverrides((current) => ({ ...current, [activeSlot.id]: item.id })); setSelectedSlot(null); }} onToggleOwned={() => toggleOwned(item.id)} />)}</div> : <p className="mt-8 rounded-xl border border-dashed border-white/15 p-6 text-sm text-stone-400">No owned {activeSlot.category.toLowerCase()} items yet. Turn off “Owned items only” or mark an item as owned.</p>}
+      {activeSlot && <div className="fixed inset-0 z-50 grid place-items-center bg-black/80 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="item-picker-title">
+        <div className="max-h-[88vh] w-full max-w-5xl overflow-y-auto border border-white/15 bg-[#202020] p-5 shadow-2xl sm:p-7">
+          <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-5"><div><p className="text-[10px] font-bold uppercase tracking-[.18em] text-[#ff555e]">Inventory</p><h2 id="item-picker-title" className="mt-1 text-2xl font-black uppercase text-white">Choose {activeSlot.label}</h2></div><button onClick={() => setSelectedSlot(null)} className="rounded-md border border-white/15 px-3 py-2 text-xs font-bold uppercase text-stone-400 hover:border-white/40 hover:text-white">Close</button></div>
+          {choices.length ? <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{choices.map((item) => <InventoryItem key={item.id} item={item} owned={owned.includes(item.id)} onChoose={() => { setOverrides((current) => ({ ...current, [activeSlot.id]: item.id })); setSelectedSlot(null); }} onToggleOwned={() => toggleOwned(item.id)} />)}</div> : <p className="mt-8 border border-dashed border-white/15 p-6 text-sm text-stone-400">No owned {activeSlot.category.toLowerCase()} items. Disable “Owned only” or mark items as owned.</p>}
         </div>
       </div>}
     </section>
   );
 }
 
-function ItemChoice({ item, owned, onChoose, onToggleOwned }: { item: Item; owned: boolean; onChoose: () => void; onToggleOwned: () => void }) {
-  return <article className="rounded-2xl border border-white/10 bg-black/15 p-4"><div className="flex gap-3"><ItemIcon item={item} size={48} /><div className="min-w-0 flex-1"><div className="flex items-center justify-between gap-2"><h3 className="truncate font-bold">{item.name}</h3><span className={`rounded px-1.5 py-0.5 text-xs font-black ${tierColor[item.tier]}`}>{item.tier}</span></div><p className="mt-1 text-xs text-stone-500">{item.score}/100 · {item.meta}</p></div></div><p className="mt-3 text-sm leading-5 text-stone-400">{item.description}</p><div className="mt-4 flex items-center justify-between gap-3"><button onClick={onToggleOwned} className={`text-xs font-bold ${owned ? "text-emerald-300" : "text-stone-500 hover:text-stone-300"}`}>{owned ? "Owned" : "Mark owned"}</button><button onClick={onChoose} className="rounded-lg bg-amber-400 px-3 py-2 text-xs font-bold text-stone-950 hover:bg-amber-300">Use in build</button></div></article>;
+function LoadoutSlot({ slot, item, unavailable, onClick, large = false }: { slot: typeof slotDefinitions[number]; item: Item | undefined; unavailable: boolean; onClick: () => void; large?: boolean }) {
+  return <button onClick={onClick} className={`group relative mt-3 w-full border p-3 text-left transition hover:-translate-y-0.5 hover:border-[#ff555e] ${large ? "min-h-44" : "min-h-28"} ${unavailable ? "border-[#ff555e]/60 bg-[#ff555e]/5" : "border-white/10 bg-[#111]"}`}>
+    <span className="text-[9px] font-bold uppercase tracking-[.16em] text-stone-500">{slot.label}</span>
+    {item ? <div className={`mt-3 flex ${large ? "items-center gap-4" : "gap-2"} `}><ItemArt item={item} size={large ? 72 : 42} /><span className="min-w-0"><span className={`${large ? "text-lg" : "text-xs"} block truncate font-bold text-white`}>{item.name}</span><span className="mt-1 block text-[10px] text-stone-500">{item.tier} · {item.score} score</span></span></div> : <span className="mt-8 block text-xs text-stone-500">Choose item</span>}
+    {item && <ItemTooltip item={item} />}
+  </button>;
 }
 
-function ItemIcon({ item, size }: { item: Item; size: number }) {
-  if (item.imageUrl) {
-    return <Image src={item.imageUrl} alt="" width={size} height={size} className="mt-3 size-11 shrink-0 rounded-xl object-contain" />;
-  }
+function InventoryItem({ item, owned, onChoose, onToggleOwned }: { item: Item; owned: boolean; onChoose: () => void; onToggleOwned: () => void }) {
+  return <article className="group relative border border-white/10 bg-[#151515] p-4 transition hover:border-[#ff555e]"><div className="flex gap-3"><ItemArt item={item} size={52} /><div className="min-w-0 flex-1"><div className="flex justify-between gap-2"><h3 className="truncate font-bold text-white">{item.name}</h3><span className={`grid size-6 place-items-center text-[10px] font-black ${tierColors[item.tier]}`}>{item.tier === "Unranked" ? "?" : item.tier}</span></div><p className="mt-1 text-xs text-stone-500">{item.score}/100 · {item.meta}</p></div></div><p className="mt-4 text-sm leading-5 text-stone-400">{item.description}</p><div className="mt-4 flex justify-between border-t border-white/10 pt-3"><button onClick={onToggleOwned} className={`text-xs font-bold ${owned ? "text-[#8dda93]" : "text-stone-500 hover:text-white"}`}>{owned ? "Owned" : "Mark owned"}</button><button onClick={onChoose} className="bg-[#ff3e47] px-3 py-1.5 text-xs font-black uppercase text-white hover:bg-[#ff555e]">Equip</button></div><ItemTooltip item={item} />
+  </article>;
+}
 
-  return <span className={`mt-3 grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${item.accent} text-lg font-black text-white`}>{item.name.charAt(0)}</span>;
+function ItemArt({ item, size }: { item: Item; size: number }) {
+  if (item.imageUrl) return <Image src={item.imageUrl} alt="" width={size} height={size} className="shrink-0 object-contain" />;
+  return <span style={{ width: size, height: size }} className={`grid shrink-0 place-items-center bg-gradient-to-br ${item.accent} text-lg font-black text-white`}>{item.name.charAt(0)}</span>;
+}
+
+function ItemTooltip({ item }: { item: Item }) {
+  return <span className="pointer-events-none absolute bottom-[calc(100%+8px)] left-0 z-20 hidden w-64 border border-white/15 bg-[#0e0e0e] p-3 text-left shadow-2xl group-hover:block group-focus-within:block"><span className="block text-xs font-black uppercase text-white">{item.name}</span><span className="mt-1 block text-[10px] font-bold uppercase tracking-wide text-[#ff555e]">{item.tier} tier · {item.score}/100</span><span className="mt-2 block text-xs leading-5 text-stone-400">{item.description}</span><span className="mt-2 block border-t border-white/10 pt-2 text-[10px] text-stone-500">Attack / HP: pending in-game verification</span></span>;
+}
+
+function Stat({ label, value }: { label: string; value: string }) {
+  return <span><span className="block text-[10px] font-bold uppercase tracking-wide text-stone-500">{label}</span><span className="mt-1 block font-black text-stone-300">{value}</span></span>;
 }
