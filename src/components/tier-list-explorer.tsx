@@ -36,7 +36,8 @@ export function TierListExplorer({
   publishedTierRankings: PublishedTierRanking[];
 }) {
   const [selectedCategory, setSelectedCategory] = useState<Category | "All">("All");
-  const [selectedTierListId, setSelectedTierListId] = useState("current");
+  const defaultTierListId = publishedTierLists.find((tierList) => tierList.gameVersion === "6.10.2")?.id ?? "current";
+  const [selectedTierListId, setSelectedTierListId] = useState(defaultTierListId);
   const rankedItems = useMemo(() => {
     if (selectedTierListId === "current") {
       return catalogItems;
