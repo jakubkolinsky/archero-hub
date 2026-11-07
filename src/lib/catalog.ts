@@ -31,6 +31,7 @@ export type Tier = "SS" | "S" | "A" | "B" | "C" | "D" | "Unranked";
 
 export type Item = {
   id: string;
+  databaseId?: string;
   name: string;
   category: Category;
   tier: Tier;

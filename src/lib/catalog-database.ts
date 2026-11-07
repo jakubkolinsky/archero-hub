@@ -2,11 +2,38 @@ import { createClient } from "@supabase/supabase-js";
 import { Category, Item, items as curatedItems } from "@/lib/catalog";
 
 type CatalogRow = {
+  id: string;
   name: string;
   slug: string;
   image_url: string | null;
   category: string;
   description: string | null;
+};
+
+export type PublishedTierList = {
+  id: string;
+  title: string;
+  gameVersion: string;
+};
+
+export type PublishedTierRanking = {
+  itemId: string;
+  tierListId: string;
+  tier: Item["tier"];
+  score: number;
+};
+
+type TierListRow = {
+  id: string;
+  title: string;
+  game_version: string;
+};
+
+type TierRankingRow = {
+  item_id: string;
+  tier_list_id: string;
+  tier: Exclude<Item["tier"], "Unranked">;
+  score: number;
 };
 
 const categoryBySlug: Record<string, Category> = {
@@ -49,6 +76,7 @@ function toCatalogItem(row: CatalogRow): Item {
 
   return {
     id: curatedItem?.id ?? row.slug,
+    databaseId: row.id,
     name: row.name,
     category,
     tier: curatedItem?.tier ?? "Unranked",
@@ -63,7 +91,7 @@ function toCatalogItem(row: CatalogRow): Item {
   };
 }
 
-export async function getCatalogItems(): Promise<Item[]> {
+function createCatalogClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
@@ -71,10 +99,14 @@ export async function getCatalogItems(): Promise<Item[]> {
     throw new Error("Missing Supabase environment variables.");
   }
 
-  const supabase = createClient(url, publishableKey);
+  return createClient(url, publishableKey);
+}
+
+export async function getCatalogItems(): Promise<Item[]> {
+  const supabase = createCatalogClient();
   const { data, error } = await supabase
     .from("items")
-    .select("name, slug, image_url, category, description")
+    .select("id, name, slug, image_url, category, description")
     .eq("active", true)
     .order("name");
 
@@ -90,4 +122,54 @@ export async function getCatalogItems(): Promise<Item[]> {
   }
 
   return [...catalogItems.values()];
+}
+
+export async function getTierListCatalog(): Promise<{
+  catalogItems: Item[];
+  publishedTierLists: PublishedTierList[];
+  publishedTierRankings: PublishedTierRanking[];
+}> {
+  const supabase = createCatalogClient();
+  const [catalogItems, tierListsResult] = await Promise.all([
+    getCatalogItems(),
+    supabase
+      .from("tier_lists")
+      .select("id, title, game_version")
+      .not("published_at", "is", null)
+      .order("published_at", { ascending: false }),
+  ]);
+
+  if (tierListsResult.error) {
+    throw new Error(`Unable to load tier lists: ${tierListsResult.error.message}`);
+  }
+
+  const tierLists = (tierListsResult.data as TierListRow[]).map((tierList) => ({
+    id: tierList.id,
+    title: tierList.title,
+    gameVersion: tierList.game_version,
+  }));
+
+  if (!tierLists.length) {
+    return { catalogItems, publishedTierLists: [], publishedTierRankings: [] };
+  }
+
+  const { data, error } = await supabase
+    .from("tier_rankings")
+    .select("item_id, tier_list_id, tier, score")
+    .in("tier_list_id", tierLists.map((tierList) => tierList.id));
+
+  if (error) {
+    throw new Error(`Unable to load tier rankings: ${error.message}`);
+  }
+
+  return {
+    catalogItems,
+    publishedTierLists: tierLists,
+    publishedTierRankings: (data as TierRankingRow[]).map((ranking) => ({
+      itemId: ranking.item_id,
+      tierListId: ranking.tier_list_id,
+      tier: ranking.tier,
+      score: ranking.score,
+    })),
+  };
 }

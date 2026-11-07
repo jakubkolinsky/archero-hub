@@ -1,12 +1,12 @@
 import { connection } from "next/server";
 import { TierListExplorer } from "@/components/tier-list-explorer";
-import { getCatalogItems } from "@/lib/catalog-database";
+import { getTierListCatalog } from "@/lib/catalog-database";
 
 export const instant = false;
 
 export default async function TierListsPage() {
   await connection();
-  const catalogItems = await getCatalogItems();
+  const tierListCatalog = await getTierListCatalog();
 
-  return <TierListExplorer catalogItems={catalogItems} />;
+  return <TierListExplorer {...tierListCatalog} />;
 }
