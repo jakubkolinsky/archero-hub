@@ -13,6 +13,9 @@ const boardCategories: { label: string; category: Category }[] = [
   { label: "Dragons", category: "Dragon" },
   { label: "Armor", category: "Armor" },
   { label: "Rings", category: "Ring" },
+  { label: "Books", category: "Book" },
+  { label: "Bracelets", category: "Bracelet" },
+  { label: "Lockets", category: "Locket" },
 ];
 
 const tiers: Item["tier"][] = ["SS", "S", "A", "B", "C", "Unranked"];
