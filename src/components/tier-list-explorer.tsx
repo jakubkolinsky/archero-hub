@@ -15,7 +15,7 @@ const boardCategories: { label: string; category: Category }[] = [
   { label: "Rings", category: "Ring" },
 ];
 
-const tiers: Item["tier"][] = ["SS", "S", "A", "B", "C", "D", "Unranked"];
+const tiers: Item["tier"][] = ["SS", "S", "A", "B", "C", "Unranked"];
 const tierColors: Record<Item["tier"], string> = {
   SS: "bg-[#f23843]",
   S: "bg-[#ff7d76]",
@@ -75,7 +75,7 @@ export function TierListExplorer({
         </label>
         <div className="flex flex-wrap justify-center gap-1">{[{ label: "All categories", category: "All" as const }, ...boardCategories].map((entry) => <button key={entry.category} onClick={() => setSelectedCategory(entry.category)} className={`rounded-md px-3 py-2 text-xs font-bold uppercase tracking-wide transition ${selectedCategory === entry.category ? "bg-[#ff3e47] text-white" : "text-stone-300 hover:bg-white/10 hover:text-white"}`}>{entry.label}</button>)}</div>
       </div>
-      <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] font-bold uppercase tracking-wide text-stone-400"><Legend color="bg-[#f23843]" label="SS" /><Legend color="bg-[#ff7d76]" label="S" /><Legend color="bg-[#ffbe63]" label="A" /><Legend color="bg-[#e6df64]" label="B" /><Legend color="bg-[#8dda93]" label="C" /><Legend color="bg-[#6fc0e7]" label="D" /><Legend color="bg-stone-600" label="Unranked" /></div>
+      <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] font-bold uppercase tracking-wide text-stone-400"><Legend color="bg-[#f23843]" label="SS" /><Legend color="bg-[#ff7d76]" label="S" /><Legend color="bg-[#ffbe63]" label="A" /><Legend color="bg-[#e6df64]" label="B" /><Legend color="bg-[#8dda93]" label="C" /><Legend color="bg-stone-600" label="Unranked" /></div>
 
       <div className="mt-7 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
         {boards.map((board) => <TierBoard key={board.category} title={board.label} items={board.items} />)}
