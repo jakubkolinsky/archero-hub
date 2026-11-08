@@ -78,12 +78,23 @@ Notes:
 
 ## Highest-priority next work
 
+### Completed workbook foundation
+
+- [x] Created workbook import, sheet, raw-row, and hero-bonus milestone tables with RLS.
+- [x] Registered all 14 uploaded workbooks with SHA-256 fingerprints and source attribution.
+- [x] Added a reusable `scripts/generate_hero_bonus_import.py` extractor for the All Hero Bonuses workbook.
+- [x] Imported the first clean workbook slice as unpublished data:
+  - 31 raw `stats` sheet rows.
+  - 30 per-hero source records.
+  - 268 Hero Bonus milestone effects.
+- [x] Linked imported effects to their catalog heroes and exact source rows.
+
 ### 1. Import workbook data with provenance
 
 Create a repeatable import pipeline that keeps both raw source data and normalized game data.
 
-1. Store each workbook, sheet, source filename, row/cell location, import date, and review status.
-2. Preserve raw values before converting them into application tables.
+1. Store each remaining workbook sheet, source filename, row/cell location, import date, and review status.
+2. Preserve raw values before converting the remaining workbook data into application tables.
 3. Normalize only understood records and retain an `unverified` status where the workbook is incomplete or ambiguous.
 4. Link normalized records to existing catalog item slugs whenever possible.
 5. Add a curator review workflow before publishing calculations or numeric stats.
@@ -221,4 +232,3 @@ Likely future normalized tables:
 - Historical 6.10.2 board converted into the single starting tier list.
 - Books, Bracelets, Lockets, Pets, Spirits, Dragons, Heroes, Armor, Rings, and Weapons visible as tier-board categories.
 - Corrected Celestial Bracer image path and Admin media registration.
-
