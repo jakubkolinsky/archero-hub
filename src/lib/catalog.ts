@@ -62,8 +62,8 @@ export const slotDefinitions = [
   { id: "armor", label: "Armor", category: "Armor" as Category },
   { id: "ring-one", label: "Ring 1", category: "Ring" as Category },
   { id: "ring-two", label: "Ring 2", category: "Ring" as Category },
-  { id: "pet-one", label: "Pet 1", category: "Pet" as Category },
-  { id: "pet-two", label: "Pet 2", category: "Pet" as Category },
+  { id: "pet-one", label: "Spirit 1", category: "Spirit" as Category },
+  { id: "pet-two", label: "Spirit 2", category: "Spirit" as Category },
   { id: "bracelet", label: "Bracelet", category: "Bracelet" as Category },
   { id: "locket", label: "Locket", category: "Locket" as Category },
   { id: "book", label: "Book", category: "Book" as Category },
@@ -91,10 +91,10 @@ export const items: Item[] = [
 ];
 
 export const builds: Build[] = [
-  { id: "chapter-push", name: "Chapter Push Meta", description: "High-score setup for sustained late-game progression.", mode: "Chapter Push", strengths: "Boss burst, recovery, survival", weaknesses: "Premium item requirements", slots: { hero: "zeus", weapon: "expedition-fists", armor: "warplate", "ring-one": "dragon-ring", "ring-two": "dragon-ring", "pet-one": "starfire-fox", "pet-two": "polar-penguin-king", bracelet: "warbracer", locket: "angel-locket", book: "enlightenment-book", dragon: "riri" } },
-  { id: "farm", name: "Gold Farming Build", description: "A safe and consistent setup for quick resource runs.", mode: "Farming", strengths: "Room clear, range, repeatability", weaknesses: "Lower boss ceiling", slots: { hero: "meowgik", weapon: "brightspear", armor: "warplate", "ring-one": "bull-ring", "ring-two": "bull-ring", "pet-one": "polar-penguin-king", "pet-two": "starfire-fox", bracelet: "warbracer", locket: "angel-locket", book: "enlightenment-book", dragon: "riri" } },
-  { id: "boss-killer", name: "Boss Killer Build", description: "Optimized for focused damage against boss encounters.", mode: "Boss Chapters", strengths: "Burst and target pressure", weaknesses: "Less comfortable room clearing", slots: { hero: "zeus", weapon: "expedition-fists", armor: "warplate", "ring-one": "dragon-ring", "ring-two": "dragon-ring", "pet-one": "starfire-fox", "pet-two": "starfire-fox", bracelet: "warbracer", locket: "angel-locket", book: "enlightenment-book", dragon: "riri" } },
-  { id: "f2p", name: "F2P Progression Build", description: "A flexible starting point that prioritizes consistency.", mode: "Events", strengths: "Adaptable and easier to assemble", weaknesses: "Not the highest damage ceiling", slots: { hero: "meowgik", weapon: "brightspear", armor: "warplate", "ring-one": "bull-ring", "ring-two": "dragon-ring", "pet-one": "polar-penguin-king", "pet-two": "starfire-fox", bracelet: "warbracer", locket: "angel-locket", book: "enlightenment-book", dragon: "riri" } },
+  { id: "chapter-push", name: "Chapter Push Meta", description: "High-score setup for sustained late-game progression.", mode: "Chapter Push", strengths: "Boss burst, recovery, survival", weaknesses: "Premium item requirements", slots: { hero: "zeus", weapon: "expedition-fists", armor: "warplate", "ring-one": "dragon-ring", "ring-two": "dragon-ring", "pet-one": "bone-warrior", "pet-two": "flaming-ghost", bracelet: "warbracer", locket: "angel-locket", book: "enlightenment-book", dragon: "riri" } },
+  { id: "farm", name: "Gold Farming Build", description: "A safe and consistent setup for quick resource runs.", mode: "Farming", strengths: "Room clear, range, repeatability", weaknesses: "Lower boss ceiling", slots: { hero: "meowgik", weapon: "brightspear", armor: "warplate", "ring-one": "bull-ring", "ring-two": "bull-ring", "pet-one": "bone-warrior", "pet-two": "flaming-ghost", bracelet: "warbracer", locket: "angel-locket", book: "enlightenment-book", dragon: "riri" } },
+  { id: "boss-killer", name: "Boss Killer Build", description: "Optimized for focused damage against boss encounters.", mode: "Boss Chapters", strengths: "Burst and target pressure", weaknesses: "Less comfortable room clearing", slots: { hero: "zeus", weapon: "expedition-fists", armor: "warplate", "ring-one": "dragon-ring", "ring-two": "dragon-ring", "pet-one": "bone-warrior", "pet-two": "flaming-ghost", bracelet: "warbracer", locket: "angel-locket", book: "enlightenment-book", dragon: "riri" } },
+  { id: "f2p", name: "F2P Progression Build", description: "A flexible starting point that prioritizes consistency.", mode: "Events", strengths: "Adaptable and easier to assemble", weaknesses: "Not the highest damage ceiling", slots: { hero: "meowgik", weapon: "brightspear", armor: "warplate", "ring-one": "bull-ring", "ring-two": "dragon-ring", "pet-one": "bone-warrior", "pet-two": "flaming-ghost", bracelet: "warbracer", locket: "angel-locket", book: "enlightenment-book", dragon: "riri" } },
 ];
 
 export function itemById(id: string) {
