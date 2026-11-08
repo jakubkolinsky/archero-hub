@@ -68,17 +68,32 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
             <div className="border-l-2 border-[#ff3e47] pl-4 text-right"><p className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-500">Build score</p><p className="mt-1 text-3xl font-black text-white">{averageScore}<span className="text-sm text-stone-500">/100</span></p></div>
           </div>
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-[1.05fr_1fr]">
-            <div className="border border-white/10 bg-[#181818] p-4">
-              <p className="text-[10px] font-bold uppercase tracking-[.18em] text-stone-500">Hero</p>
-              <LoadoutSlot slot={slotDefinitions[0]} item={catalogItems.find((catalogItem) => catalogItem.id === slots.hero)} unavailable={ownedOnly && !owned.includes(slots.hero)} onClick={() => setSelectedSlot("hero")} large />
-              <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/10 pt-4 text-xs"><Stat label="Attack" value="Pending" /><Stat label="HP" value="Pending" /></div>
-            </div>
-            <div className="grid grid-cols-2 gap-3">
-              {slotDefinitions.slice(1).map((slot) => {
-                const item = catalogItems.find((catalogItem) => catalogItem.id === slots[slot.id]);
-                return <LoadoutSlot key={slot.id} slot={slot} item={item} unavailable={item ? ownedOnly && !owned.includes(item.id) : false} onClick={() => setSelectedSlot(slot.id)} />;
-              })}
+          <div className="relative mt-6 overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_50%_42%,rgba(255,154,70,.2),transparent_27%),radial-gradient(circle_at_50%_62%,rgba(77,202,183,.2),transparent_36%),#141414] p-3 sm:p-5">
+            <div className="pointer-events-none absolute inset-x-1/4 top-[18%] aspect-square rounded-full border border-[#ffd261]/20 bg-[#ffd261]/5 blur-3xl" />
+            <div className="relative grid gap-3 sm:grid-cols-[minmax(132px,1fr)_minmax(220px,1.45fr)_minmax(132px,1fr)]">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
+                <ArenaSlot slotId="weapon" />
+                <ArenaSlot slotId="dragon" />
+                <ArenaSlot slotId="pet-one" />
+                <ArenaSlot slotId="bracelet" />
+              </div>
+
+              <div className="flex min-h-[420px] flex-col justify-center border-x border-white/10 px-3 py-5 sm:min-h-[590px] sm:px-7">
+                <p className="text-center text-[10px] font-bold uppercase tracking-[.24em] text-[#ffbe63]">Hero center</p>
+                <LoadoutSlot slot={slotDefinitions[0]} item={catalogItems.find((catalogItem) => catalogItem.id === slots.hero)} unavailable={ownedOnly && !owned.includes(slots.hero)} onClick={() => setSelectedSlot("hero")} large />
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  <ArenaSlot slotId="book" />
+                  <ArenaSlot slotId="ring-two" />
+                </div>
+                <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/10 pt-4 text-xs"><Stat label="Attack" value="Pending" /><Stat label="HP" value="Pending" /></div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
+                <ArenaSlot slotId="armor" />
+                <ArenaSlot slotId="ring-one" />
+                <ArenaSlot slotId="pet-two" />
+                <ArenaSlot slotId="locket" />
+              </div>
             </div>
           </div>
         </section>
@@ -100,6 +115,14 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
       </div>}
     </section>
   );
+
+  function ArenaSlot({ slotId }: { slotId: string }) {
+    const slot = slotDefinitions.find((definition) => definition.id === slotId);
+    if (!slot) return null;
+
+    const item = catalogItems.find((catalogItem) => catalogItem.id === slots[slot.id]);
+    return <LoadoutSlot slot={slot} item={item} unavailable={item ? ownedOnly && !owned.includes(item.id) : false} onClick={() => setSelectedSlot(slot.id)} />;
+  }
 }
 
 function LoadoutSlot({ slot, item, unavailable, onClick, large = false }: { slot: typeof slotDefinitions[number]; item: Item | undefined; unavailable: boolean; onClick: () => void; large?: boolean }) {
