@@ -105,6 +105,9 @@ Notes:
 - [x] Imported the structured Pet workbook blocks as unreviewed, source-backed records:
   - 11 Pet profiles linked to exact catalog matches.
   - 39 Battle, Kindred, and Talent Skill records.
+- [x] Imported Dragon Statue source data as unreviewed, source-backed records:
+  - 44 dragon rarity-stat rows and 7 dragon metadata records, all linked to catalog dragons.
+  - 120 rank-specific upgrade-cost rows.
 - [x] Kept source-derived tables behind Admin-only RLS. Nothing new is publicly shown or used for calculations until curator review.
 
 ### 1. Complete remaining workbook normalization
@@ -183,7 +186,7 @@ All workbooks currently live in `~/Downloads/`.
 | `Archero All Hero bonuses.xlsx` | All-hero milestone bonuses | Clean hero-by-row table; high-priority normalization source. |
 | `Assist Brave Hero List (LuhCaran, Sloth, Kyle, Chaos).xlsx` | Hero assist and brave effects | 227 source-backed effects imported as unreviewed. |
 | `Archero.xlsx` | Weapon skins and hero skin bonuses | 87 source-backed skin entries imported as unreviewed. |
-| `Archero - Dragon Statues.xlsx` | Dragon Statue stats, rarity, level, costs | Multi-sheet/formula-heavy; preserve raw data and normalize carefully. |
+| `Archero - Dragon Statues.xlsx` | Dragon Statue stats, rarity, level, costs | 44 rarity-stat rows, 7 metadata records, and 120 costs imported as unreviewed. |
 | `Archero Pets.xlsx` | Pet stats, milestones, battle skills, upgrade costs | 11 profiles and 39 skills imported as unreviewed; never merge with Spirits. |
 | `Archero Sigils.xlsx` | Sigil effects, evolution, hidden stats, faith | Mixed blocks; parse with row grouping and source-cell provenance. |
 | `Archero Glyphs.xlsx` | Glyph effects and rarity/upgrade tiers by equipment category | Complex tier blocks; needs a dedicated parser. |
