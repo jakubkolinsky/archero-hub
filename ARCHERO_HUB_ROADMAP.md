@@ -89,15 +89,29 @@ Notes:
   - 268 Hero Bonus milestone effects.
 - [x] Linked imported effects to their catalog heroes and exact source rows.
 
-### 1. Import workbook data with provenance
+### Completed workbook provenance and clean-source staging
 
-Create a repeatable import pipeline that keeps both raw source data and normalized game data.
+- [x] Preserved every workbook sheet and every non-empty source row:
+  - 50 sheets across all 14 workbooks.
+  - 4,060 raw source rows.
+  - 50 sheet-level source records with workbook SHA-256 fingerprints.
+- [x] Added deterministic, standard-library import generators for repeatable migrations.
+- [x] Imported clean structured data as private, unreviewed staging records:
+  - 87 weapon and hero skin entries.
+  - 298 jewel level effects.
+  - 32 medal entries.
+  - 206 relic effect entries.
+  - 227 hero assist/brave effects.
+- [x] Kept source-derived tables behind Admin-only RLS. Nothing new is publicly shown or used for calculations until curator review.
 
-1. Store each remaining workbook sheet, source filename, row/cell location, import date, and review status.
-2. Preserve raw values before converting the remaining workbook data into application tables.
-3. Normalize only understood records and retain an `unverified` status where the workbook is incomplete or ambiguous.
-4. Link normalized records to existing catalog item slugs whenever possible.
-5. Add a curator review workflow before publishing calculations or numeric stats.
+### 1. Complete remaining workbook normalization
+
+Continue the repeatable import pipeline from the preserved raw source data.
+
+1. Normalize the remaining complex sources: Dragon Statues, Pets, Sigils, Glyphs, Outfits, Hatchery, Estate/Workers, and Quick Raid.
+2. Link reviewed source entries to existing catalog item slugs whenever possible.
+3. Add a curator review workflow before publishing calculations or numeric stats.
+4. Keep workbook source records `unreviewed` until a curator verifies them.
 
 Do not treat every spreadsheet cell as verified game truth. Several workbooks contain mixed tables, formulas, notes, blank formatted rows, and incomplete values.
 
@@ -164,15 +178,15 @@ All workbooks currently live in `~/Downloads/`.
 | Workbook | Key data | Import notes |
 |---|---|---|
 | `Archero All Hero bonuses.xlsx` | All-hero milestone bonuses | Clean hero-by-row table; high-priority normalization source. |
-| `Assist Brave Hero List (LuhCaran, Sloth, Kyle, Chaos).xlsx` | Hero assist and brave effects | Good source for hero progression/assist data. |
-| `Archero.xlsx` | Weapon skins and hero skin bonuses | Includes named skin rows, costs, attack bonuses, and effects. |
+| `Assist Brave Hero List (LuhCaran, Sloth, Kyle, Chaos).xlsx` | Hero assist and brave effects | 227 source-backed effects imported as unreviewed. |
+| `Archero.xlsx` | Weapon skins and hero skin bonuses | 87 source-backed skin entries imported as unreviewed. |
 | `Archero - Dragon Statues.xlsx` | Dragon Statue stats, rarity, level, costs | Multi-sheet/formula-heavy; preserve raw data and normalize carefully. |
 | `Archero Pets.xlsx` | Pet stats, milestones, battle skills, upgrade costs | Use for Pet records; do not merge with Spirits. |
 | `Archero Sigils.xlsx` | Sigil effects, evolution, hidden stats, faith | Mixed blocks; parse with row grouping and source-cell provenance. |
 | `Archero Glyphs.xlsx` | Glyph effects and rarity/upgrade tiers by equipment category | Complex tier blocks; needs a dedicated parser. |
-| `Archero Relics.xlsx` | Relic base, advanced, exclusive, and star effects | High-value normalized source. |
-| `Archero Jewels.xlsx` | Jewel levels and stat progression | Good calculation source once formulas are normalized. |
-| `Archero Medals.xlsx` | Medal triggers, rarity, and enhancements | Straightforward catalog source. |
+| `Archero Relics.xlsx` | Relic base, advanced, exclusive, and star effects | 206 source-backed effect entries imported as unreviewed. |
+| `Archero Jewels.xlsx` | Jewel levels and stat progression | 298 source-backed level effects imported as unreviewed. |
+| `Archero Medals.xlsx` | Medal triggers, rarity, and enhancements | 32 source-backed entries imported as unreviewed. |
 | `Archero Outfit stats.xlsx` | Outfit names, prices, bonuses, level costs, embedded art | Contains 96 embedded outfit PNGs; map each drawing anchor to its outfit row/name before importing. |
 | `Archero Hatchery 4.8.4 (LanderZ, mrb, Shusaku, Abstrusity, LuhCaran).xlsx` | Monster training, zones, bosses, hatchery data | Useful for account progression; separate from Pet and Spirit equipment. |
 | `Archero Workers, Estate.xlsx` | Workers, buildings, estate levels, costs | Account progression and total-stat calculations. |
