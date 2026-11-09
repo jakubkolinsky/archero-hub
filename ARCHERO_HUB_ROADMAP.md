@@ -109,6 +109,7 @@ Notes:
   - 44 dragon rarity-stat rows and 7 dragon metadata records, all linked to catalog dragons.
   - 120 rank-specific upgrade-cost rows.
 - [x] Staged 139 unreviewed Glyph rows across Weapon, Armor, Bracelet, Locket, Ring, Book, and Spirit categories.
+- [x] Staged 635 unreviewed Sigil rows from the Sigils, Faith, and chart sheets.
 - [x] Kept source-derived tables behind Admin-only RLS. Nothing new is publicly shown or used for calculations until curator review.
 
 ### 1. Complete remaining workbook normalization
@@ -189,7 +190,7 @@ All workbooks currently live in `~/Downloads/`.
 | `Archero.xlsx` | Weapon skins and hero skin bonuses | 87 source-backed skin entries imported as unreviewed. |
 | `Archero - Dragon Statues.xlsx` | Dragon Statue stats, rarity, level, costs | 44 rarity-stat rows, 7 metadata records, and 120 costs imported as unreviewed. |
 | `Archero Pets.xlsx` | Pet stats, milestones, battle skills, upgrade costs | 11 profiles and 39 skills imported as unreviewed; never merge with Spirits. |
-| `Archero Sigils.xlsx` | Sigil effects, evolution, hidden stats, faith | Mixed blocks; parse with row grouping and source-cell provenance. |
+| `Archero Sigils.xlsx` | Sigil effects, evolution, hidden stats, faith | 635 rows staged as unreviewed; parse mixed blocks with curator review. |
 | `Archero Glyphs.xlsx` | Glyph effects and rarity/upgrade tiers by equipment category | 139 category-specific rows staged as unreviewed; parse effects after curator review. |
 | `Archero Relics.xlsx` | Relic base, advanced, exclusive, and star effects | 206 source-backed effect entries imported as unreviewed. |
 | `Archero Jewels.xlsx` | Jewel levels and stat progression | 298 source-backed level effects imported as unreviewed. |
