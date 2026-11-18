@@ -54,56 +54,55 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
 
   return (
     <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-8">
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-y border-white/10 py-3">
-        <div className="flex flex-wrap gap-2">
-          {gameModes.map((item) => <button key={item} onClick={() => changeMode(item)} className={`rounded-md px-3 py-1.5 text-xs font-bold uppercase tracking-wide transition ${mode === item ? "bg-[#ff3e47] text-white" : "text-stone-400 hover:bg-white/10 hover:text-white"}`}>{item}</button>)}
+      <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-4 pb-5 pt-7 sm:pt-9">
+        <div className="min-w-0">
+          <p className="text-[11px] font-bold uppercase tracking-[.2em] text-[#ff555e]">Recommended loadout · {mode}</p>
+          <h1 className="mt-1 text-3xl font-black uppercase tracking-tight text-white sm:text-4xl">{recommendedBuild.name}</h1>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-stone-300">{recommendedBuild.description} Tap any slot to swap in what you own.</p>
         </div>
-        <label className="flex cursor-pointer items-center gap-2 text-xs font-semibold text-stone-400"><input checked={ownedOnly} onChange={(event) => setOwnedOnly(event.target.checked)} type="checkbox" className="size-3.5 accent-[#ff3e47]" /> Owned only</label>
+        <div className="border-l-2 border-[#ff3e47] pl-4"><p className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-400">Build score</p><p className="mt-1 text-3xl font-black text-white">{averageScore}<span className="text-sm text-stone-400">/100</span></p></div>
+      </div>
+
+      <div className="mb-5 flex items-center gap-3 border-y border-white/10 py-3">
+        <div className="-mx-1 flex min-w-0 flex-1 snap-x gap-1 overflow-x-auto px-1 [scrollbar-width:none]">
+          {gameModes.map((item) => <button key={item} onClick={() => changeMode(item)} className={`shrink-0 snap-start whitespace-nowrap rounded-md px-3 py-1.5 text-xs font-bold uppercase tracking-wide transition ${mode === item ? "bg-[#ff3e47] text-white" : "text-stone-400 hover:bg-white/10 hover:text-white"}`}>{item}</button>)}
+        </div>
+        <label className="flex shrink-0 cursor-pointer items-center gap-2 text-xs font-semibold text-stone-300"><input checked={ownedOnly} onChange={(event) => setOwnedOnly(event.target.checked)} type="checkbox" className="size-3.5 accent-[#ff3e47]" /> Owned only</label>
       </div>
 
       <div className="grid gap-5 xl:grid-cols-[1fr_290px]">
-        <section className="border border-white/10 bg-[#242424] p-4 shadow-2xl shadow-black/20 sm:p-6">
-          <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/10 pb-5">
-            <div><p className="text-[11px] font-bold uppercase tracking-[.2em] text-[#ff555e]">Recommended loadout</p><h1 className="mt-1 text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">{recommendedBuild.name}</h1><p className="mt-2 max-w-xl text-sm text-stone-400">{recommendedBuild.description}</p></div>
-            <div className="border-l-2 border-[#ff3e47] pl-4 text-right"><p className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-500">Build score</p><p className="mt-1 text-3xl font-black text-white">{averageScore}<span className="text-sm text-stone-500">/100</span></p></div>
-          </div>
+        <section className="relative overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_50%_38%,rgba(255,154,70,.16),transparent_30%),radial-gradient(circle_at_50%_70%,rgba(77,202,183,.14),transparent_40%),#161616] p-3 shadow-2xl shadow-black/20 sm:p-5">
+          <div className="grid gap-3 sm:grid-cols-[minmax(120px,1fr)_minmax(240px,1.6fr)_minmax(120px,1fr)] sm:gap-4">
+            <div className="order-2 grid grid-cols-4 gap-2 sm:order-none sm:grid-cols-1 sm:gap-3">
+              <SlotTile slotId="weapon" />
+              <SlotTile slotId="dragon" />
+              <SlotTile slotId="pet-one" />
+              <SlotTile slotId="bracelet" />
+            </div>
 
-          <div className="relative mt-6 overflow-hidden border border-white/10 bg-[radial-gradient(circle_at_50%_42%,rgba(255,154,70,.2),transparent_27%),radial-gradient(circle_at_50%_62%,rgba(77,202,183,.2),transparent_36%),#141414] p-3 sm:p-5">
-            <div className="pointer-events-none absolute inset-x-1/4 top-[18%] aspect-square rounded-full border border-[#ffd261]/20 bg-[#ffd261]/5 blur-3xl" />
-            <div className="relative grid gap-3 sm:grid-cols-[minmax(132px,1fr)_minmax(220px,1.45fr)_minmax(132px,1fr)]">
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
-                <ArenaSlot slotId="weapon" />
-                <ArenaSlot slotId="dragon" />
-                <ArenaSlot slotId="pet-one" />
-                <ArenaSlot slotId="bracelet" />
+            <div className="order-1 flex flex-col gap-3 sm:order-none">
+              <HeroCard item={catalogItems.find((catalogItem) => catalogItem.id === slots.hero)} unavailable={ownedOnly && !owned.includes(slots.hero)} onClick={() => setSelectedSlot("hero")} />
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                <SlotTile slotId="book" />
+                <SlotTile slotId="ring-two" />
               </div>
+              <div className="grid grid-cols-2 gap-3 border border-white/10 bg-black/30 px-4 py-3 text-xs"><Stat label="Attack" value="Needs reviewed data" /><Stat label="HP" value="Needs reviewed data" /></div>
+            </div>
 
-              <div className="flex min-h-[420px] flex-col justify-center border-x border-white/10 px-3 py-5 sm:min-h-[590px] sm:px-7">
-                <p className="text-center text-[10px] font-bold uppercase tracking-[.24em] text-[#ffbe63]">Hero center</p>
-                <LoadoutSlot slot={slotDefinitions[0]} item={catalogItems.find((catalogItem) => catalogItem.id === slots.hero)} unavailable={ownedOnly && !owned.includes(slots.hero)} onClick={() => setSelectedSlot("hero")} large />
-                <div className="mt-4 grid grid-cols-2 gap-3">
-                  <ArenaSlot slotId="book" />
-                  <ArenaSlot slotId="ring-two" />
-                </div>
-                <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/10 pt-4 text-xs"><Stat label="Attack" value="Pending" /><Stat label="HP" value="Pending" /></div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
-                <ArenaSlot slotId="armor" />
-                <ArenaSlot slotId="ring-one" />
-                <ArenaSlot slotId="pet-two" />
-                <ArenaSlot slotId="locket" />
-              </div>
+            <div className="order-3 grid grid-cols-4 gap-2 sm:order-none sm:grid-cols-1 sm:gap-3">
+              <SlotTile slotId="armor" />
+              <SlotTile slotId="ring-one" />
+              <SlotTile slotId="pet-two" />
+              <SlotTile slotId="locket" />
             </div>
           </div>
         </section>
 
         <aside className="border border-white/10 bg-[#202020] p-5">
           <p className="text-[11px] font-bold uppercase tracking-[.18em] text-[#ff555e]">Build brief</p>
-          <h2 className="mt-2 text-xl font-black uppercase text-white">{mode}</h2>
-          <div className="mt-6 space-y-5 text-sm"><div><p className="font-bold text-[#8dda93]">Strengths</p><p className="mt-1 leading-6 text-stone-400">{recommendedBuild.strengths}</p></div><div><p className="font-bold text-[#ff7d76]">Watch out</p><p className="mt-1 leading-6 text-stone-400">{recommendedBuild.weaknesses}</p></div></div>
-          <div className="mt-7 border-y border-white/10 py-4"><p className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-500">Inventory</p><p className="mt-1 text-sm font-bold text-white">{owned.length} items marked owned</p><p className="mt-1 text-xs leading-5 text-stone-500">Choose any slot to browse items. Your inventory stays in this browser.</p></div>
-          <p className="mt-5 text-xs leading-5 text-stone-500">Hover an item for its current tier, score, and verified notes. Attack and HP calculations will unlock as the stat catalog is reviewed.</p>
+          <div className="mt-4 space-y-5 text-sm"><div><p className="font-bold text-[#8dda93]">Strengths</p><p className="mt-1 leading-6 text-stone-300">{recommendedBuild.strengths}</p></div><div><p className="font-bold text-[#ff7d76]">Watch out</p><p className="mt-1 leading-6 text-stone-300">{recommendedBuild.weaknesses}</p></div></div>
+          <div className="mt-7 border-y border-white/10 py-4"><p className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-400">Inventory</p><p className="mt-1 text-sm font-bold text-white">{owned.length} items marked owned</p><p className="mt-1 text-xs leading-5 text-stone-400">Choose any slot to browse items. Your inventory stays in this browser.</p></div>
+          <p className="mt-5 text-xs leading-5 text-stone-400">Attack and HP will appear here once the stat catalog is reviewed.</p>
         </aside>
       </div>
 
@@ -116,21 +115,60 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
     </section>
   );
 
-  function ArenaSlot({ slotId }: { slotId: string }) {
+  function SlotTile({ slotId }: { slotId: string }) {
     const slot = slotDefinitions.find((definition) => definition.id === slotId);
     if (!slot) return null;
 
     const item = catalogItems.find((catalogItem) => catalogItem.id === slots[slot.id]);
-    return <LoadoutSlot slot={slot} item={item} unavailable={item ? ownedOnly && !owned.includes(item.id) : false} onClick={() => setSelectedSlot(slot.id)} />;
+    return <LoadoutTile slot={slot} item={item} unavailable={item ? ownedOnly && !owned.includes(item.id) : false} onClick={() => setSelectedSlot(slot.id)} />;
   }
 }
 
-function LoadoutSlot({ slot, item, unavailable, onClick, large = false }: { slot: typeof slotDefinitions[number]; item: Item | undefined; unavailable: boolean; onClick: () => void; large?: boolean }) {
-  return <button onClick={onClick} className={`group relative mt-3 w-full border p-3 text-left transition hover:-translate-y-0.5 hover:border-[#ff555e] ${large ? "min-h-44" : "min-h-28"} ${unavailable ? "border-[#ff555e]/60 bg-[#ff555e]/5" : "border-white/10 bg-[#111]"}`}>
-    <span className="text-[9px] font-bold uppercase tracking-[.16em] text-stone-500">{slot.label}</span>
-    {item ? <div className={`mt-3 flex ${large ? "items-center gap-4" : "gap-2"} `}><ItemArt item={item} size={large ? 72 : 42} /><span className="min-w-0"><span className={`${large ? "text-lg" : "text-xs"} block truncate font-bold text-white`}>{item.name}</span><span className="mt-1 block text-[10px] text-stone-500">{item.tier} · {item.score} score</span></span></div> : <span className="mt-8 block text-xs text-stone-500">Choose item</span>}
-    {item && <ItemTooltip item={item} />}
+const tierFrames: Record<Item["tier"], string> = {
+  SS: "border-[#ff555e]",
+  S: "border-[#ff7d76]",
+  A: "border-[#ffbe63]",
+  B: "border-[#e6df64]",
+  C: "border-[#8dda93]",
+  D: "border-[#6fc0e7]",
+  Unranked: "border-stone-600",
+};
+
+function HeroCard({ item, unavailable, onClick }: { item: Item | undefined; unavailable: boolean; onClick: () => void }) {
+  return <button onClick={onClick} aria-label={item ? `Hero: ${item.name}. Change hero` : "Choose hero"} className={`group relative flex w-full items-center gap-4 border p-4 text-left transition hover:border-[#ff555e] sm:flex-col sm:gap-3 sm:py-6 sm:text-center ${unavailable ? "border-[#ff555e]/60 bg-[#ff555e]/5" : "border-white/10 bg-black/40"}`}>
+    {item ? <>
+      <span className={`grid size-24 shrink-0 place-items-center border-2 bg-[#202020] sm:size-36 ${tierFrames[item.tier]}`}><ItemArt item={item} size={128} className="size-20 sm:size-32" /></span>
+      <span className="min-w-0">
+        <span className="block text-[10px] font-bold uppercase tracking-[.2em] text-[#ffbe63]">Hero</span>
+        <span className="mt-1 block text-2xl font-black uppercase tracking-tight text-white">{item.name}</span>
+        <span className="mt-1 block text-xs text-stone-400">{item.tier} tier · {item.score} score</span>
+      </span>
+      <ItemTooltip item={item} />
+    </> : <EmptyArt label="Hero" large />}
   </button>;
+}
+
+function LoadoutTile({ slot, item, unavailable, onClick }: { slot: typeof slotDefinitions[number]; item: Item | undefined; unavailable: boolean; onClick: () => void }) {
+  if (!item) {
+    return <button onClick={onClick} aria-label={`Add ${slot.label}`} className="flex aspect-square w-full flex-col items-center justify-center gap-1 border border-dashed border-white/20 bg-white/[.02] p-2 text-center transition hover:border-[#ff555e] hover:bg-[#ff555e]/5 sm:aspect-auto sm:min-h-32">
+      <EmptyArt label={slot.label} />
+    </button>;
+  }
+
+  return <button onClick={onClick} aria-label={`${slot.label}: ${item.name}. Change ${slot.label}`} className={`group relative flex w-full flex-col items-center gap-1.5 border p-2 text-center transition hover:-translate-y-0.5 hover:border-[#ff555e] sm:min-h-32 sm:p-3 ${unavailable ? "border-[#ff555e]/60 bg-[#ff555e]/5" : "border-white/10 bg-black/40"}`}>
+    <span className="hidden text-[10px] font-bold uppercase tracking-[.16em] text-stone-400 sm:block">{slot.label}</span>
+    <span className={`grid size-14 shrink-0 place-items-center border-2 bg-[#202020] sm:size-16 ${tierFrames[item.tier]}`}><ItemArt item={item} size={64} className="size-11 sm:size-13" /></span>
+    <span className="line-clamp-2 w-full text-[11px] font-bold leading-tight text-white sm:text-xs">{item.name}</span>
+    <span className="hidden text-[10px] text-stone-400 sm:block">{item.tier} · {item.score}</span>
+    <ItemTooltip item={item} />
+  </button>;
+}
+
+function EmptyArt({ label, large = false }: { label: string; large?: boolean }) {
+  return <span className={`flex flex-col items-center gap-1 text-stone-400 ${large ? "w-full py-8" : ""}`}>
+    <span aria-hidden className={`grid place-items-center rounded-full border border-dashed border-white/25 font-light leading-none ${large ? "size-16 text-4xl" : "size-9 text-2xl"}`}>+</span>
+    <span className="text-[10px] font-bold uppercase tracking-[.12em] sm:text-[11px]">{label}</span>
+  </span>;
 }
 
 function InventoryItem({ item, owned, onChoose, onToggleOwned }: { item: Item; owned: boolean; onChoose: () => void; onToggleOwned: () => void }) {
@@ -138,9 +176,9 @@ function InventoryItem({ item, owned, onChoose, onToggleOwned }: { item: Item; o
   </article>;
 }
 
-function ItemArt({ item, size }: { item: Item; size: number }) {
-  if (item.imageUrl) return <Image src={item.imageUrl} alt="" width={size} height={size} className="shrink-0 object-contain" />;
-  return <span style={{ width: size, height: size }} className={`grid shrink-0 place-items-center bg-gradient-to-br ${item.accent} text-lg font-black text-white`}>{item.name.charAt(0)}</span>;
+function ItemArt({ item, size, className }: { item: Item; size: number; className?: string }) {
+  if (item.imageUrl) return <Image src={item.imageUrl} alt="" width={size} height={size} className={`shrink-0 object-contain ${className ?? ""}`} />;
+  return <span style={className ? undefined : { width: size, height: size }} className={`grid shrink-0 place-items-center bg-gradient-to-br ${item.accent} text-lg font-black text-white ${className ?? ""}`}>{item.name.charAt(0)}</span>;
 }
 
 function ItemTooltip({ item }: { item: Item }) {
@@ -148,5 +186,5 @@ function ItemTooltip({ item }: { item: Item }) {
 }
 
 function Stat({ label, value }: { label: string; value: string }) {
-  return <span><span className="block text-[10px] font-bold uppercase tracking-wide text-stone-500">{label}</span><span className="mt-1 block font-black text-stone-300">{value}</span></span>;
+  return <span><span className="block text-[10px] font-bold uppercase tracking-wide text-stone-400">{label}</span><span className="mt-1 block text-[11px] font-bold text-stone-300">{value}</span></span>;
 }

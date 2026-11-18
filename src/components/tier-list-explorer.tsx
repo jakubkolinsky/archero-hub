@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Category, Item } from "@/lib/catalog";
-import { PublishedTierList, PublishedTierRanking } from "@/lib/catalog-database";
+import type { PublishedTierList, PublishedTierRanking } from "@/lib/catalog-database";
 
 const boardCategories: { label: string; category: Category }[] = [
   { label: "Weapons", category: "Weapon" },

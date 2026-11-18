@@ -1,5 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { Category, Item, items as curatedItems } from "@/lib/catalog";
+import catalogSnapshot from "@/lib/catalog-snapshot.json";
 
 type CatalogRow = {
   id: string;
@@ -92,6 +93,24 @@ function toCatalogItem(row: CatalogRow): Item {
   };
 }
 
+// Supabase requests give up after this long so a paused or slow database falls
+// back to the snapshot instead of hanging the page.
+const DATABASE_TIMEOUT_MS = 4000;
+
+export type CatalogSource = "live" | "snapshot";
+
+type TierCatalog = {
+  catalogItems: Item[];
+  publishedTierLists: PublishedTierList[];
+  publishedTierRankings: PublishedTierRanking[];
+};
+
+type Snapshot = {
+  items: CatalogRow[];
+  tierLists: TierListRow[];
+  tierRankings: TierRankingRow[];
+};
+
 function createCatalogClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
@@ -100,10 +119,44 @@ function createCatalogClient() {
     throw new Error("Missing Supabase environment variables.");
   }
 
-  return createClient(url, publishableKey);
+  return createClient(url, publishableKey, {
+    global: { fetch: (input, init) => fetch(input, { ...init, signal: AbortSignal.timeout(DATABASE_TIMEOUT_MS) }) },
+  });
 }
 
-export async function getCatalogItems(): Promise<Item[]> {
+function mergeWithCurated(rows: CatalogRow[]): Item[] {
+  const catalogItems = new Map(curatedItems.map((item) => [item.id, item]));
+
+  for (const item of rows.map(toCatalogItem)) {
+    catalogItems.set(item.id, item);
+  }
+
+  return [...catalogItems.values()];
+}
+
+function toTierLists(rows: TierListRow[]): PublishedTierList[] {
+  return rows.map((tierList) => ({ id: tierList.id, title: tierList.title, gameVersion: tierList.game_version }));
+}
+
+function toTierRankings(rows: TierRankingRow[]): PublishedTierRanking[] {
+  return rows.map((ranking) => ({
+    itemId: ranking.item_id,
+    tierListId: ranking.tier_list_id,
+    tier: ranking.tier,
+    score: ranking.score,
+  }));
+}
+
+function snapshotTierCatalog(): TierCatalog {
+  const snapshot = catalogSnapshot as Snapshot;
+  return {
+    catalogItems: mergeWithCurated(snapshot.items),
+    publishedTierLists: toTierLists(snapshot.tierLists),
+    publishedTierRankings: toTierRankings(snapshot.tierRankings),
+  };
+}
+
+async function loadLiveCatalogItems(): Promise<Item[]> {
   const supabase = createCatalogClient();
   const { data, error } = await supabase
     .from("items")
@@ -115,24 +168,13 @@ export async function getCatalogItems(): Promise<Item[]> {
     throw new Error(`Unable to load the catalog: ${error.message}`);
   }
 
-  const importedItems = (data as CatalogRow[]).map(toCatalogItem);
-  const catalogItems = new Map(curatedItems.map((item) => [item.id, item]));
-
-  for (const item of importedItems) {
-    catalogItems.set(item.id, item);
-  }
-
-  return [...catalogItems.values()];
+  return mergeWithCurated(data as CatalogRow[]);
 }
 
-export async function getTierListCatalog(): Promise<{
-  catalogItems: Item[];
-  publishedTierLists: PublishedTierList[];
-  publishedTierRankings: PublishedTierRanking[];
-}> {
+async function loadLiveTierCatalog(): Promise<TierCatalog> {
   const supabase = createCatalogClient();
   const [catalogItems, tierListsResult] = await Promise.all([
-    getCatalogItems(),
+    loadLiveCatalogItems(),
     supabase
       .from("tier_lists")
       .select("id, title, game_version")
@@ -144,11 +186,7 @@ export async function getTierListCatalog(): Promise<{
     throw new Error(`Unable to load tier lists: ${tierListsResult.error.message}`);
   }
 
-  const tierLists = (tierListsResult.data as TierListRow[]).map((tierList) => ({
-    id: tierList.id,
-    title: tierList.title,
-    gameVersion: tierList.game_version,
-  }));
+  const tierLists = toTierLists(tierListsResult.data as TierListRow[]);
 
   if (!tierLists.length) {
     return { catalogItems, publishedTierLists: [], publishedTierRankings: [] };
@@ -163,14 +201,25 @@ export async function getTierListCatalog(): Promise<{
     throw new Error(`Unable to load tier rankings: ${error.message}`);
   }
 
-  return {
-    catalogItems,
-    publishedTierLists: tierLists,
-    publishedTierRankings: (data as TierRankingRow[]).map((ranking) => ({
-      itemId: ranking.item_id,
-      tierListId: ranking.tier_list_id,
-      tier: ranking.tier,
-      score: ranking.score,
-    })),
-  };
+  return { catalogItems, publishedTierLists: tierLists, publishedTierRankings: toTierRankings(data as TierRankingRow[]) };
+}
+
+/** Live catalog, or the bundled snapshot when the database is unavailable. */
+export async function getCatalogItems(): Promise<{ catalogItems: Item[]; source: CatalogSource }> {
+  try {
+    return { catalogItems: await loadLiveCatalogItems(), source: "live" };
+  } catch (error) {
+    console.error("Catalog database unavailable, using snapshot:", error);
+    return { catalogItems: snapshotTierCatalog().catalogItems, source: "snapshot" };
+  }
+}
+
+/** Live tier lists, or the bundled snapshot when the database is unavailable. */
+export async function getTierListCatalog(): Promise<TierCatalog & { source: CatalogSource }> {
+  try {
+    return { ...(await loadLiveTierCatalog()), source: "live" };
+  } catch (error) {
+    console.error("Tier list database unavailable, using snapshot:", error);
+    return { ...snapshotTierCatalog(), source: "snapshot" };
+  }
 }

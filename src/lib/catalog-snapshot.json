@@ -1,0 +1,1596 @@
+{
+ "source": "Live Supabase catalog exported 2026-11-18",
+ "items": [
+  {
+   "id": "agile-locket",
+   "name": "Agile Locket",
+   "slug": "agile-locket",
+   "image_url": "/images/equipment/agile-locket.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "amethyne-turtle",
+   "name": "Amethyne Turtle",
+   "slug": "amethyne-turtle",
+   "image_url": "/images/pets/amethyne-turtle.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "angel-locket",
+   "name": "Angel Locket",
+   "slug": "angel-locket",
+   "image_url": "/images/equipment/angel-locket.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "antiquated-sword",
+   "name": "Antiquated Sword",
+   "slug": "antiquated-sword",
+   "image_url": "/images/equipment/antiquated-sword.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "aquea",
+   "name": "Aquea",
+   "slug": "aquea",
+   "image_url": "/images/heroes/aquea.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "arcane-archer",
+   "name": "Arcane Archer",
+   "slug": "arcane-archer",
+   "image_url": "/images/equipment/arcane-archer.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "arcanum-of-time",
+   "name": "Arcanum of Time",
+   "slug": "arcanum-of-time",
+   "image_url": "/images/equipment/arcanum-of-time.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "art-of-combat",
+   "name": "Art of Combat",
+   "slug": "art-of-combat",
+   "image_url": "/images/equipment/art-of-combat.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "atreus",
+   "name": "Atreus",
+   "slug": "atreus",
+   "image_url": "/images/heroes/atreus.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "auspicious-mistarion",
+   "name": "Auspicious Mistarion",
+   "slug": "auspicious-mistarion",
+   "image_url": "/images/dragons/auspicious-mistarion.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "ayana",
+   "name": "Ayana",
+   "slug": "ayana",
+   "image_url": "/images/heroes/ayana.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "bear-ring",
+   "name": "Bear Ring",
+   "slug": "bear-ring",
+   "image_url": "/images/equipment/bear-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "blazing-bracelet",
+   "name": "Blazing Bracelet",
+   "slug": "blazing-bracelet",
+   "image_url": "/images/equipment/blazing-bracelet.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "blazo",
+   "name": "Blazo",
+   "slug": "blazo",
+   "image_url": "/images/heroes/blazo.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "bloodthirsty-locket",
+   "name": "Bloodthirsty Locket",
+   "slug": "bloodthirsty-locket",
+   "image_url": "/images/equipment/bloodthirsty-locket.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "bobo",
+   "name": "Bobo",
+   "slug": "bobo",
+   "image_url": "/images/heroes/bobo.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "bone-warrior",
+   "name": "Bone Warrior",
+   "slug": "bone-warrior",
+   "image_url": "/images/equipment/bone-warrior.png",
+   "category": "spirit",
+   "description": null
+  },
+  {
+   "id": "bonnie",
+   "name": "Bonnie",
+   "slug": "bonnie",
+   "image_url": "/images/heroes/bonnie.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "brave-bow",
+   "name": "Brave Bow",
+   "slug": "brave-bow",
+   "image_url": "/images/equipment/brave-bow.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "bright-robe",
+   "name": "Bright Robe",
+   "slug": "bright-robe",
+   "image_url": "/images/equipment/bright-robe.png",
+   "category": "armor",
+   "description": null
+  },
+  {
+   "id": "brightspear",
+   "name": "Brightspear",
+   "slug": "brightspear",
+   "image_url": "/images/equipment/brightspear.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "bull-ring",
+   "name": "Bull Ring",
+   "slug": "bull-ring",
+   "image_url": "/images/equipment/bull-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "bulletproof-locket",
+   "name": "Bulletproof Locket",
+   "slug": "bulletproof-locket",
+   "image_url": "/images/equipment/bulletproof-locket.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "celestial-band",
+   "name": "Celestial Band",
+   "slug": "celestial-band",
+   "image_url": "/images/equipment/celestial-band.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "celestial-bracer",
+   "name": "Celestial Bracer",
+   "slug": "celestial-bracer",
+   "image_url": "/images/equipment/celestial-bracer-corrected.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "celestial-codex",
+   "name": "Celestial Codex",
+   "slug": "celestial-codex",
+   "image_url": "/images/equipment/celestial-codex.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "celestial-might",
+   "name": "Celestial Might",
+   "slug": "celestial-might",
+   "image_url": "/images/equipment/celestial-might.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "celestial-talisman",
+   "name": "Celestial Talisman",
+   "slug": "celestial-talisman",
+   "image_url": "/images/equipment/celestial-talisman.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "celestial-warplate",
+   "name": "Celestial Warplate",
+   "slug": "celestial-warplate",
+   "image_url": "/images/equipment/celestial-warplate.png",
+   "category": "armor",
+   "description": null
+  },
+  {
+   "id": "counterattack-charm",
+   "name": "Counterattack Charm",
+   "slug": "counterattack-charm",
+   "image_url": "/images/equipment/counterattack-charm.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "death-scythe",
+   "name": "Death Scythe",
+   "slug": "death-scythe",
+   "image_url": "/images/equipment/death-scythe.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "demon-blade-rain",
+   "name": "Demon Blade Rain",
+   "slug": "demon-blade-rain",
+   "image_url": "/images/equipment/demon-blade-rain.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "demon-king-bracelet",
+   "name": "Demon King Bracelet",
+   "slug": "demon-king-bracelet",
+   "image_url": "/images/equipment/demon-king-bracelet.png",
+   "category": "bracelet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "demon-king-grimoire",
+   "name": "Demon King Grimoire",
+   "slug": "demon-king-grimoire",
+   "image_url": "/images/equipment/demon-king-grimoire.png",
+   "category": "book",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "demon-king-ring",
+   "name": "Demon King Ring",
+   "slug": "demon-king-ring",
+   "image_url": "/images/equipment/demon-king-ring.png",
+   "category": "ring",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "demon-king-spearshield",
+   "name": "Demon King Spearshield",
+   "slug": "demon-king-spearshield",
+   "image_url": "/images/equipment/demon-king-spearshield.png",
+   "category": "weapon",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "demon-king-talisman",
+   "name": "Demon King Talisman",
+   "slug": "demon-king-talisman",
+   "image_url": "/images/equipment/demon-king-talisman.png",
+   "category": "locket",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "demon-king-warplate",
+   "name": "Demon King Warplate",
+   "slug": "demon-king-warplate",
+   "image_url": "/images/equipment/demon-king-warplate.png",
+   "category": "armor",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "dominus",
+   "name": "Dominus",
+   "slug": "dominus",
+   "image_url": "/images/dragons/dominus.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "dragon-girl",
+   "name": "Dragon Girl",
+   "slug": "dragon-girl",
+   "image_url": "/images/heroes/dragon-girl.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "dragon-ring",
+   "name": "Dragon Ring",
+   "slug": "dragon-ring",
+   "image_url": "/images/equipment/dragon-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "elaine",
+   "name": "Elaine",
+   "slug": "elaine",
+   "image_url": "/images/heroes/elaine.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "elf",
+   "name": "Elf",
+   "slug": "elf",
+   "image_url": "/images/equipment/elf.png",
+   "category": "spirit",
+   "description": null
+  },
+  {
+   "id": "empyrean-unicorn",
+   "name": "Empyrean Unicorn",
+   "slug": "empyrean-unicorn",
+   "image_url": "/images/pets/empyrean-unicorn.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "enlightenment",
+   "name": "Enlightenment",
+   "slug": "enlightenment",
+   "image_url": "/images/equipment/enlightenment.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "expedition-bracelet",
+   "name": "Expedition Bracelet",
+   "slug": "expedition-bracelet",
+   "image_url": "/images/equipment/expedition-bracelet.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "expedition-fist",
+   "name": "Expedition Fist",
+   "slug": "expedition-fist",
+   "image_url": "/images/equipment/expedition-fist.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "expedition-locket",
+   "name": "Expedition Locket",
+   "slug": "expedition-locket",
+   "image_url": "/images/equipment/expedition-locket.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "expedition-plate",
+   "name": "Expedition Plate",
+   "slug": "expedition-plate",
+   "image_url": "/images/equipment/expedition-plate.png",
+   "category": "armor",
+   "description": null
+  },
+  {
+   "id": "expedition-ring",
+   "name": "Expedition Ring",
+   "slug": "expedition-ring",
+   "image_url": "/images/equipment/expedition-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "expedition-spellbook",
+   "name": "Expedition Spellbook",
+   "slug": "expedition-spellbook",
+   "image_url": "/images/equipment/expedition-spellbook.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "falcon-ring",
+   "name": "Falcon Ring",
+   "slug": "falcon-ring",
+   "image_url": "/images/equipment/falcon-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "ferron",
+   "name": "Ferron",
+   "slug": "ferron",
+   "image_url": "/images/dragons/ferron.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "fiery-frog",
+   "name": "Fiery Frog",
+   "slug": "fiery-frog",
+   "image_url": "/images/pets/fiery-frog.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "firebask-phoenix",
+   "name": "Firebask Phoenix",
+   "slug": "firebask-phoenix",
+   "image_url": "/images/pets/firebask-phoenix.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "flaming-ghost",
+   "name": "Flaming Ghost",
+   "slug": "flaming-ghost",
+   "image_url": "/images/equipment/flaming-ghost.png",
+   "category": "spirit",
+   "description": null
+  },
+  {
+   "id": "frothy-capy",
+   "name": "Frothy Capy",
+   "slug": "frothy-capy",
+   "image_url": "/images/pets/frothy-capy.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "frozen-bracelet",
+   "name": "Frozen Bracelet",
+   "slug": "frozen-bracelet",
+   "image_url": "/images/equipment/frozen-bracelet.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "furious-blitzbeak",
+   "name": "Furious Blitzbeak",
+   "slug": "furious-blitzbeak",
+   "image_url": "/images/pets/furious-blitzbeak.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "gale-force",
+   "name": "Gale Force",
+   "slug": "gale-force",
+   "image_url": "/images/equipment/gale-force.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "geogon",
+   "name": "Geogon",
+   "slug": "geogon",
+   "image_url": "/images/dragons/geogon.png",
+   "category": "dragon",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "giants-contract",
+   "name": "Giants Contract",
+   "slug": "giants-contract",
+   "image_url": "/images/equipment/giants-contract.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "glacion",
+   "name": "Glacion",
+   "slug": "glacion",
+   "image_url": "/images/dragons/glacion.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "golden-chestplate",
+   "name": "Golden Chestplate",
+   "slug": "golden-chestplate",
+   "image_url": "/images/equipment/golden-chestplate.png",
+   "category": "armor",
+   "description": null
+  },
+  {
+   "id": "gugu",
+   "name": "Gugu",
+   "slug": "gugu",
+   "image_url": "/images/heroes/gugu.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "helix",
+   "name": "Helix",
+   "slug": "helix",
+   "image_url": "/images/heroes/helix.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "ice-realm",
+   "name": "Ice Realm",
+   "slug": "ice-realm",
+   "image_url": "/images/equipment/ice-realm.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "ignitus-bird",
+   "name": "Ignitus Bird",
+   "slug": "ignitus-bird",
+   "image_url": "/images/pets/ignitus-bird.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "infernox",
+   "name": "Infernox",
+   "slug": "infernox",
+   "image_url": "/images/dragons/infernox.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "invincible-bracelet",
+   "name": "Invincible Bracelet",
+   "slug": "invincible-bracelet",
+   "image_url": "/images/equipment/invincible-bracelet.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "iris",
+   "name": "Iris",
+   "slug": "iris",
+   "image_url": "/images/heroes/iris.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "iron-locket",
+   "name": "Iron Locket",
+   "slug": "iron-locket",
+   "image_url": "/images/equipment/iron-locket.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "jadeon",
+   "name": "Jadeon",
+   "slug": "jadeon",
+   "image_url": "/images/dragons/jadeon.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "king-arthur",
+   "name": "King Arthur",
+   "slug": "king-arthur",
+   "image_url": "/images/heroes/king-arthur.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "laser-bat",
+   "name": "Laser Bat",
+   "slug": "laser-bat",
+   "image_url": "/images/equipment/laser-bat.png",
+   "category": "spirit",
+   "description": null
+  },
+  {
+   "id": "lina",
+   "name": "Lina",
+   "slug": "lina",
+   "image_url": "/images/heroes/lina.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "lion-ring",
+   "name": "Lion Ring",
+   "slug": "lion-ring",
+   "image_url": "/images/equipment/lion-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "living-bomb",
+   "name": "Living Bomb",
+   "slug": "living-bomb",
+   "image_url": "/images/equipment/living-bomb.png",
+   "category": "spirit",
+   "description": null
+  },
+  {
+   "id": "magmar",
+   "name": "Magmar",
+   "slug": "magmar",
+   "image_url": "/images/dragons/magmar.png",
+   "category": "dragon",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "melinda",
+   "name": "Melinda",
+   "slug": "melinda",
+   "image_url": "/images/heroes/melinda.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "meowgik",
+   "name": "Meowgik",
+   "slug": "meowgik",
+   "image_url": "/images/heroes/meowgik.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "mini-atreus",
+   "name": "Mini Atreus",
+   "slug": "mini-atreus",
+   "image_url": "/images/equipment/mini-atreus.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "mole",
+   "name": "Mole",
+   "slug": "mole",
+   "image_url": "/images/pets/mole.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "necrogon",
+   "name": "Necrogon",
+   "slug": "necrogon",
+   "image_url": "/images/dragons/necrogon.png",
+   "category": "dragon",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "nightstar-cat",
+   "name": "Nightstar Cat",
+   "slug": "nightstar-cat",
+   "image_url": "/images/pets/nightstar-cat.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "noisy-owl",
+   "name": "Noisy Owl",
+   "slug": "noisy-owl",
+   "image_url": "/images/equipment/noisy-owl.png",
+   "category": "spirit",
+   "description": null
+  },
+  {
+   "id": "noxion",
+   "name": "Noxion",
+   "slug": "noxion",
+   "image_url": "/images/dragons/noxion.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "onir",
+   "name": "Onir",
+   "slug": "onir",
+   "image_url": "/images/heroes/onir.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "ophelia",
+   "name": "Ophelia",
+   "slug": "ophelia",
+   "image_url": "/images/heroes/ophelia.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "phantom-cloak",
+   "name": "Phantom Cloak",
+   "slug": "phantom-cloak",
+   "image_url": "/images/equipment/phantom-cloak.png",
+   "category": "armor",
+   "description": null
+  },
+  {
+   "id": "phoren",
+   "name": "Phoren",
+   "slug": "phoren",
+   "image_url": "/images/heroes/phoren.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "piercer-locket",
+   "name": "Piercer Locket",
+   "slug": "piercer-locket",
+   "image_url": "/images/equipment/piercer-locket.png",
+   "category": "locket",
+   "description": null
+  },
+  {
+   "id": "polar-penguin-king",
+   "name": "Polar Penguin King",
+   "slug": "polar-penguin-king",
+   "image_url": "/images/pets/polar-penguin-king.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "quickshot-bracelet",
+   "name": "Quickshot Bracelet",
+   "slug": "quickshot-bracelet",
+   "image_url": "/images/equipment/quickshot-bracelet.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "raidara",
+   "name": "Raidara",
+   "slug": "raidara",
+   "image_url": "/images/heroes/raidara.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "rolla",
+   "name": "Rolla",
+   "slug": "rolla",
+   "image_url": "/images/heroes/rolla.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "ryan",
+   "name": "Ryan",
+   "slug": "ryan",
+   "image_url": "/images/heroes/ryan.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "saw-blade",
+   "name": "Saw Blade",
+   "slug": "saw-blade",
+   "image_url": "/images/equipment/saw-blade.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "scythe-mage",
+   "name": "Scythe Mage",
+   "slug": "scythe-mage",
+   "image_url": "/images/equipment/scythe-mage.png",
+   "category": "spirit",
+   "description": null
+  },
+  {
+   "id": "serpent-ring",
+   "name": "Serpent Ring",
+   "slug": "serpent-ring",
+   "image_url": "/images/equipment/serpent-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "shade",
+   "name": "Shade",
+   "slug": "shade",
+   "image_url": "/images/heroes/shade.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "shadex",
+   "name": "Shadex",
+   "slug": "shadex",
+   "image_url": "/images/dragons/shadex.png",
+   "category": "dragon",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "shadow-robe",
+   "name": "Shadow Robe",
+   "slug": "shadow-robe",
+   "image_url": "/images/equipment/shadow-robe.png",
+   "category": "armor",
+   "description": null
+  },
+  {
+   "id": "shari",
+   "name": "Shari",
+   "slug": "shari",
+   "image_url": "/images/heroes/shari.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "shield-bracelet",
+   "name": "Shield Bracelet",
+   "slug": "shield-bracelet",
+   "image_url": "/images/equipment/shield-bracelet.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "shingen",
+   "name": "Shingen",
+   "slug": "shingen",
+   "image_url": "/images/heroes/shingen.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "spectre-book",
+   "name": "Spectre Book",
+   "slug": "spectre-book",
+   "image_url": "/images/equipment/spectre-book.png",
+   "category": "book",
+   "description": null
+  },
+  {
+   "id": "spirit-butterfly",
+   "name": "Spirit Butterfly",
+   "slug": "spirit-butterfly",
+   "image_url": "/images/pets/spirit-butterfly.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "split-bracelet",
+   "name": "Split Bracelet",
+   "slug": "split-bracelet",
+   "image_url": "/images/equipment/split-bracelet.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "stalker-staff",
+   "name": "Stalker Staff",
+   "slug": "stalker-staff",
+   "image_url": "/images/equipment/stalker-staff.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "starrite",
+   "name": "Starrite",
+   "slug": "starrite",
+   "image_url": "/images/dragons/starrite.png",
+   "category": "dragon",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "stella",
+   "name": "Stella",
+   "slug": "stella",
+   "image_url": "/images/heroes/stella.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "stormra",
+   "name": "Stormra",
+   "slug": "stormra",
+   "image_url": "/images/dragons/stormra.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "swordian",
+   "name": "Swordian",
+   "slug": "swordian",
+   "image_url": "/images/dragons/swordian.png",
+   "category": "dragon",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "sylvan",
+   "name": "Sylvan",
+   "slug": "sylvan",
+   "image_url": "/images/heroes/sylvan.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "taiga",
+   "name": "Taiga",
+   "slug": "taiga",
+   "image_url": "/images/heroes/taiga.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "taranis",
+   "name": "Taranis",
+   "slug": "taranis",
+   "image_url": "/images/heroes/taranis.png",
+   "category": "hero",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "thunder-bracelet",
+   "name": "Thunder Bracelet",
+   "slug": "thunder-bracelet",
+   "image_url": "/images/equipment/thunder-bracelet.png",
+   "category": "bracelet",
+   "description": null
+  },
+  {
+   "id": "thunderfrost-wings",
+   "name": "Thunderfrost Wings",
+   "slug": "thunderfrost-wings",
+   "image_url": "/images/dragons/thunderfrost-wings.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "thunderworm",
+   "name": "Thunderworm",
+   "slug": "thunderworm",
+   "image_url": "/images/pets/thunderworm.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "tornado",
+   "name": "Tornado",
+   "slug": "tornado",
+   "image_url": "/images/equipment/tornado.png",
+   "category": "weapon",
+   "description": null
+  },
+  {
+   "id": "urasil",
+   "name": "Urasil",
+   "slug": "urasil",
+   "image_url": "/images/heroes/urasil.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "verdafrost-bear",
+   "name": "Verdafrost Bear",
+   "slug": "verdafrost-bear",
+   "image_url": "/images/pets/verdafrost-bear.png",
+   "category": "pet",
+   "description": "Catalog record imported from a supplied named icon. Ranking pending curation."
+  },
+  {
+   "id": "vest-of-dexterity",
+   "name": "Vest of Dexterity",
+   "slug": "vest-of-dexterity",
+   "image_url": "/images/equipment/vest-of-dexterity.png",
+   "category": "armor",
+   "description": null
+  },
+  {
+   "id": "vilebat-ring",
+   "name": "Vilebat Ring",
+   "slug": "vilebat-ring",
+   "image_url": "/images/equipment/vilebat-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "viridax",
+   "name": "Viridax",
+   "slug": "viridax",
+   "image_url": "/images/dragons/viridax.png",
+   "category": "dragon",
+   "description": "Catalog record imported from a supplied named icon. Historical ranking pending curation."
+  },
+  {
+   "id": "void-robe",
+   "name": "Void Robe",
+   "slug": "void-robe",
+   "image_url": "/images/equipment/void-robe.png",
+   "category": "armor",
+   "description": null
+  },
+  {
+   "id": "voideon",
+   "name": "Voideon",
+   "slug": "voideon",
+   "image_url": "/images/dragons/voideon.png",
+   "category": "dragon",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "wolf-ring",
+   "name": "Wolf Ring",
+   "slug": "wolf-ring",
+   "image_url": "/images/equipment/wolf-ring.png",
+   "category": "ring",
+   "description": null
+  },
+  {
+   "id": "wukong",
+   "name": "Wukong",
+   "slug": "wukong",
+   "image_url": "/images/heroes/wukong.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  },
+  {
+   "id": "zeus",
+   "name": "Zeus",
+   "slug": "zeus",
+   "image_url": "/images/heroes/zeus.png",
+   "category": "hero",
+   "description": "Imported from the historical Archero Discord Tier List 6.10.2 board."
+  }
+ ],
+ "tierLists": [
+  {
+   "id": "6.10.2",
+   "title": "Archero Discord Tier List",
+   "game_version": "6.10.2"
+  }
+ ],
+ "tierRankings": [
+  {
+   "item_id": "agile-locket",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "angel-locket",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "antiquated-sword",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "arcane-archer",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "arcanum-of-time",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "art-of-combat",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "atreus",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "bear-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "blazing-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "blazo",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "bloodthirsty-locket",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "bobo",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "bone-warrior",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "brave-bow",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "bright-robe",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "brightspear",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "bull-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "bulletproof-locket",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "celestial-band",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "celestial-bracer",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "celestial-codex",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "celestial-might",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "celestial-talisman",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "celestial-warplate",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "counterattack-charm",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "death-scythe",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "demon-blade-rain",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "demon-king-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "demon-king-grimoire",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "demon-king-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "demon-king-spearshield",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "demon-king-talisman",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "demon-king-warplate",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "dragon-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "elaine",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "elf",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "enlightenment",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "expedition-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "expedition-fist",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "expedition-locket",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "expedition-plate",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "expedition-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "expedition-spellbook",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "falcon-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "flaming-ghost",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "frozen-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "gale-force",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "geogon",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "giants-contract",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "golden-chestplate",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "ice-realm",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "invincible-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "iris",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "iron-locket",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "laser-bat",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "lion-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "living-bomb",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "magmar",
+   "tier_list_id": "6.10.2",
+   "tier": "SS",
+   "score": 100
+  },
+  {
+   "item_id": "melinda",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "mini-atreus",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "necrogon",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "noisy-owl",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "phantom-cloak",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "phoren",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "piercer-locket",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "quickshot-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "saw-blade",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "scythe-mage",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "serpent-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "shadex",
+   "tier_list_id": "6.10.2",
+   "tier": "SS",
+   "score": 100
+  },
+  {
+   "item_id": "shadow-robe",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "shield-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "spectre-book",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "split-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "stalker-staff",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "starrite",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "stella",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "swordian",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "taiga",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "thunder-bracelet",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "tornado",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "urasil",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "vest-of-dexterity",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "vilebat-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "A",
+   "score": 80
+  },
+  {
+   "item_id": "void-robe",
+   "tier_list_id": "6.10.2",
+   "tier": "C",
+   "score": 40
+  },
+  {
+   "item_id": "voideon",
+   "tier_list_id": "6.10.2",
+   "tier": "SS",
+   "score": 100
+  },
+  {
+   "item_id": "wolf-ring",
+   "tier_list_id": "6.10.2",
+   "tier": "B",
+   "score": 60
+  },
+  {
+   "item_id": "wukong",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  },
+  {
+   "item_id": "zeus",
+   "tier_list_id": "6.10.2",
+   "tier": "S",
+   "score": 90
+  }
+ ]
+}
