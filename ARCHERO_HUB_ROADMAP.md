@@ -110,13 +110,48 @@ Notes:
   - 120 rank-specific upgrade-cost rows.
 - [x] Staged 139 unreviewed Glyph rows across Weapon, Armor, Bracelet, Locket, Ring, Book, and Spirit categories.
 - [x] Staged 635 unreviewed Sigil rows from the Sigils, Faith, and chart sheets.
+- [x] Mapped and imported the Outfit workbook (`scripts/generate_outfit_workbook_import.py`):
+  - 93 outfit entries with price, unlock stat, and Level 5–80 effects, staged as unreviewed in `outfit_source_entries`.
+  - 93 portraits mapped by drawing anchor (not image order) and copied to `public/images/outfits/`, all registered in `catalog_media`.
+  - The other 3 embedded images are upgrade-ticket currency icons, not outfits.
+  - Hero ownership is only attributed when the Cheap Outfits sheet corroborates the block: 39 outfits labeled, 35 linked to catalog heroes (`Cat` → Meowgik, `Ayaya` → Ayana). The 4 `Racoon` outfits have no catalog match. The other 54 outfits need curator hero assignment.
+  - Needs curator review: the outfit at row 298 column M has no name in the workbook (`unnamed-r298m`); "Sweet Proposal" and "Cherry Blossom Romance" each appear twice with different art, so their slugs carry a row/column suffix.
+  - Not yet imported: the Level up Cost sheet (outfit stone and ticket costs).
+- [x] Parsed the 139 staged Glyph rows (`scripts/generate_glyph_effects_import.py`):
+  - 27 section base stats (`glyph_source_base_stats`) and 112 glyph effects (`glyph_source_effects`) across 7 categories; every staged row is linked.
+  - Tier values are kept verbatim with a parsed `number` only for bare numbers and `percent` only for explicit `%` strings. Curators must confirm whether fractions like `0.05` mean 5%.
+  - Weapon sheet's `ALE` tier header is normalized to `AL`; the original header is kept on each value.
+  - Needs curator review: the 4th section on each sheet (3rd on Spirit) has no rarity label (stored as `''`); Locket and Ring SS glyphs have no name; the Glyph "Level up costs" sheet is not parsed yet.
+  - The earlier `glyph_source_rows.glyph_name` for Spirit rows is unreliable (it picks column H, a tier column on that sheet); use `glyph_source_effects` instead.
+- [x] Parsed the staged Sigil rows (`scripts/generate_sigil_effects_import.py`):
+  - 84 sigils in `sigil_source_entries` with basic stat, advanced stats, ordered evolution effects, hidden stats, and footnotes (an empty template block at row 505 is skipped).
+  - 29 names from the Sigils sheet's separate "Not yet" list in `sigil_source_listings`; none overlap the 84 documented sigils.
+  - Faith talent tree: 148 nodes across tiers 1–25 in `faith_source_nodes` (each node has one option or two alternatives); tiers 26–40 are empty in the workbook. Tiers 14–20 list stat names without values.
+  - 8 faith rules in `faith_source_rules`: point costs (Unlock/Enhance/Advance/Evolve by sigil rarity) and blessing point multipliers.
+  - The unlabeled `chart` sheet is left raw-only; its numbers have no headers to interpret.
+- [x] Staged Quick Raid rewards (`scripts/generate_quick_raid_import.py`):
+  - 132 chapter rows (Hero and Normal, chapters 1–66) in `quick_raid_source_chapters`, with raw values plus parsed `min`/`max` (`k` = thousands).
+  - Reward columns have icon-only headers: 30 columns in `quick_raid_reward_columns`, 17 distinct icons copied to `public/images/quick-raid/` and registered in `catalog_media`.
+  - Only unambiguous icons are labeled (XP and the seven equipment scrolls). Curators must label the other 9 icons (gold-badge, gems, cookie, stones, red gem).
+  - 45 range cells were coerced to spreadsheet dates in the workbook (e.g. `45112` = 5 Jul → `5-7`). They keep the raw value and are flagged `date_recovered: true` for confirmation.
+  - Screen_QuickRaid, Data_Screen, and Loot_Item are UI/lookup scaffolding and stay raw-only.
+- [x] Staged Workers and Estate data (`scripts/generate_estate_workbook_import.py`):
+  - 29 workers with per-star (0–8☆) stats in `estate_source_workers`.
+  - 13 buildings with their building stat and per-star (1–5☆) promotion stats in `estate_source_buildings`.
+  - 14 building level tracks (levels 1–100: stat, production, cost per level) in `estate_source_building_levels`. Training Camp has almost no data in the workbook and no Buildings entry.
+  - 3 cost tables in `estate_source_cost_tables` (worker shard costs, building level-up costs, building promotion costs). Material names are not written in the workbook (sheet is titled "Scroll, stone costs"), so labels are kept as written.
+  - Workbook note: resource production excludes star upgrades and worker bonuses.
+- [x] Staged Hatchery monsters (`scripts/generate_hatchery_import.py`) — historical data (Feb 2022, game 4.8.4):
+  - 67 monsters in `hatchery_source_monsters`, merging the Data sheet (version, boss flag, hatch, NH timer, quests, kill cap), Zones per Monster (recommended/available zones), and Monster Training (star bonuses, 1–4 training stats with unlock notes, costs, Support unlocks over three star series).
+  - 8 monsters appear only on the Training sheet (Crimson Zombie, Fat bat, Fireworm Queen, Infernal Demon, Plainswolf, Scythe Pharoah, Shark Bro, Sinister Touch). `Medusa - Boss` (Training) is matched to `Medusa-Boss` (Data).
+  - Summary Table, WhereToGo, Bosses, and Monster Type are derived views/lists and stay raw-only.
 - [x] Kept source-derived tables behind Admin-only RLS. Nothing new is publicly shown or used for calculations until curator review.
 
 ### 1. Complete remaining workbook normalization
 
 Continue the repeatable import pipeline from the preserved raw source data.
 
-1. Normalize the remaining complex sources: Dragon Statues, Pets, Sigils, Glyphs, Outfits, Hatchery, Estate/Workers, and Quick Raid.
+1. [x] Normalize the remaining complex sources: Dragon Statues, Pets, Sigils, Glyphs, Outfits, Hatchery, Estate/Workers, and Quick Raid. (Done 2026-11-18. Still pending: the Outfit and Glyph level-up cost sheets, whose column headers are ambiguous.)
 2. Link reviewed source entries to existing catalog item slugs whenever possible.
 3. Add a curator review workflow before publishing calculations or numeric stats.
 4. Keep workbook source records `unreviewed` until a curator verifies them.
@@ -140,6 +175,28 @@ Requirements:
 - Clearly mark missing/unknown sources.
 - Keep account-wide bonuses separate from equipped-loadout bonuses.
 - Add tests for formula parsing and known reference builds before showing totals publicly.
+
+#### Attack formula (verified 2026-11-18)
+
+- [x] Implemented in `src/lib/calculator/attack.ts`; reference-build test in `attack.test.ts` (`npm test`).
+- Source: user-supplied calculator screenshots (`~/Downloads/calculation.png`, `calculationII.webp`, `warfrenczy.webp`), an Atreus build reproduced exactly:
+
+  ```
+  base   = trunc(Count × (1 + Attack%))          67,255 × 2.32 → 156,031
+  AV     = trunc((base + Outside flat) × (1 + Outside%))   + 1,200 → 157,231
+  Attack = trunc(AV × (1 + Attack multiplier))   × 1.60 → 251,569
+  ```
+
+- **Count** = all flat Attack sources (hero base/level/stars/assist, equipment, relics, dragons, sigil imprints, skins, wings, all-hero unlocks, Hero Powerup).
+- **Attack%** = all percent Attack sources (altar breaks, equipment rarity unlocks, relic %, sigil imprint %, all-hero level unlocks).
+- **Outside flat** = added after the percent step; in the reference build this is gem Attack (Lv.13 Tourmaline +1,200).
+- **Attack multiplier** = combat buffs applied last to the whole AV. This is where sigil skill effects enter: War Frenzy's "Damage bonus +60%" is the 60% multiplier. Its imprint (+10,405 flat, +7%) is separate and lives in Count/Attack%.
+- **Equipment main stat** = trunc(level value × (1 + slot-type boost + rarity boost)), e.g. 3,750 × (1 + 34.5% + 30%) → 6,168.
+- War Frenzy combat effects (normal play, skill 6103304): Damage bonus +60%, Crit Damage +80%, Red Heart healing +50%, Dodge −20%, Lifesteal +50% (all applied), Weapon Melee Damage +20% (conditional). Has separate Hero Duel effects. These differ from the older Sigils workbook hidden stats (Crit Damage +50–80%, HP Recovery +30–45%, Dodge −5%), so prefer the newer values after curator review.
+- The reference calculator also shows a separate **Weapon** term, `(Count + Weapon) × (1 + Attack%)`. It is supported as its own stage; in the reference build it was empty and the weapon's 6,168 sat in Count.
+- "Outside flat" is part of Attack (the footer math proves it). Conditional bonuses (vs bosses, ground, melee, …) are different: they never enter Attack and only matter in combat scenarios.
+- [x] HP formula in `src/lib/calculator/hp.ts`: `Max HP = trunc(Count × (1 + HP%))`, with no outside step or multiplier (Atreus base 600). The reference calculator says it is derived from Archero 8.3.0 game files and not checked against the live game. **Only the empty build is verified; needs a full HP reference build.**
+- Next: a full HP reference build, the multiplier sources for other sigils and modes, and mapping each staged data table to a stage.
 
 ### 3. Finish catalog depth
 
@@ -190,22 +247,21 @@ All workbooks currently live in `~/Downloads/`.
 | `Archero.xlsx` | Weapon skins and hero skin bonuses | 87 source-backed skin entries imported as unreviewed. |
 | `Archero - Dragon Statues.xlsx` | Dragon Statue stats, rarity, level, costs | 44 rarity-stat rows, 7 metadata records, and 120 costs imported as unreviewed. |
 | `Archero Pets.xlsx` | Pet stats, milestones, battle skills, upgrade costs | 11 profiles and 39 skills imported as unreviewed; never merge with Spirits. |
-| `Archero Sigils.xlsx` | Sigil effects, evolution, hidden stats, faith | 635 rows staged as unreviewed; parse mixed blocks with curator review. |
-| `Archero Glyphs.xlsx` | Glyph effects and rarity/upgrade tiers by equipment category | 139 category-specific rows staged as unreviewed; parse effects after curator review. |
+| `Archero Sigils.xlsx` | Sigil effects, evolution, hidden stats, faith | Parsed: 84 sigils, 29 "Not yet" listings, 148 faith nodes, 8 faith rules (unreviewed). `chart` sheet raw-only. |
+| `Archero Glyphs.xlsx` | Glyph effects and rarity/upgrade tiers by equipment category | Parsed: 27 section base stats and 112 glyph effects (unreviewed). Level up costs sheet pending. |
 | `Archero Relics.xlsx` | Relic base, advanced, exclusive, and star effects | 206 source-backed effect entries imported as unreviewed. |
 | `Archero Jewels.xlsx` | Jewel levels and stat progression | 298 source-backed level effects imported as unreviewed. |
 | `Archero Medals.xlsx` | Medal triggers, rarity, and enhancements | 32 source-backed entries imported as unreviewed. |
-| `Archero Outfit stats.xlsx` | Outfit names, prices, bonuses, level costs, embedded art | Contains 96 embedded outfit PNGs; map each drawing anchor to its outfit row/name before importing. |
-| `Archero Hatchery 4.8.4 (LanderZ, mrb, Shusaku, Abstrusity, LuhCaran).xlsx` | Monster training, zones, bosses, hatchery data | Useful for account progression; separate from Pet and Spirit equipment. |
-| `Archero Workers, Estate.xlsx` | Workers, buildings, estate levels, costs | Account progression and total-stat calculations. |
-| `QuickRaid 5.11 (LuhCaran, Pelmens, zkn).xlsx` | Quick Raid rewards and chapters | Future farming/reward planner. |
+| `Archero Outfit stats.xlsx` | Outfit names, prices, bonuses, level costs, embedded art | 93 outfits and their mapped portraits imported as unreviewed; Level up Cost sheet still pending. |
+| `Archero Hatchery 4.8.4 (LanderZ, mrb, Shusaku, Abstrusity, LuhCaran).xlsx` | Monster training, zones, bosses, hatchery data | Staged: 67 monsters with data, zones, and training (historical, Feb 2022). Separate from Pet and Spirit equipment. |
+| `Archero Workers, Estate.xlsx` | Workers, buildings, estate levels, costs | Staged: 29 workers, 13 buildings, 14 level tracks, 3 cost tables (unreviewed). |
+| `QuickRaid 5.11 (LuhCaran, Pelmens, zkn).xlsx` | Quick Raid rewards and chapters | Staged: 132 chapter reward rows with icon-keyed columns; 9 icons need curator labels. |
 
 ### Outfit workbook assets
 
-- `Archero Outfit stats.xlsx` contains 96 embedded PNG images in `xl/media/`.
-- They are actual outfit/hero art, not decorative images.
-- The mapping must be built from worksheet drawing anchors plus the Outfits sheet rows.
-- Extract to a temporary directory, generate a contact sheet for review, then copy only named/mapped images into the repository.
+- `Archero Outfit stats.xlsx` contains 96 embedded PNG images in `xl/media/`: 93 outfit portraits and 3 upgrade-ticket icons.
+- Done: portraits are mapped from drawing anchors (portrait anchored two rows below the outfit name, in the name column of each 11-row block).
+- Regenerate with `python3 scripts/generate_outfit_workbook_import.py OUTPUT.sql public/images/outfits`; the output is deterministic.
 
 ## Data-model guidance
 
