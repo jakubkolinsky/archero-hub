@@ -75,7 +75,7 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
           <div className="grid gap-3 sm:grid-cols-[minmax(120px,1fr)_minmax(240px,1.6fr)_minmax(120px,1fr)] sm:gap-4">
             <div className="order-2 grid grid-cols-4 gap-2 sm:order-none sm:grid-cols-1 sm:gap-3">
               <SlotTile slotId="weapon" />
-              <SlotTile slotId="dragon" />
+              <SlotTile slotId="ring-one" />
               <SlotTile slotId="pet-one" />
               <SlotTile slotId="bracelet" />
             </div>
@@ -84,14 +84,14 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
               <HeroCard item={catalogItems.find((catalogItem) => catalogItem.id === slots.hero)} unavailable={ownedOnly && !owned.includes(slots.hero)} onClick={() => setSelectedSlot("hero")} />
               <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 <SlotTile slotId="book" />
-                <SlotTile slotId="ring-two" />
+                <SlotTile slotId="dragon" />
               </div>
               <div className="grid grid-cols-2 gap-3 border border-white/10 bg-black/30 px-4 py-3 text-xs"><Stat label="Attack" value="Needs reviewed data" /><Stat label="HP" value="Needs reviewed data" /></div>
             </div>
 
             <div className="order-3 grid grid-cols-4 gap-2 sm:order-none sm:grid-cols-1 sm:gap-3">
               <SlotTile slotId="armor" />
-              <SlotTile slotId="ring-one" />
+              <SlotTile slotId="ring-two" />
               <SlotTile slotId="pet-two" />
               <SlotTile slotId="locket" />
             </div>

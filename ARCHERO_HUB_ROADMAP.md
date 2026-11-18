@@ -19,9 +19,9 @@ Archero Hub is a community catalog and planner for Archero:
 - Production URL: `https://archero-hub.vercel.app`
 - `/` is a loadout planner with:
   - Hero in the center.
-  - Weapon, dragon, spirit, and bracelet on the left.
-  - Armor, ring, spirit, and locket on the right.
-  - Book and second ring below the hero.
+  - Weapon, Ring 1, Spirit 1, and Bracelet on the left.
+  - Armor, Ring 2, Spirit 2, and Locket on the right.
+  - Book and Dragon below the hero.
   - Clickable equipment slots, an item-picker modal, local browser-owned-item state, hover cards, and mode recommendations.
   - Attack/HP deliberately shown as pending until verified calculation data exists.
 - `/tier-lists` is a category-based board. It has no version dropdown and uses one starting-point list.
