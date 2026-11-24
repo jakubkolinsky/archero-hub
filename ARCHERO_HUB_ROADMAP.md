@@ -2,6 +2,45 @@
 
 This is the working handoff for future chats. It records the agreed product direction, completed foundation, remaining work, and reference workbooks.
 
+## Next session (planned 2026-11-19)
+
+### State at end of 2026-11-18
+
+- Live and deployed: all workbook imports (unreviewed, Admin-only), the offline catalog snapshot fallback, the redesigned loadout (rings in the side columns, Dragon below the hero).
+- Calculator core exists and is tested but is **not shown on the site yet**: `src/lib/calculator/attack.ts` (verified against a full reference build) and `hp.ts` (formula only, empty build verified).
+- **Uncommitted, not deployed:** placeholder items fixed. Riri/Warplate/Warbracer replaced by Magmar, Demon King Warplate/Bracelet (premium builds) and Expedition Plate/Bracelet (Farming/F2P). Starfire Fox and Bloodfeast Grail removed. The loadout now uses the published tier list via `src/lib/rankings.ts`, and `catalog.test.ts` guards the builds. Tests, lint, and build pass.
+
+### To do, in order
+
+1. [ ] **Deploy the placeholder fix** (commit + push to `main`) after a final look.
+2. [ ] **Decide:** swap the C-tier Book (Enlightenment) and Locket (Angel Locket) in the recommended builds for S-tier options? (Books: Arcanum of Time, Demon King Grimoire, Ice Realm. Lockets: Celestial Talisman, Counterattack Charm, Demon King Talisman.)
+3. [ ] **Patch Next.js 16.4.3 → 16.4.6** (moderate advisory GHSA-mfr8-8qww-v76h / GHSA-vc7v-qv4w-wrv8; the build stops once on first run until patched).
+4. [ ] **Attack/HP calculator in the loadout, phase 1** (see plan below).
+5. [ ] **Get an HP reference build**: a screenshot of the Max HP breakdown with its footer totals, to verify `hp.ts` like Attack.
+6. [ ] **Curator review workflow** in Admin (approve/reject unreviewed source records). Needed before any workbook value feeds public totals.
+7. [ ] Curator follow-ups from imports: label 9 Quick Raid icons, assign heroes to 54 outfits, name `unnamed-r298m`, confirm 45 date-recovered Quick Raid cells, and confirm whether glyph fractions like `0.05` mean 5%.
+
+### Plan: Attack/HP calculator in the loadout
+
+The formulas are done; the gap is **input data**. No workbook has equipment base stats per level/rarity, slot-type boosts, rarity boosts, or hero base/level growth. The reference build used values like Trident Lv1 = 3,750 with a 34.5% slot boost and 30% rarity boost.
+
+**Phase 1: "your numbers" calculator (no new data needed)**
+
+- Replace the "Needs reviewed data" strip with live **Attack** and **HP** values, plus a "Breakdown" button.
+- The breakdown panel lists contributions grouped by stage (Count, Weapon, Attack%, Outside, Multiplier; Count and HP% for HP), exactly like the reference calculator.
+- Prefill what we can derive from the loadout (e.g. hero base Atreus 150/600 once hero base stats are entered as reviewed data); every other line is a **user-editable row** (label, source, stage, value), with presets such as "Equipment", "Relic", "Gem (outside)", "Sigil imprint", "Combat buff (multiplier)".
+- Equipment slots get a small "stat" field so users can type the item's Attack/HP from the game. `equipmentStat()` can derive it from level value + slot boost + rarity boost if the user enters those.
+- Save per-browser in localStorage (like owned items); add "load reference build" to demo with the verified 251,569 example.
+- Clearly label totals as **user-entered**; nothing is presented as verified game data.
+
+**Phase 2: data-backed prefill**
+
+- Add a `stat_contributions` model: item/system + level/star/rarity condition → stat (attack/hp), stage, value, `source_record_id`, review status.
+- Map reviewed workbook data into it: hero all-hero bonuses, relics, jewels, dragon statues, skins/outfits, estate workers/buildings, hatchery training.
+- Source equipment base stats and boost tables (ask whether the reference calculator's 8.3.0 data can be used with permission, or collect from the game).
+- Add an account panel (hero levels/stars, altar breaks, estate, relics) kept separate from the equipped loadout.
+- Every prefilled line shows its source; unreviewed lines are excluded from public totals.
+
 ## Product direction
 
 Archero Hub is a community catalog and planner for Archero:
