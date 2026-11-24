@@ -6,15 +6,14 @@ This is the working handoff for future chats. It records the agreed product dire
 
 ### State at end of 2026-11-24
 
-- Live: workbook imports (unreviewed, Admin-only), offline catalog snapshot fallback, redesigned loadout, real items in the recommended builds (loadout uses the published tier list), Next.js 16.4.6 (no known vulnerabilities).
-- **Built, not yet deployed:** the Attack/HP calculator in the loadout (phase 1, below) and a fix for owned items being wiped on every page load.
+- Live: workbook imports (unreviewed, Admin-only), offline catalog snapshot fallback, redesigned loadout, real items in the recommended builds (loadout uses the published tier list), Next.js 16.4.6 (no known vulnerabilities), the Attack/HP calculator in the loadout (phase 1), and the fix for owned items being wiped on page load. Everything is deployed; nothing is pending.
 
 ### To do, in order
 
 1. [x] **Deploy the placeholder fix.** Live since 2026-11-24.
 2. [ ] **Decide:** swap the C-tier Book (Enlightenment) and Locket (Angel Locket) in the recommended builds for S-tier options? (Books: Arcanum of Time, Demon King Grimoire, Ice Realm. Lockets: Celestial Talisman, Counterattack Charm, Demon King Talisman.)
 3. [x] **Patch Next.js 16.4.3 → 16.4.6.** Live; `npm audit` reports 0 vulnerabilities and builds no longer stop on the security notice.
-4. [x] **Attack/HP calculator in the loadout, phase 1.** Built and browser-tested; deploy pending. See plan below.
+4. [x] **Attack/HP calculator in the loadout, phase 1.** Live since 2026-11-24, verified in production (example shows 251,569). See plan below.
 5. [ ] **Get an HP reference build**: a screenshot of the Max HP breakdown with its footer totals, to verify `hp.ts` like Attack.
 6. [ ] **Curator review workflow** in Admin (approve/reject unreviewed source records). Needed before any workbook value feeds public totals.
 7. [ ] Curator follow-ups from imports: label 9 Quick Raid icons, assign heroes to 54 outfits, name `unnamed-r298m`, confirm 45 date-recovered Quick Raid cells, and confirm whether glyph fractions like `0.05` mean 5%.
