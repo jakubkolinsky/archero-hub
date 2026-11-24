@@ -2,13 +2,15 @@ import Link from "next/link";
 import { connection } from "next/server";
 import { BuildPlanner } from "@/components/build-planner";
 import { SnapshotNotice } from "@/components/snapshot-notice";
-import { getCatalogItems } from "@/lib/catalog-database";
+import { getTierListCatalog } from "@/lib/catalog-database";
+import { applyPublishedRankings } from "@/lib/rankings";
 
 export const instant = false;
 
 export default async function Home() {
   await connection();
-  const { catalogItems, source } = await getCatalogItems();
+  const { catalogItems, publishedTierLists, publishedTierRankings, source } = await getTierListCatalog();
+  const rankedItems = applyPublishedRankings(catalogItems, publishedTierLists, publishedTierRankings);
 
   return <main className="min-h-screen bg-[#2b2b2b] text-[#f4f3ef]">
     <div className="border-b border-white/10 bg-[#171717]">
@@ -18,7 +20,7 @@ export default async function Home() {
       </nav>
     </div>
     <SnapshotNotice source={source} />
-    <BuildPlanner catalogItems={catalogItems} />
+    <BuildPlanner catalogItems={rankedItems} />
     <footer className="mx-auto flex max-w-7xl flex-col justify-between gap-4 border-t border-white/10 px-4 py-7 text-xs text-stone-500 sm:flex-row sm:px-8"><p>Unofficial fan project. Not affiliated with Habby.</p><p>Stats are added only after in-game verification.</p></footer>
   </main>;
 }

@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { Category, Item, items as curatedItems } from "@/lib/catalog";
+import { Category, Item, curatedItemAliases, items as curatedItems } from "@/lib/catalog";
 import catalogSnapshot from "@/lib/catalog-snapshot.json";
 
 type CatalogRow = {
@@ -56,11 +56,6 @@ const categoryBySlug: Record<string, Category> = {
   skin: "Skin",
 };
 
-const curatedItemAliases: Record<string, string> = {
-  "demon-blade-rain": "demon-blade",
-  "enlightenment": "enlightenment-book",
-  "expedition-fist": "expedition-fists",
-};
 
 function getCuratedItem(row: CatalogRow) {
   const itemId = curatedItemAliases[row.slug] ?? row.slug;

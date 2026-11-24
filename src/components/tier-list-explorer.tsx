@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Category, Item } from "@/lib/catalog";
 import type { PublishedTierList, PublishedTierRanking } from "@/lib/catalog-database";
+import { applyPublishedRankings } from "@/lib/rankings";
 
 const boardCategories: { label: string; category: Category }[] = [
   { label: "Weapons", category: "Weapon" },
@@ -40,26 +41,10 @@ export function TierListExplorer({
   publishedTierRankings: PublishedTierRanking[];
 }) {
   const [selectedCategory, setSelectedCategory] = useState<Category | "All">("All");
-  const selectedTierListId = publishedTierLists.find((tierList) => tierList.gameVersion === "6.10.2")?.id ?? publishedTierLists[0]?.id ?? "";
-  const rankedItems = useMemo(() => {
-    if (!selectedTierListId) {
-      return catalogItems;
-    }
-
-    const rankings = new Map(
-      publishedTierRankings
-        .filter((ranking) => ranking.tierListId === selectedTierListId)
-        .map((ranking) => [ranking.itemId, ranking]),
-    );
-
-    return catalogItems.map((item) => {
-      const ranking = item.databaseId ? rankings.get(item.databaseId) : undefined;
-
-      return ranking
-        ? { ...item, tier: ranking.tier, score: ranking.score }
-        : { ...item, tier: "Unranked" as const, score: 0 };
-    });
-  }, [catalogItems, publishedTierRankings, selectedTierListId]);
+  const rankedItems = useMemo(
+    () => applyPublishedRankings(catalogItems, publishedTierLists, publishedTierRankings),
+    [catalogItems, publishedTierLists, publishedTierRankings],
+  );
   const boards = useMemo(() => boardCategories.filter(({ category }) => selectedCategory === "All" || selectedCategory === category).map((definition) => ({ ...definition, items: rankedItems.filter((item) => item.category === definition.category) })), [rankedItems, selectedCategory]);
 
   return <main className="min-h-screen bg-[#2b2b2b] text-[#f4f3ef]">
