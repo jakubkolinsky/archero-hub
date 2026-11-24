@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { SourceReview } from "@/components/admin/source-review";
 import { getSupabaseBrowserClient } from "@/lib/supabase";
 
 type CatalogItem = {
@@ -53,6 +54,7 @@ export default function AdminPage() {
   const [category, setCategory] = useState("All");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(Boolean(supabase));
+  const [tab, setTab] = useState<"catalog" | "review">("catalog");
 
   const loadData = useCallback(async () => {
     if (!supabase) return;
@@ -167,9 +169,15 @@ export default function AdminPage() {
   return (
     <main className="min-h-screen bg-[#090b11] px-5 py-10 text-[#f7f1e7] sm:px-8">
       <header className="mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-amber-400">Admin workspace</p><h1 className="mt-2 text-3xl font-bold">Curate the catalog</h1><p className="mt-2 text-sm text-stone-400">Assign icon assets and publish rankings for each game mode.</p></div>
+        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-amber-400">Admin workspace</p><h1 className="mt-2 text-3xl font-bold">Curate the catalog</h1><p className="mt-2 text-sm text-stone-400">Assign icons, publish rankings, and review imported game data.</p></div>
         <p className="text-sm text-stone-400">{email}</p>
       </header>
+
+      <nav className="mx-auto mt-6 flex max-w-7xl gap-2" aria-label="Admin sections">
+        {([["catalog", "Catalog & rankings"], ["review", "Review data"]] as const).map(([value, label]) => <button key={value} onClick={() => setTab(value)} aria-pressed={tab === value} className={`rounded-lg px-4 py-2 text-sm font-semibold ${tab === value ? "bg-amber-400 text-stone-950" : "bg-white/[.06] text-stone-400 hover:text-white"}`}>{label}</button>)}
+      </nav>
+
+      {tab === "review" ? <div className="mx-auto mt-6 max-w-7xl"><SourceReview supabase={supabase} /></div> : <>
 
       <div className="mx-auto mt-8 grid max-w-7xl gap-6 xl:grid-cols-[1fr_1.2fr]">
         <section className="rounded-3xl border border-white/10 bg-[#151821] p-5">
@@ -211,6 +219,7 @@ export default function AdminPage() {
         </div>
       </div>
       {message && <p role="status" className="mx-auto mt-5 max-w-7xl text-sm text-amber-300">{message}</p>}
+      </>}
     </main>
   );
 }

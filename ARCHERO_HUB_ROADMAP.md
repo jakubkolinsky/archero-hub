@@ -15,7 +15,7 @@ This is the working handoff for future chats. It records the agreed product dire
 3. [x] **Patch Next.js 16.4.3 → 16.4.6.** Live; `npm audit` reports 0 vulnerabilities and builds no longer stop on the security notice.
 4. [x] **Attack/HP calculator in the loadout, phase 1.** Live since 2026-11-24, verified in production (example shows 251,569). See plan below.
 5. [ ] **Get an HP reference build**: a screenshot of the Max HP breakdown with its footer totals, to verify `hp.ts` like Attack.
-6. [ ] **Curator review workflow** in Admin (approve/reject unreviewed source records). Needed before any workbook value feeds public totals.
+6. [x] **Curator review workflow** in Admin: a "Review data" tab (`src/components/admin/source-review.tsx`) over the `source_review_entries` view (migration `202611240001`). It shows progress per data type, filters by type and status, searches names inside the data, shows each record's staged content, takes notes, and verifies or rejects single records, a selection, or all matching records (confirmed in-page, batched). The database stamps `reviewed_at` and `reviewed_by`; clients cannot set them. Admin, non-admin, and anonymous access were checked against RLS locally. 1,809 records are waiting for review. **Production deploy pending approval** (a database migration plus the Admin UI).
 7. [ ] Curator follow-ups from imports: label 9 Quick Raid icons, assign heroes to 54 outfits, name `unnamed-r298m`, confirm 45 date-recovered Quick Raid cells, and confirm whether glyph fractions like `0.05` mean 5%.
 8. [ ] **Calculator phase 2** (data-backed prefill, below). Optional phase-1 polish: an equipment helper (level value + slot boost + rarity boost → stat via `equipmentStat()`), and per-mode or shareable saved calculator builds.
 
