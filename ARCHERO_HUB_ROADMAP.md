@@ -2,29 +2,32 @@
 
 This is the working handoff for future chats. It records the agreed product direction, completed foundation, remaining work, and reference workbooks.
 
-## Next session (planned 2026-11-19)
+## Next session
 
-### State at end of 2026-11-18
+### State at end of 2026-11-24
 
-- Live and deployed: all workbook imports (unreviewed, Admin-only), the offline catalog snapshot fallback, the redesigned loadout (rings in the side columns, Dragon below the hero).
-- Calculator core exists and is tested but is **not shown on the site yet**: `src/lib/calculator/attack.ts` (verified against a full reference build) and `hp.ts` (formula only, empty build verified).
-- **Uncommitted, not deployed:** placeholder items fixed. Riri/Warplate/Warbracer replaced by Magmar, Demon King Warplate/Bracelet (premium builds) and Expedition Plate/Bracelet (Farming/F2P). Starfire Fox and Bloodfeast Grail removed. The loadout now uses the published tier list via `src/lib/rankings.ts`, and `catalog.test.ts` guards the builds. Tests, lint, and build pass.
+- Live: workbook imports (unreviewed, Admin-only), offline catalog snapshot fallback, redesigned loadout, real items in the recommended builds (loadout uses the published tier list), Next.js 16.4.6 (no known vulnerabilities).
+- **Built, not yet deployed:** the Attack/HP calculator in the loadout (phase 1, below) and a fix for owned items being wiped on every page load.
 
 ### To do, in order
 
-1. [ ] **Deploy the placeholder fix** (commit + push to `main`) after a final look.
+1. [x] **Deploy the placeholder fix.** Live since 2026-11-24.
 2. [ ] **Decide:** swap the C-tier Book (Enlightenment) and Locket (Angel Locket) in the recommended builds for S-tier options? (Books: Arcanum of Time, Demon King Grimoire, Ice Realm. Lockets: Celestial Talisman, Counterattack Charm, Demon King Talisman.)
-3. [ ] **Patch Next.js 16.4.3 → 16.4.6** (moderate advisory GHSA-mfr8-8qww-v76h / GHSA-vc7v-qv4w-wrv8; the build stops once on first run until patched).
-4. [ ] **Attack/HP calculator in the loadout, phase 1** (see plan below).
+3. [x] **Patch Next.js 16.4.3 → 16.4.6.** Live; `npm audit` reports 0 vulnerabilities and builds no longer stop on the security notice.
+4. [x] **Attack/HP calculator in the loadout, phase 1.** Built and browser-tested; deploy pending. See plan below.
 5. [ ] **Get an HP reference build**: a screenshot of the Max HP breakdown with its footer totals, to verify `hp.ts` like Attack.
 6. [ ] **Curator review workflow** in Admin (approve/reject unreviewed source records). Needed before any workbook value feeds public totals.
 7. [ ] Curator follow-ups from imports: label 9 Quick Raid icons, assign heroes to 54 outfits, name `unnamed-r298m`, confirm 45 date-recovered Quick Raid cells, and confirm whether glyph fractions like `0.05` mean 5%.
+8. [ ] **Calculator phase 2** (data-backed prefill, below). Optional phase-1 polish: an equipment helper (level value + slot boost + rarity boost → stat via `equipmentStat()`), and per-mode or shareable saved calculator builds.
 
 ### Plan: Attack/HP calculator in the loadout
 
 The formulas are done; the gap is **input data**. No workbook has equipment base stats per level/rarity, slot-type boosts, rarity boosts, or hero base/level growth. The reference build used values like Trident Lv1 = 3,750 with a 34.5% slot boost and 30% rarity boost.
 
-**Phase 1: "your numbers" calculator (no new data needed)**
+**Phase 1: "your numbers" calculator (no new data needed)** — done 2026-11-24
+
+- Implemented in `src/components/stat-calculator.tsx` with state logic in `src/lib/calculator/user-build.ts` (tested in `user-build.test.ts`). The example button loads the verified Atreus build (`reference-build.ts`) and shows 251,569.
+- The original plan, for reference:
 
 - Replace the "Needs reviewed data" strip with live **Attack** and **HP** values, plus a "Breakdown" button.
 - The breakdown panel lists contributions grouped by stage (Count, Weapon, Attack%, Outside, Multiplier; Count and HP% for HP), exactly like the reference calculator.
@@ -62,7 +65,7 @@ Archero Hub is a community catalog and planner for Archero:
   - Armor, Ring 2, Spirit 2, and Locket on the right.
   - Book and Dragon below the hero.
   - Clickable equipment slots, an item-picker modal, local browser-owned-item state, hover cards, and mode recommendations.
-  - Attack/HP deliberately shown as pending until verified calculation data exists.
+  - An Attack/HP calculator under the hero: the verified formula with numbers the player enters (per equipped item plus free lines by formula step), a step-by-step breakdown, and a "Load example (Atreus)" button. Saved per browser; no item stats are prefilled yet.
 - `/tier-lists` is a category-based board. It has no version dropdown and uses one starting-point list.
 - Tier-board categories currently include Weapons, Heroes, Pets, Spirits, Dragons, Armor, Rings, Books, Bracelets, and Lockets.
 - Pets and Spirits are separate concepts and must remain separate in the catalog and layout.

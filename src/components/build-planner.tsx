@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
+import { StatCalculator } from "@/components/stat-calculator";
 import { Build, GameMode, Item, builds, gameModes, slotDefinitions } from "@/lib/catalog";
+import type { EquippedSlot } from "@/lib/calculator/user-build";
 
 const tierColors: Record<Item["tier"], string> = {
   SS: "bg-[#ff555e] text-[#1f1718]",
@@ -20,21 +22,28 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
   const [ownedOnly, setOwnedOnly] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const [overrides, setOverrides] = useState<Record<string, string>>({});
+  const [ownedLoaded, setOwnedLoaded] = useState(false);
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
       const saved = window.localStorage.getItem("archero-hub-owned-items");
       if (saved) setOwned(JSON.parse(saved) as string[]);
+      setOwnedLoaded(true);
     });
     return () => window.cancelAnimationFrame(frame);
   }, []);
 
+  // Save only after the stored list has loaded, or the first render would overwrite it with [].
   useEffect(() => {
-    window.localStorage.setItem("archero-hub-owned-items", JSON.stringify(owned));
-  }, [owned]);
+    if (ownedLoaded) window.localStorage.setItem("archero-hub-owned-items", JSON.stringify(owned));
+  }, [owned, ownedLoaded]);
 
   const recommendedBuild = useMemo<Build>(() => builds.find((build) => build.mode === mode) ?? builds[0], [mode]);
-  const slots = { ...recommendedBuild.slots, ...overrides };
+  const slots = useMemo(() => ({ ...recommendedBuild.slots, ...overrides }), [recommendedBuild, overrides]);
+  const equippedSlots = useMemo<EquippedSlot[]>(() => slotDefinitions.flatMap((slot) => {
+    const item = catalogItems.find((catalogItem) => catalogItem.id === slots[slot.id]);
+    return item ? [{ slotId: slot.id, slotLabel: slot.label, itemId: item.id, itemName: item.name }] : [];
+  }), [catalogItems, slots]);
   const activeSlot = slotDefinitions.find((slot) => slot.id === selectedSlot);
   const choices = activeSlot
     ? catalogItems.filter((item) => item.category === activeSlot.category && (!ownedOnly || owned.includes(item.id))).sort((a, b) => b.score - a.score)
@@ -86,7 +95,7 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
                 <SlotTile slotId="book" />
                 <SlotTile slotId="dragon" />
               </div>
-              <div className="grid grid-cols-2 gap-3 border border-white/10 bg-black/30 px-4 py-3 text-xs"><Stat label="Attack" value="Needs reviewed data" /><Stat label="HP" value="Needs reviewed data" /></div>
+              <StatCalculator equipped={equippedSlots} />
             </div>
 
             <div className="order-3 grid grid-cols-4 gap-2 sm:order-none sm:grid-cols-1 sm:gap-3">
@@ -102,7 +111,7 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
           <p className="text-[11px] font-bold uppercase tracking-[.18em] text-[#ff555e]">Build brief</p>
           <div className="mt-4 space-y-5 text-sm"><div><p className="font-bold text-[#8dda93]">Strengths</p><p className="mt-1 leading-6 text-stone-300">{recommendedBuild.strengths}</p></div><div><p className="font-bold text-[#ff7d76]">Watch out</p><p className="mt-1 leading-6 text-stone-300">{recommendedBuild.weaknesses}</p></div></div>
           <div className="mt-7 border-y border-white/10 py-4"><p className="text-[10px] font-bold uppercase tracking-[.16em] text-stone-400">Inventory</p><p className="mt-1 text-sm font-bold text-white">{owned.length} items marked owned</p><p className="mt-1 text-xs leading-5 text-stone-400">Choose any slot to browse items. Your inventory stays in this browser.</p></div>
-          <p className="mt-5 text-xs leading-5 text-stone-400">Attack and HP will appear here once the stat catalog is reviewed.</p>
+          <p className="mt-5 text-xs leading-5 text-stone-400">Attack and HP use the verified game formula with numbers you enter from the game. Item stats will be filled in automatically once the stat catalog is reviewed.</p>
         </aside>
       </div>
 
@@ -183,8 +192,4 @@ function ItemArt({ item, size, className }: { item: Item; size: number; classNam
 
 function ItemTooltip({ item }: { item: Item }) {
   return <span className="pointer-events-none absolute bottom-[calc(100%+8px)] left-0 z-20 hidden w-64 border border-white/15 bg-[#0e0e0e] p-3 text-left shadow-2xl group-hover:block group-focus-within:block"><span className="block text-xs font-black uppercase text-white">{item.name}</span><span className="mt-1 block text-[10px] font-bold uppercase tracking-wide text-[#ff555e]">{item.tier} tier · {item.score}/100</span><span className="mt-2 block text-xs leading-5 text-stone-400">{item.description}</span><span className="mt-2 block border-t border-white/10 pt-2 text-[10px] text-stone-500">Attack / HP: pending in-game verification</span></span>;
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return <span><span className="block text-[10px] font-bold uppercase tracking-wide text-stone-400">{label}</span><span className="mt-1 block text-[11px] font-bold text-stone-300">{value}</span></span>;
 }
