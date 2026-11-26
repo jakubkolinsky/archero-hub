@@ -95,7 +95,7 @@ export function BuildPlanner({ catalogItems }: { catalogItems: Item[] }) {
                 <SlotTile slotId="book" />
                 <SlotTile slotId="dragon" />
               </div>
-              <StatCalculator equipped={equippedSlots} />
+              <StatCalculator equipped={equippedSlots} heroName={catalogItems.find((catalogItem) => catalogItem.id === slots.hero)?.name ?? null} />
             </div>
 
             <div className="order-3 grid grid-cols-4 gap-2 sm:order-none sm:grid-cols-1 sm:gap-3">

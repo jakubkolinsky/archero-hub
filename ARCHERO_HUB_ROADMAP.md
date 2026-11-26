@@ -17,7 +17,12 @@ This is the working handoff for future chats. It records the agreed product dire
 5. [ ] **Get an HP reference build**: a screenshot of the Max HP breakdown with its footer totals, to verify `hp.ts` like Attack.
 6. [x] **Curator review workflow** in Admin: a "Review data" tab (`src/components/admin/source-review.tsx`) over the `source_review_entries` view (migration `202611240001`). It shows progress per data type, filters by type and status, searches names inside the data, shows each record's staged content, takes notes, and verifies or rejects single records, a selection, or all matching records (confirmed in-page, batched). The database stamps `reviewed_at` and `reviewed_by`; clients cannot set them. Admin, non-admin, and anonymous access were checked against RLS locally. 1,809 records are waiting for review. **Production deploy pending approval** (a database migration plus the Admin UI).
 7. [ ] Curator follow-ups from imports: label 9 Quick Raid icons, assign heroes to 54 outfits, name `unnamed-r298m`, confirm 45 date-recovered Quick Raid cells, and confirm whether glyph fractions like `0.05` mean 5%.
-8. [ ] **Calculator phase 2** (data-backed prefill, below). Optional phase-1 polish: an equipment helper (level value + slot boost + rarity boost → stat via `equipmentStat()`), and per-mode or shareable saved calculator builds.
+8. [x] **Calculator questionnaire** (built 2026-11-26, not yet deployed). The calculator opens in "Questions" mode, a 5-step wizard: Gear → Heroes → Outfits → Weapon skins → Altars & more. Owned outfits, weapon skins and hero milestones are looked up from `src/lib/calculator/game-data.json`, exported from the imported workbooks (93 outfits, 23 weapon skins, 268 hero milestones). Manual mode is unchanged. Scope assumptions, to confirm in game:
+   - Outfit unlock bonuses and "all heroes" level bonuses apply to every hero; the other level bonuses apply only to the outfit's own hero.
+   - Hero Level and 2☆/7☆ milestones apply to all heroes (matches the reference build); Brave and 8☆ milestones apply only to that hero.
+   - Weapon skin values are the listed base. The data has Star Cluster Fury at 180, but the reference build shows 296, so skins probably grow with level; the value is editable.
+   - Regenerate `game-data.json` after curator fixes (e.g. naming `unnamed-r298m`, assigning heroes to outfits).
+9. [ ] **Calculator phase 2** (data-backed prefill, below). Optional phase-1 polish: an equipment helper (level value + slot boost + rarity boost → stat via `equipmentStat()`), and per-mode or shareable saved calculator builds.
 
 ### Plan: Attack/HP calculator in the loadout
 

@@ -1,0 +1,6486 @@
+{
+ "source": "Generated from imported workbook data (outfit, skin and hero bonus migrations). Not yet curator-verified.",
+ "outfits": [
+  {
+   "slug": "unnamed-r298m",
+   "name": "",
+   "hero": null,
+   "unlock": "",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +160"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +3%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +85"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +180"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Crit Damage +15%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +255"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Damage to Ranged Units +6%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Bosses +8%"
+    }
+   ],
+   "image": "/images/outfits/unnamed-r298m.png"
+  },
+  {
+   "slug": "asura",
+   "name": "Asura",
+   "hero": null,
+   "unlock": "Attack +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +26"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Crit Chance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +51"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Front Damage Resistance +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Crit Chance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +203"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/asura.png"
+  },
+  {
+   "slug": "athenian-lord",
+   "name": "Athenian Lord",
+   "hero": "Onir",
+   "unlock": "Max HP +250",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Undead +5%"
+    }
+   ],
+   "image": "/images/outfits/athenian-lord.png"
+  },
+  {
+   "slug": "baking-sweety",
+   "name": "Baking Sweety",
+   "hero": null,
+   "unlock": "Max HP +750",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +97"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Elemental Damage +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +194"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +1%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Elemental Damage +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +775"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Flame Damage +6%"
+    }
+   ],
+   "image": "/images/outfits/baking-sweety.png"
+  },
+  {
+   "slug": "beach-dance",
+   "name": "Beach Dance",
+   "hero": "Ayana",
+   "unlock": "Attack +60",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Weapon ranged Damage +2%"
+    }
+   ],
+   "image": "/images/outfits/beach-dance.png"
+  },
+  {
+   "slug": "bear-master",
+   "name": "Bear Master",
+   "hero": "Helix",
+   "unlock": "Attack +60",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Melee Units +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Weapon Damage +106"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Melee Units +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/bear-master.png"
+  },
+  {
+   "slug": "black-order",
+   "name": "Black Order",
+   "hero": "Urasil",
+   "unlock": "Max HP +150",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Projectile Resistance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Projectile Resistence +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Ranged Units +4%"
+    }
+   ],
+   "image": "/images/outfits/black-order.png"
+  },
+  {
+   "slug": "boy-scout",
+   "name": "Boy Scout",
+   "hero": "Racoon",
+   "unlock": "Max HP +600",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Ice Damage +3%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +88"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Ice Damage +7%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Chance of Angle's Healing x2 +5%"
+    }
+   ],
+   "image": "/images/outfits/boy-scout.png"
+  },
+  {
+   "slug": "brawler",
+   "name": "Brawler",
+   "hero": "Phoren",
+   "unlock": "Attack +85",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +27"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Flame Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +53"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +1%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Flame Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +212"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Enemy debuff duration extended +5%"
+    }
+   ],
+   "image": "/images/outfits/brawler.png"
+  },
+  {
+   "slug": "bunny-melinda",
+   "name": "Bunny Melinda",
+   "hero": null,
+   "unlock": "Attack +200",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +97"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Movement Speed +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +194"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +146"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Movement Speed +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +775"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/bunny-melinda.png"
+  },
+  {
+   "slug": "cat-warlock",
+   "name": "Cat Warlock",
+   "hero": "Meowgik",
+   "unlock": "Max HP +200",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Summoned Creature Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +352"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Summoned Creature Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "HP Drops +4%"
+    }
+   ],
+   "image": "/images/outfits/cat-warlock.png"
+  },
+  {
+   "slug": "chef-kitty",
+   "name": "Chef Kitty",
+   "hero": "Meowgik",
+   "unlock": "Max HP +600",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Crit Chance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +132"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Crit Chance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/chef-kitty.png"
+  },
+  {
+   "slug": "cherry-blossom-romance-r243g",
+   "name": "Cherry Blossom Romance",
+   "hero": null,
+   "unlock": "Max HP +800",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +92"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +184"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +368"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +736"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Chance of Angel's Healing x2 +5%"
+    }
+   ],
+   "image": "/images/outfits/cherry-blossom-romance-r243g.png"
+  },
+  {
+   "slug": "cherry-blossom-romance-r188g",
+   "name": "Cherry Blossom Romance",
+   "hero": null,
+   "unlock": "Attack +130",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +88"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Front Damage resistance +4%"
+    }
+   ],
+   "image": "/images/outfits/cherry-blossom-romance-r188g.png"
+  },
+  {
+   "slug": "cherry-kitty",
+   "name": "Cherry Kitty",
+   "hero": "Meowgik",
+   "unlock": "Max HP +500",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Bosses + 132"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Own buff duration extended +4%  ?"
+    }
+   ],
+   "image": "/images/outfits/cherry-kitty.png"
+  },
+  {
+   "slug": "christmas-elf",
+   "name": "Christmas Elf",
+   "hero": "Racoon",
+   "unlock": "Weapon droprate +8%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Crit Chance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Crit Chance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Bosses +4%"
+    }
+   ],
+   "image": "/images/outfits/christmas-elf.png"
+  },
+  {
+   "slug": "coast-guard",
+   "name": "Coast Guard",
+   "hero": "Helix",
+   "unlock": "Attack +60",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "damage to Bosses +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +88"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "damage to Bosses +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "MAx HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Weapon Ranged Damage +2%"
+    }
+   ],
+   "image": "/images/outfits/coast-guard.png"
+  },
+  {
+   "slug": "commander",
+   "name": "Commander",
+   "hero": "Sylvan",
+   "unlock": "Max HP +350",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +100"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Elemental damage +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +200"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +100"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Elemental damage +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +800"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Elemental damage reduced +4%"
+    }
+   ],
+   "image": "/images/outfits/commander.png"
+  },
+  {
+   "slug": "conqueror-of-battles",
+   "name": "Conqueror of Battles",
+   "hero": null,
+   "unlock": "Max HP +2.5%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +40"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +375"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Damage to enemies with full HP +5%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Elemental damage reduced +2%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +255"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +5%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Weapon melee damage +6%"
+    }
+   ],
+   "image": "/images/outfits/conqueror-of-battles.png"
+  },
+  {
+   "slug": "crimson-blade",
+   "name": "Crimson Blade",
+   "hero": null,
+   "unlock": "Attack +120",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Melee Units +4%"
+    }
+   ],
+   "image": "/images/outfits/crimson-blade.png"
+  },
+  {
+   "slug": "cute-clown",
+   "name": "Cute Clown",
+   "hero": null,
+   "unlock": "Max HP +700",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +97"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Movement Speed +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +194"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +146"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Movement Speed +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +775"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/cute-clown.png"
+  },
+  {
+   "slug": "demon-shift",
+   "name": "Demon Shift",
+   "hero": "Ophelia",
+   "unlock": "Attack +100",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Healing Effect of Red Heart +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Healing Effect of Red Heart +4%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +4%"
+    }
+   ],
+   "image": "/images/outfits/demon-shift.png"
+  },
+  {
+   "slug": "demonslayer",
+   "name": "Demonslayer",
+   "hero": null,
+   "unlock": "Enemy debuff duration extended +3%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Knockback +3%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Elite enemy damage reduced +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +225"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Weapon Melee Damage +5%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Bosses +8%"
+    }
+   ],
+   "image": "/images/outfits/demonslayer.png"
+  },
+  {
+   "slug": "diver-pro",
+   "name": "Diver Pro",
+   "hero": null,
+   "unlock": "Attack +120",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +126"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Dodge +2%"
+    }
+   ],
+   "image": "/images/outfits/diver-pro.png"
+  },
+  {
+   "slug": "elegant-prince",
+   "name": "Elegant Prince",
+   "hero": "Sylvan",
+   "unlock": "Attack +120",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "HP Drops +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +126"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "HP Drops +4%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/elegant-prince.png"
+  },
+  {
+   "slug": "enchantress",
+   "name": "Enchantress",
+   "hero": "Ayana",
+   "unlock": "Attack +110",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Enemy debuff duration extended +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +132"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Enemy debuff duration extended +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Crit Chance +2%"
+    }
+   ],
+   "image": "/images/outfits/enchantress.png"
+  },
+  {
+   "slug": "expect-thunder-today",
+   "name": "Expect thunder today",
+   "hero": null,
+   "unlock": "Max HP +2.5%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +35"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Battle XP Gain +5%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +66"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Heroes +5%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Lightning Damage +10%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +220"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +5%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Elemental damage reduced +5%"
+    }
+   ],
+   "image": "/images/outfits/expect-thunder-today.png"
+  },
+  {
+   "slug": "family-armor",
+   "name": "Family Armor",
+   "hero": null,
+   "unlock": "Attack +125",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Weapon Damage +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Weapon Damage +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Healing Effect of Red Heart +4%"
+    }
+   ],
+   "image": "/images/outfits/family-armor.png"
+  },
+  {
+   "slug": "flame-student",
+   "name": "Flame Student",
+   "hero": "Phoren",
+   "unlock": "Attack +40",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +20"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Rear Damage Resistance +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +40"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +80"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Rear Damage Resistance +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +160"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +4%"
+    }
+   ],
+   "image": "/images/outfits/flame-student.png"
+  },
+  {
+   "slug": "flash",
+   "name": "Flash",
+   "hero": "Urasil",
+   "unlock": "Max HP +150",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Projectile Resistance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Projectile Resistence +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Ranged Units +4%"
+    }
+   ],
+   "image": "/images/outfits/flash.png"
+  },
+  {
+   "slug": "frosty-clawsmas",
+   "name": "Frosty Clawsmas",
+   "hero": null,
+   "unlock": "Attack +200",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +97"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Airborne Units +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +194"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Movement Speed +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +220"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +3%"
+    }
+   ],
+   "image": "/images/outfits/frosty-clawsmas.png"
+  },
+  {
+   "slug": "ghost-captain",
+   "name": "Ghost Captain",
+   "hero": null,
+   "unlock": "Max HP +250",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Movement Speed +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +88"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Movement Speed +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Summoned Creature Attack Speed +5%"
+    }
+   ],
+   "image": "/images/outfits/ghost-captain.png"
+  },
+  {
+   "slug": "gift-generator",
+   "name": "Gift Generator",
+   "hero": null,
+   "unlock": "Attack +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +150"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +70"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +180"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistence +4%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +255"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +5%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Elemental damage Reduced +5%"
+    }
+   ],
+   "image": "/images/outfits/gift-generator.png"
+  },
+  {
+   "slug": "golden-eyes",
+   "name": "Golden Eyes",
+   "hero": null,
+   "unlock": "Max HP +2%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +30"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Flame Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +60"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Front Damage Resistance +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Flame Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +240"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +3%"
+    }
+   ],
+   "image": "/images/outfits/golden-eyes.png"
+  },
+  {
+   "slug": "heart-of-wisdom",
+   "name": "Heart of Wisdom",
+   "hero": null,
+   "unlock": "Enemy debuff duration extended +2%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +110"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +225"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Crit Chance +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Crit Chance +2%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +1000"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Elemental damage reduced +5%"
+    }
+   ],
+   "image": "/images/outfits/heart-of-wisdom.png"
+  },
+  {
+   "slug": "holiday-kitty",
+   "name": "Holiday Kitty",
+   "hero": "Meowgik",
+   "unlock": "Max HP +500",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Summoned Creature Size +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +126"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Summoned Creature Size +2%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Weapon Ranged Damage +2%"
+    }
+   ],
+   "image": "/images/outfits/holiday-kitty.png"
+  },
+  {
+   "slug": "huffy-melinda",
+   "name": "Huffy Melinda",
+   "hero": null,
+   "unlock": "Max HP +750",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Crit Chance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +132"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Crit Chance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/huffy-melinda.png"
+  },
+  {
+   "slug": "hunting-arrow",
+   "name": "Hunting Arrow",
+   "hero": null,
+   "unlock": "Healing Effect of Red Heart +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +97"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Movement Speed +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +194"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +146"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Movement Speed +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +775"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/hunting-arrow.png"
+  },
+  {
+   "slug": "i-m-a-giant-dino-rawrr",
+   "name": "I'm a giant dino, rawrr",
+   "hero": null,
+   "unlock": "Max HP +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +102"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Enemies with full HP +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +203"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Rear Damage Resistance +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Enemies with full HP +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +810"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/i-m-a-giant-dino-rawrr.png"
+  },
+  {
+   "slug": "ice-empress",
+   "name": "Ice Empress",
+   "hero": null,
+   "unlock": "Attack +100",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Ice Damage +3%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Ice Damage +7%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +4%"
+    }
+   ],
+   "image": "/images/outfits/ice-empress.png"
+  },
+  {
+   "slug": "incoming-spirit",
+   "name": "Incoming Spirit",
+   "hero": null,
+   "unlock": "Attack +155",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +102"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "HP Drops +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +46"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +138"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "HP Drops +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +184"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/incoming-spirit.png"
+  },
+  {
+   "slug": "it-s-noon",
+   "name": "It's Noon",
+   "hero": null,
+   "unlock": "Attack +160",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Weapon Damage +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +88"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Weapon Damage +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Weapon Ranged Damage +2%"
+    }
+   ],
+   "image": "/images/outfits/it-s-noon.png"
+  },
+  {
+   "slug": "king-of-the-gods",
+   "name": "King of the Gods",
+   "hero": null,
+   "unlock": "Chain Lightning DMG +3%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +30"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Lightning Damage +5%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +60"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Rear Damage Resistance +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Lightning Damage +10%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +240"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +5%"
+    }
+   ],
+   "image": "/images/outfits/king-of-the-gods.png"
+  },
+  {
+   "slug": "kitchen-s-secret",
+   "name": "Kitchen's Secret",
+   "hero": null,
+   "unlock": "Max HP +820",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +102"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Ground Units +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +203"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +1%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Ground Units +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +810"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Flame Damage +6%"
+    }
+   ],
+   "image": "/images/outfits/kitchen-s-secret.png"
+  },
+  {
+   "slug": "legendary-assassin",
+   "name": "Legendary Assassin",
+   "hero": null,
+   "unlock": "Attack +120",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Dark Touch Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Dark Touch Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Collision Damage Resistance +2%"
+    }
+   ],
+   "image": "/images/outfits/legendary-assassin.png"
+  },
+  {
+   "slug": "legendary-hunter",
+   "name": "Legendary Hunter",
+   "hero": "Helix",
+   "unlock": "Max HP +800",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +100"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Elemental Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +200"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +100"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Elite enemy damage reduced +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +800"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/legendary-hunter.png"
+  },
+  {
+   "slug": "lethal-jello",
+   "name": "Lethal Jello",
+   "hero": null,
+   "unlock": "Attack +200",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +26"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Poison Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +51"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Weapon Damage +122"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Poison Damage +7%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +203"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/lethal-jello.png"
+  },
+  {
+   "slug": "little-witch",
+   "name": "Little Witch",
+   "hero": "Ayana",
+   "unlock": "Attack +60",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Rear Damage Resiatance +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +352"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Rear Damage Resistance +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Ranged Units +4%"
+    }
+   ],
+   "image": "/images/outfits/little-witch.png"
+  },
+  {
+   "slug": "lucky-lion",
+   "name": "Lucky Lion",
+   "hero": null,
+   "unlock": "Attack +200",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +115"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Ground Units +3%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +250"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +1200"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Bosses +5%"
+    }
+   ],
+   "image": "/images/outfits/lucky-lion.png"
+  },
+  {
+   "slug": "lunar-radiance",
+   "name": "Lunar Radiance",
+   "hero": null,
+   "unlock": "Max HP +700",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Weapon Damage +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Weapon Damage +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Healing Effect of Red Hearts +4%"
+    }
+   ],
+   "image": "/images/outfits/lunar-radiance.png"
+  },
+  {
+   "slug": "magician",
+   "name": "Magician",
+   "hero": null,
+   "unlock": "Max HP +825",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +110"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Crit Chance +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +240"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Crit Damage +10%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Crit Chance +2%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +1000"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/magician.png"
+  },
+  {
+   "slug": "mandarin-taiga",
+   "name": "Mandarin Taiga",
+   "hero": null,
+   "unlock": "Max HP +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +102"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Enemies with full HP +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +203"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Rear Damage Resistance +2%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Enemies with full HP +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +810"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/mandarin-taiga.png"
+  },
+  {
+   "slug": "mermaid-garb",
+   "name": "Mermaid Garb",
+   "hero": null,
+   "unlock": "Max HP +525",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Ice Damage +3%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +126"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Ice Damage +7%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/mermaid-garb.png"
+  },
+  {
+   "slug": "merry-christmas",
+   "name": "Merry Christmas",
+   "hero": null,
+   "unlock": "Max HP +700",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Projectile Resistance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Projectile Resistance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +4%"
+    }
+   ],
+   "image": "/images/outfits/merry-christmas.png"
+  },
+  {
+   "slug": "mummy-returns",
+   "name": "Mummy Returns",
+   "hero": "Gugu",
+   "unlock": "Attack +125",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Rear Damage Resistance +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ranged Units +44"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Rear Damage Resistance +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/mummy-returns.png"
+  },
+  {
+   "slug": "netherwolf",
+   "name": "Netherwolf",
+   "hero": "Helix",
+   "unlock": "Max HP +800",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +97"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Collision Damage Resist +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +194"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +1%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Collision Damage Resist +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +775"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Elemental Damage reduced +5%"
+    }
+   ],
+   "image": "/images/outfits/netherwolf.png"
+  },
+  {
+   "slug": "ocean-s-heart",
+   "name": "Ocean's Heart",
+   "hero": null,
+   "unlock": "Attack +155",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +23"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Blue Heart Drop Rate +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +46"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Bosses +138"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Blue Heart Drop Rate +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +184"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/ocean-s-heart.png"
+  },
+  {
+   "slug": "overlord-s-liberation",
+   "name": "Overlord's Liberation",
+   "hero": null,
+   "unlock": "Max HP +2.5%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +150"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to enemies with full HP +3%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +80"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +180"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Elemental damage +10%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +255"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Crit Chance +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Bosses +8%"
+    }
+   ],
+   "image": "/images/outfits/overlord-s-liberation.png"
+  },
+  {
+   "slug": "pharaoh-taranis",
+   "name": "Pharaoh Taranis",
+   "hero": "Taranis",
+   "unlock": "Max HP +500",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Lightning Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage Resistance +34"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Lightning Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/pharaoh-taranis.png"
+  },
+  {
+   "slug": "phoenixier",
+   "name": "Phoenixier",
+   "hero": "Taranis",
+   "unlock": "Max HP +320",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Flame Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +1%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Flame Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Flame Resistance +6%"
+    }
+   ],
+   "image": "/images/outfits/phoenixier.png"
+  },
+  {
+   "slug": "pinobear",
+   "name": "Pinobear",
+   "hero": "Bobo",
+   "unlock": "Max HP +300",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +92"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +184"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +138"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +736"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/pinobear.png"
+  },
+  {
+   "slug": "pirate-captain",
+   "name": "Pirate Captain",
+   "hero": null,
+   "unlock": "Max HP +250",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +80"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Summoned Creature Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +160"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +320"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Summoned Creature Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP + 640"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Projectile Resistance +2%"
+    }
+   ],
+   "image": "/images/outfits/pirate-captain.png"
+  },
+  {
+   "slug": "present-envoy",
+   "name": "Present Envoy",
+   "hero": "Ophelia",
+   "unlock": "Attack +100",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Summoned Creature Duration +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +132"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Summoned Creature Duration +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/present-envoy.png"
+  },
+  {
+   "slug": "raindeer-meowgik",
+   "name": "Raindeer Meowgik",
+   "hero": "Meowgik",
+   "unlock": "Max HP +600",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +97"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +194"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Spin Speed +3%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +775"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Weapon Melee Damage +3%"
+    }
+   ],
+   "image": "/images/outfits/raindeer-meowgik.png"
+  },
+  {
+   "slug": "refreshing-summer",
+   "name": "Refreshing Summer",
+   "hero": null,
+   "unlock": "Max HP +750",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": ""
+    }
+   ],
+   "image": "/images/outfits/refreshing-summer.png"
+  },
+  {
+   "slug": "robin-gugu",
+   "name": "Robin Gugu",
+   "hero": "Gugu",
+   "unlock": "Max HP +400",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Summoned Creature Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Summoned Creature Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +4%"
+    }
+   ],
+   "image": "/images/outfits/robin-gugu.png"
+  },
+  {
+   "slug": "rockstar",
+   "name": "Rockstar",
+   "hero": null,
+   "unlock": "Attack +130",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Crit Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +352"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Crit Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Melee Units +4%"
+    }
+   ],
+   "image": "/images/outfits/rockstar.png"
+  },
+  {
+   "slug": "royal-knight",
+   "name": "Royal Knight",
+   "hero": "Urasil",
+   "unlock": "Max HP +150",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Poison Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Poison Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Melee Units +4%"
+    }
+   ],
+   "image": "/images/outfits/royal-knight.png"
+  },
+  {
+   "slug": "royal-princess",
+   "name": "Royal Princess",
+   "hero": null,
+   "unlock": "Max HP +500",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Movement Speed +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Movement Speed +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Boss Damage Resistance +3%"
+    }
+   ],
+   "image": "/images/outfits/royal-princess.png"
+  },
+  {
+   "slug": "rozen-will",
+   "name": "Rozen WIll",
+   "hero": null,
+   "unlock": "Max HP +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +110"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +220"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +1%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Mobs Damage Resistance +4%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +900"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +4%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Chain Lightning DMG +5%"
+    }
+   ],
+   "image": "/images/outfits/rozen-will.png"
+  },
+  {
+   "slug": "sage-above-heaven",
+   "name": "Sage Above Heaven",
+   "hero": null,
+   "unlock": "Crit Chance +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +125"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Front Damage Resistance +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +250"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Knockback +3%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Control Resistance +10%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +255"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Weapon Melee Damage +5%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +4%"
+    }
+   ],
+   "image": "/images/outfits/sage-above-heaven.png"
+  },
+  {
+   "slug": "sanguine-sovereign",
+   "name": "Sanguine Sovereign",
+   "hero": null,
+   "unlock": "Max HP +2.5%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +40"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Lifesteal effect up +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +375"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +180"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "All Strikes Damage +15%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +1200"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Weapon Melee Damage +5%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Front Damage Resistance +4%"
+    }
+   ],
+   "image": "/images/outfits/sanguine-sovereign.png"
+  },
+  {
+   "slug": "seahorse-seahorse",
+   "name": "Seahorse! Seahorse!",
+   "hero": null,
+   "unlock": "Max HP +600",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +88"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "HP Drops +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +176"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +352"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "HP Drops +4%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +704"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +4%"
+    }
+   ],
+   "image": "/images/outfits/seahorse-seahorse.png"
+  },
+  {
+   "slug": "shaman-sacrifice",
+   "name": "Shaman Sacrifice",
+   "hero": "Shari",
+   "unlock": "Max HP +150",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +80"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Summoned Creature Attack Speed +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +160"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Collision Damage Resistance +40"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Summoned Creature Attack Speed +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max Hp + 640"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/shaman-sacrifice.png"
+  },
+  {
+   "slug": "silken-dance",
+   "name": "Silken Dance",
+   "hero": null,
+   "unlock": "Attack +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +102"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Flame Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +203"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +1%"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Flame Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +810"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Own buff duration extended +4% "
+    }
+   ],
+   "image": "/images/outfits/silken-dance.png"
+  },
+  {
+   "slug": "snow-maiden-elaine",
+   "name": "Snow Maiden Elaine",
+   "hero": null,
+   "unlock": "Attack +150",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Airborne Units +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +352"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Airborne Units +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Ice Damage +7%"
+    }
+   ],
+   "image": "/images/outfits/snow-maiden-elaine.png"
+  },
+  {
+   "slug": "soul-of-war",
+   "name": "Soul of War",
+   "hero": null,
+   "unlock": "Weapon Damage +1%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +30"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Movement Speed +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +60"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage Resistance +50"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Movement Speed +2%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +220"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +5%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Weapon Melee Damage +3%"
+    }
+   ],
+   "image": "/images/outfits/soul-of-war.png"
+  },
+  {
+   "slug": "sushi-master",
+   "name": "Sushi Master",
+   "hero": null,
+   "unlock": "Attack +130",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Weapon Melee Damage +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Melee Units +132"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Weapon Melee Damage +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/sushi-master.png"
+  },
+  {
+   "slug": "sweet-proposal-r122g",
+   "name": "Sweet Proposal",
+   "hero": "Sylvan",
+   "unlock": "Attack +120",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Elemental Damage +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +126"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Elemental Damage +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/sweet-proposal-r122g.png"
+  },
+  {
+   "slug": "sweet-proposal-r100d",
+   "name": "Sweet Proposal",
+   "hero": null,
+   "unlock": "Attack +100",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to enemies with full HP +?"
+    }
+   ],
+   "image": "/images/outfits/sweet-proposal-r100d.png"
+  },
+  {
+   "slug": "sweetheart-teddy",
+   "name": "Sweetheart Teddy",
+   "hero": "Helix",
+   "unlock": "Max HP +600",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Flame Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +126"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Flame Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Ice Damage +7%"
+    }
+   ],
+   "image": "/images/outfits/sweetheart-teddy.png"
+  },
+  {
+   "slug": "this-isn-t-turkey",
+   "name": "This Isn't Turkey!",
+   "hero": "Racoon",
+   "unlock": "Max HP +600",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": ""
+    }
+   ],
+   "image": "/images/outfits/this-isn-t-turkey.png"
+  },
+  {
+   "slug": "this-is-sparta",
+   "name": "This is Sparta",
+   "hero": "Onir",
+   "unlock": "Attack +75",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +352"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Humanoid +5%"
+    }
+   ],
+   "image": "/images/outfits/this-is-sparta.png"
+  },
+  {
+   "slug": "thunder-lord",
+   "name": "Thunder Lord",
+   "hero": "Taranis",
+   "unlock": "Max HP +200",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistance +1%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Max HP +336"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Collision Damage Resistance +3%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Damage to Mobs +4%"
+    }
+   ],
+   "image": "/images/outfits/thunder-lord.png"
+  },
+  {
+   "slug": "today-s-chef",
+   "name": "Today's Chef",
+   "hero": null,
+   "unlock": "Max HP +550",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Flame Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +126"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Flame Damage +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/today-s-chef.png"
+  },
+  {
+   "slug": "tribe-chief",
+   "name": "Tribe Chief",
+   "hero": "Shari",
+   "unlock": "Max HP +400",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Summoned Creature Duration +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Collision Damage Resistance +44"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Summoned Creature Duration +6%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Projectile Resistance +2%"
+    }
+   ],
+   "image": "/images/outfits/tribe-chief.png"
+  },
+  {
+   "slug": "trick-or-treat",
+   "name": "Trick or Treat",
+   "hero": "Racoon",
+   "unlock": "Max HP +600",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Elemental Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Elemental Damage +4%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attak +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Elemental Damage +3%"
+    }
+   ],
+   "image": "/images/outfits/trick-or-treat.png"
+  },
+  {
+   "slug": "turkey-celebration",
+   "name": "Turkey Celebration",
+   "hero": null,
+   "unlock": "Max HP +400",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +84"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Airborne Units +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +168"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +84"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Airborne Unita +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +672"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Rear Damage Resistance +4%"
+    }
+   ],
+   "image": "/images/outfits/turkey-celebration.png"
+  },
+  {
+   "slug": "vampire-count",
+   "name": "Vampire Count",
+   "hero": "Sylvan",
+   "unlock": "Max HP +350",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +96"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +192"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Airborne Units +144"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +768"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Attack +2%"
+    }
+   ],
+   "image": "/images/outfits/vampire-count.png"
+  },
+  {
+   "slug": "white-haired-samurai",
+   "name": "White-haired Samurai",
+   "hero": null,
+   "unlock": "Attack +150",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +22"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Summoned Creature Damage +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +44"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Attack +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Attack +88"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Summoned Creature Damage +2%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +176"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Attack +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Crit Chance +2%"
+    }
+   ],
+   "image": "/images/outfits/white-haired-samurai.png"
+  },
+  {
+   "slug": "world-reign",
+   "name": "World Reign",
+   "hero": null,
+   "unlock": "Max HP +2.5%",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": ""
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": ""
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": ""
+    }
+   ],
+   "image": "/images/outfits/world-reign.png"
+  },
+  {
+   "slug": "your-present",
+   "name": "Your Present",
+   "hero": null,
+   "unlock": "Max HP +800",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Max HP +92"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Max HP +184"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Ground Units +138"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Bosses +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Max HP +736"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/your-present.png"
+  },
+  {
+   "slug": "zombies-incoming",
+   "name": "Zombies Incoming",
+   "hero": "Helix",
+   "unlock": "Attack +60",
+   "levels": [
+    {
+     "level": 5,
+     "allHeroes": true,
+     "effect": "Attack +21"
+    },
+    {
+     "level": 10,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +2%"
+    },
+    {
+     "level": 20,
+     "allHeroes": true,
+     "effect": "Attack +42"
+    },
+    {
+     "level": 30,
+     "allHeroes": false,
+     "effect": "Max HP +2%"
+    },
+    {
+     "level": 40,
+     "allHeroes": true,
+     "effect": "Damage to Bosses +126"
+    },
+    {
+     "level": 50,
+     "allHeroes": false,
+     "effect": "Damage to Mobs +5%"
+    },
+    {
+     "level": 60,
+     "allHeroes": true,
+     "effect": "Attack +168"
+    },
+    {
+     "level": 70,
+     "allHeroes": false,
+     "effect": "Max HP +3%"
+    },
+    {
+     "level": 80,
+     "allHeroes": true,
+     "effect": "Max HP +2%"
+    }
+   ],
+   "image": "/images/outfits/zombies-incoming.png"
+  }
+ ],
+ "weaponSkins": [
+  {
+   "name": "Elegant Edge",
+   "weapon": "Blade",
+   "bonus": 200
+  },
+  {
+   "name": "Thundercleave",
+   "weapon": "Blade",
+   "bonus": 270
+  },
+  {
+   "name": "Wraithian Felblade",
+   "weapon": "Blade",
+   "bonus": 200
+  },
+  {
+   "name": "Miragold Bow",
+   "weapon": "Bow",
+   "bonus": 125
+  },
+  {
+   "name": "Star Cluster Fury",
+   "weapon": "Bow",
+   "bonus": 180
+  },
+  {
+   "name": "Disintegrating Fist",
+   "weapon": "Fist",
+   "bonus": 300
+  },
+  {
+   "name": "Fire Dragon's Howl",
+   "weapon": "Galeforce",
+   "bonus": 220
+  },
+  {
+   "name": "Wraithian Crossbow",
+   "weapon": "Galeforce",
+   "bonus": 150
+  },
+  {
+   "name": "Arcana Dagger",
+   "weapon": "Saw blade",
+   "bonus": 100
+  },
+  {
+   "name": "Nightmare Lance",
+   "weapon": "Saw blade",
+   "bonus": 180
+  },
+  {
+   "name": "Scythe of Horror",
+   "weapon": "Scythe",
+   "bonus": 180
+  },
+  {
+   "name": "Wraithian Scythe",
+   "weapon": "Scythe",
+   "bonus": 125
+  },
+  {
+   "name": "BBQ Grillmaster",
+   "weapon": "Spear",
+   "bonus": 185
+  },
+  {
+   "name": "Eternal Spear",
+   "weapon": "Spear",
+   "bonus": 180
+  },
+  {
+   "name": "Miragold Spear",
+   "weapon": "Spear",
+   "bonus": 150
+  },
+  {
+   "name": "Arcana Scepter",
+   "weapon": "Staff",
+   "bonus": 125
+  },
+  {
+   "name": "Brightspark",
+   "weapon": "Staff",
+   "bonus": 180
+  },
+  {
+   "name": "Nethersoul Wand",
+   "weapon": "Staff",
+   "bonus": 250
+  },
+  {
+   "name": "Arcana Greatsword",
+   "weapon": "Sword",
+   "bonus": 200
+  },
+  {
+   "name": "Moonlight Greatsword",
+   "weapon": "Sword",
+   "bonus": 270
+  },
+  {
+   "name": "Deathbloom",
+   "weapon": "Tornado",
+   "bonus": 180
+  },
+  {
+   "name": "Miragold Vortex",
+   "weapon": "Tornado",
+   "bonus": 80
+  },
+  {
+   "name": "Plume Awn",
+   "weapon": "Tornado",
+   "bonus": 150
+  }
+ ],
+ "heroMilestones": [
+  {
+   "hero": "Aquea",
+   "milestone": "2☆",
+   "effect": "Attack +70"
+  },
+  {
+   "hero": "Aquea",
+   "milestone": "7☆",
+   "effect": "HP +1800"
+  },
+  {
+   "hero": "Aquea",
+   "milestone": "8☆",
+   "effect": "Movement Speed 4%"
+  },
+  {
+   "hero": "Aquea",
+   "milestone": "Brave 100",
+   "effect": "Weapon Damage +7%"
+  },
+  {
+   "hero": "Aquea",
+   "milestone": "Brave 20",
+   "effect": "Attack +200"
+  },
+  {
+   "hero": "Aquea",
+   "milestone": "Brave 40",
+   "effect": "Attack +5%"
+  },
+  {
+   "hero": "Aquea",
+   "milestone": "Level 120",
+   "effect": "Healing Effect of Red Hearts 12%"
+  },
+  {
+   "hero": "Aquea",
+   "milestone": "Level 20",
+   "effect": "HP +250"
+  },
+  {
+   "hero": "Aquea",
+   "milestone": "Level 60",
+   "effect": "Attack +5%"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "2☆",
+   "effect": "Attack +30"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "7☆",
+   "effect": "HP +800"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "8☆",
+   "effect": "HP 5%"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "Brave 100",
+   "effect": "HP  +5%"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "Brave 20",
+   "effect": "Attack +80"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "Brave 40",
+   "effect": "Attack +2%"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "Level 120",
+   "effect": "Projectile Resistance 7%"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "Level 20",
+   "effect": "HP +100"
+  },
+  {
+   "hero": "Atreus",
+   "milestone": "Level 60",
+   "effect": "HP +5%"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "2☆",
+   "effect": "Crit Damage +15%"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "7☆",
+   "effect": "Attack +250"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "8☆",
+   "effect": "Damage Bosses 7%"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "Brave 100",
+   "effect": "Damage to Mobs +8%"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "Brave 20",
+   "effect": "Damage to Ranged Units +200"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "Brave 40",
+   "effect": "Damage to Elites +5%"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "Level 120",
+   "effect": "Damage Ranged Units 9%"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "Level 20",
+   "effect": "Damage to Airborne Units +80"
+  },
+  {
+   "hero": "Ayana",
+   "milestone": "Level 60",
+   "effect": "Attack +4%"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "2☆",
+   "effect": "Damage to Ground Units +80"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "7☆",
+   "effect": "HP +1800"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "8☆",
+   "effect": "Free Magic Cast 12%"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "Brave 100",
+   "effect": "Control Resistance +20%"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "Brave 20",
+   "effect": "Damage to Ground Units +320"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "Brave 40",
+   "effect": "Increased Attack after kill +7%"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "Level 120",
+   "effect": "HP 8%"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "Level 20",
+   "effect": "Damage to Melee Units +130"
+  },
+  {
+   "hero": "Blazo",
+   "milestone": "Level 60",
+   "effect": "HP +6%"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "2☆",
+   "effect": "HP +240"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "7☆",
+   "effect": "HP +1800"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "8☆",
+   "effect": "Battle XP 5%"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "Brave 100",
+   "effect": "Battle XP Gain +7%"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "Brave 20",
+   "effect": "HP +480"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "Brave 40",
+   "effect": "Attack +3%"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "Level 120",
+   "effect": "Attack 6%"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "Level 20",
+   "effect": "Damage to Mobs +150"
+  },
+  {
+   "hero": "Bobo",
+   "milestone": "Level 60",
+   "effect": "Damage to Ranged Units +5%"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "2☆",
+   "effect": "Attack +50"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "7☆",
+   "effect": "HP +1200"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "8☆",
+   "effect": "Summon Damage 15%"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "Brave 100",
+   "effect": "Summoned Creature Damage +17%"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "Brave 20",
+   "effect": "Attack +150"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "Brave 40",
+   "effect": "Attack +4%"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "Level 120",
+   "effect": "Attack 6%"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "Level 20",
+   "effect": "Crit Damage +20%"
+  },
+  {
+   "hero": "Bonnie",
+   "milestone": "Level 60",
+   "effect": "HP +5%"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "2☆",
+   "effect": "Attack +70"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "7☆",
+   "effect": "Attack +700"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "8☆",
+   "effect": "Damage to Bosses 10%"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "Brave 100",
+   "effect": "Attack +10%"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "Brave 20",
+   "effect": "Attack +260"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "Brave 40",
+   "effect": "HP +7%"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "Level 120",
+   "effect": "Damage to Ranged Units 10%"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "Level 20",
+   "effect": "Damage to Melee Units +200"
+  },
+  {
+   "hero": "Dragon Girl",
+   "milestone": "Level 60",
+   "effect": "Damage to Ground Units +5%"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "2☆",
+   "effect": "HP +360"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "7☆",
+   "effect": "HP +2000"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "8☆",
+   "effect": "HP 9%"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "Brave 100",
+   "effect": "HP +10%"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "Brave 20",
+   "effect": "HP +770"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "Brave 40",
+   "effect": "HP +6%"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "Level 120",
+   "effect": "Damage to Ground Units 9%"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "Level 20",
+   "effect": "Damage to Airborne Units +150"
+  },
+  {
+   "hero": "Elaine",
+   "milestone": "Level 60",
+   "effect": "HP +7%"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "2☆",
+   "effect": "Damage to Airborne Units +60"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "7☆",
+   "effect": "Damage to Ranged Units +400"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "8☆",
+   "effect": "Spin Speed +15%"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "Brave 100",
+   "effect": "HP +8%"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "Brave 20",
+   "effect": "Damage to Airborne Units +320"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "Brave 40",
+   "effect": "Shield Size +7%"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "Level 120",
+   "effect": "HP 8%"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "Level 20",
+   "effect": "Damage to Airborne Units +100"
+  },
+  {
+   "hero": "Gugu",
+   "milestone": "Level 60",
+   "effect": "Damage to Ranged Units +5%"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "2☆",
+   "effect": "Attack +40"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "7☆",
+   "effect": "Damage to Ranged Units +300"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "8☆",
+   "effect": "Ranged Resistance 8%"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "Brave 100",
+   "effect": "Healing Effect of Red Hearts 8%"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "Brave 20",
+   "effect": "Attack +120"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "Brave 40",
+   "effect": "Damage to Bosses +5%"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "Level 120",
+   "effect": "Healing Effect of Red Hearts 10%"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "Level 20",
+   "effect": "Crit Damage +20%"
+  },
+  {
+   "hero": "Helix",
+   "milestone": "Level 60",
+   "effect": "HP +5%"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "2☆",
+   "effect": "Attack +70"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "7☆",
+   "effect": "Damage to Airborn Units +400"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "8☆",
+   "effect": "Weapon Ranged Damage 10%"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "Brave 100",
+   "effect": "Damage to Airborne Units +12%"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "Brave 20",
+   "effect": "Attack +200"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "Brave 40",
+   "effect": "Rear Resistance +8%"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "Level 120",
+   "effect": "Damage to Airborn Units 10%"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "Level 20",
+   "effect": "HP +250"
+  },
+  {
+   "hero": "Iris",
+   "milestone": "Level 60",
+   "effect": "Attack +5%"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "2☆",
+   "effect": "Attack +60"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "7☆",
+   "effect": "HP +1500"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "8☆",
+   "effect": "Max MP 15%"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "Brave 100",
+   "effect": "Summoned Creature Duration +12%"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "Brave 20",
+   "effect": "Attack +150"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "Brave 40",
+   "effect": "MP +7%"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "Level 120",
+   "effect": "Damage to Melee Units 9%"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "Level 20",
+   "effect": "Attack +100"
+  },
+  {
+   "hero": "Lina",
+   "milestone": "Level 60",
+   "effect": "HP +5%"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "2☆",
+   "effect": "Damage to Ranged Units +100"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "7☆",
+   "effect": "Attack +400"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "8☆",
+   "effect": "Attack 9%"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "Brave 100",
+   "effect": "Attack +10%"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "Brave 20",
+   "effect": "Damage to Airborne Units +400"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "Brave 40",
+   "effect": "Attack +5%"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "Level 120",
+   "effect": "Damage to Ranged Units 8%"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "Level 20",
+   "effect": "Damage to Ranged Units +130"
+  },
+  {
+   "hero": "Melinda",
+   "milestone": "Level 60",
+   "effect": "Damage to Melee Units +5%"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "2☆",
+   "effect": "Healing Effect of Red Hearts 10%"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "7☆",
+   "effect": "HP +1000"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "8☆",
+   "effect": "Dodge 7%"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "Brave 100",
+   "effect": "Coins from Battle +5%"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "Brave 20",
+   "effect": "Damage to Melee Units +160"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "Brave 40",
+   "effect": "Damage to Mobs +5%"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "Level 120",
+   "effect": "Dodge 3%"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "Level 20",
+   "effect": "Attack +50"
+  },
+  {
+   "hero": "Meowgik",
+   "milestone": "Level 60",
+   "effect": "Attack +4%"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "2☆",
+   "effect": "HP +200"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "7☆",
+   "effect": "Projectile Resistance +10%"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "8☆",
+   "effect": "Damage Mobs 7%"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "Brave 100",
+   "effect": "Weapon Melee Damage +6%"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "Brave 20",
+   "effect": "HP +480"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "Brave 40",
+   "effect": "Damage to Airborne Units +6%"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "Level 120",
+   "effect": "Damage Ground Units 6%"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "Level 20",
+   "effect": "HP +200"
+  },
+  {
+   "hero": "Onir",
+   "milestone": "Level 60",
+   "effect": "Healing Effect of Red Hearts 20%"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "2☆",
+   "effect": "Damage to Ground Units +75"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "7☆",
+   "effect": "Attack Speed +3%"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "8☆",
+   "effect": "MP Cast Speed 25%"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "Brave 100",
+   "effect": "Weapon Ranged Damage +7%"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "Brave 20",
+   "effect": "Damage to Ground Units +240"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "Brave 40",
+   "effect": "Blue Drop +12%"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "Level 120",
+   "effect": "Damage to Melee Units 9%"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "Level 20",
+   "effect": "Attack +70"
+  },
+  {
+   "hero": "Ophelia",
+   "milestone": "Level 60",
+   "effect": "Attack +120"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "2☆",
+   "effect": "Damage to Airborne Units +75"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "7☆",
+   "effect": "Attack +200"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "8☆",
+   "effect": "Ground Resistance 6%"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "Brave 100",
+   "effect": "Flame Damage +10%"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "Brave 20",
+   "effect": "Damage to Airborne Units +150"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "Brave 40",
+   "effect": "Damage to Melee Units +4%"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "Level 120",
+   "effect": "Damage to Ranged Units 9%"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "Level 20",
+   "effect": "Crit Chance 2%"
+  },
+  {
+   "hero": "Phoren",
+   "milestone": "Level 60",
+   "effect": "Crit Chance 2%"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "2☆",
+   "effect": "Attack +80"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "7☆",
+   "effect": "Attack +750"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "8☆",
+   "effect": "Weapon Ranged Damage 12%"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "Brave 100",
+   "effect": "Weapon Melee Damage +8%"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "Brave 20",
+   "effect": "Attack +275"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "Brave 40",
+   "effect": "Damage to Bosses +8%"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "Level 120",
+   "effect": "Crit Damage 17%"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "Level 20",
+   "effect": "HP +400"
+  },
+  {
+   "hero": "Raidara",
+   "milestone": "Level 60",
+   "effect": "Attack +6%"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "2☆",
+   "effect": "Damage to Melee Units +75"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "7☆",
+   "effect": "Crit Damage +20%"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "8☆",
+   "effect": "HP 7%"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "Brave 100",
+   "effect": "Attack +6%"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "Brave 20",
+   "effect": "Damage to Melee Units +240"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "Brave 40",
+   "effect": "HP +4%"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "Level 120",
+   "effect": "Collision Resistance 7%"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "Level 20",
+   "effect": "Attack +60"
+  },
+  {
+   "hero": "Rolla",
+   "milestone": "Level 60",
+   "effect": "Attack +5%"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "2☆",
+   "effect": "Damage to Ranged Units +75"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "7☆",
+   "effect": "Damage to Airborn Units +400"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "8☆",
+   "effect": "Coin Drops 10%"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "Brave 100",
+   "effect": "HP +7%"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "Brave 20",
+   "effect": "Damage to Airborne Units +240"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "Brave 40",
+   "effect": "Angel Heal x2 +10%"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "Level 120",
+   "effect": "HP 8%"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "Level 20",
+   "effect": "Damage to Ranged Units +100"
+  },
+  {
+   "hero": "Ryan",
+   "milestone": "Level 60",
+   "effect": "Damage to Airborne Units +250"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "2☆",
+   "effect": "Crit Chance 2%"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "7☆",
+   "effect": "Attack +300"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "8☆",
+   "effect": "Attack 8%"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "Brave 100",
+   "effect": "Attack +8%"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "Brave 20",
+   "effect": "Damage to Melee Units +240"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "Brave 40",
+   "effect": "Damage to Heroes +8%"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "Level 120",
+   "effect": "Crit Damage 10%"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "Level 20",
+   "effect": "Damage to Ground Units +100"
+  },
+  {
+   "hero": "Shade",
+   "milestone": "Level 60",
+   "effect": "HP +5%"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "2☆",
+   "effect": "HP +120"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "7☆",
+   "effect": "Damage to Melee Units +300"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "8☆",
+   "effect": "Melee Resistance 7%"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "Brave 100",
+   "effect": "Damage to Heroes +9%"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "Brave 20",
+   "effect": "HP +400"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "Brave 40",
+   "effect": "Damage to Normal Units +5%"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "Level 120",
+   "effect": "HP 8%"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "Level 20",
+   "effect": "HP +300"
+  },
+  {
+   "hero": "Shari",
+   "milestone": "Level 60",
+   "effect": "Damage to Melee Units +5%"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "2☆",
+   "effect": "Damage to Melee Units +80"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "7☆",
+   "effect": "HP +1800"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "8☆",
+   "effect": "Weapon Melee Damage 11%"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "Brave 100",
+   "effect": "Damage to Elites +12%"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "Brave 20",
+   "effect": "Damage to Melee Units +320"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "Brave 40",
+   "effect": "Front Resistance +6%"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "Level 120",
+   "effect": "Damage to Ground Units 6%"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "Level 20",
+   "effect": "Damage to Melee Units +120"
+  },
+  {
+   "hero": "Shingen",
+   "milestone": "Level 60",
+   "effect": "HP +6%"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "2☆",
+   "effect": "Rear Damage Resistance +3%"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "7☆",
+   "effect": "Meteor, Star Damage +10%"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "8☆",
+   "effect": "Weapon Damage 8%"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "Brave 100",
+   "effect": "Increased Attack after kill +12%"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "Brave 20",
+   "effect": "Attack +230"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "Brave 40",
+   "effect": "Attack +5%"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "Level 120",
+   "effect": "HP drops +7%"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "Level 20",
+   "effect": "Attack +125"
+  },
+  {
+   "hero": "Stella",
+   "milestone": "Level 60",
+   "effect": "Attack +6%"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "2☆",
+   "effect": "Damage to Ranged Units +75"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "7☆",
+   "effect": "Damage to Ground Units +400"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "8☆",
+   "effect": "Elemental Damage 25%"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "Brave 100",
+   "effect": "Elemental Damage +30%"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "Brave 20",
+   "effect": "Damage to Ranged Units +240"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "Brave 40",
+   "effect": "HP +5%"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "Level 120",
+   "effect": "Damage to Ranged Units 9%"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "Level 20",
+   "effect": "HP +200"
+  },
+  {
+   "hero": "Sylvan",
+   "milestone": "Level 60",
+   "effect": "Attack +5%"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "2☆",
+   "effect": "Dodge +2%"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "7☆",
+   "effect": "Attack +3%"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "8☆",
+   "effect": "Beast damage Reduction 10%"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "Brave 100",
+   "effect": "Weapon Melee Damage +8%"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "Brave 20",
+   "effect": "Attack +240"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "Brave 40",
+   "effect": "Damage to Beasts +10%"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "Level 120",
+   "effect": "Crit Damage 17%"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "Level 20",
+   "effect": "HP +400"
+  },
+  {
+   "hero": "Taiga",
+   "milestone": "Level 60",
+   "effect": "HP +6%"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "2☆",
+   "effect": "HP +150"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "7☆",
+   "effect": "Damage to Airborne Units +300"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "8☆",
+   "effect": "Airborne Resistance 7%"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "Brave 100",
+   "effect": "Lightning Damage +10%"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "Brave 20",
+   "effect": "HP +400"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "Brave 40",
+   "effect": "Damage to Ranged Units +5%"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "Level 120",
+   "effect": "Damage to Airborn Units 9%"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "Level 20",
+   "effect": "Crit Chance 2%"
+  },
+  {
+   "hero": "Taranis",
+   "milestone": "Level 60",
+   "effect": "Attack +4%"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "2☆",
+   "effect": "HP +120"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "7☆",
+   "effect": "Crit Chance +2%"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "8☆",
+   "effect": "Healing Effect of Red Hearts 7%"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "Brave 100",
+   "effect": "Poison Damage +10%"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "Brave 20",
+   "effect": "HP +320"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "Brave 40",
+   "effect": "Damage to Ground Units +4%"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "Level 120",
+   "effect": "Damage to Melee Units 9%"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "Level 20",
+   "effect": "Attack +40"
+  },
+  {
+   "hero": "Urasil",
+   "milestone": "Level 60",
+   "effect": "Crit Damage +15%"
+  },
+  {
+   "hero": "Wukong",
+   "milestone": "2☆",
+   "effect": "Attack +5%"
+  },
+  {
+   "hero": "Wukong",
+   "milestone": "8☆",
+   "effect": "All Damage +6%"
+  },
+  {
+   "hero": "Wukong",
+   "milestone": "Brave 100",
+   "effect": "Attack +15%"
+  },
+  {
+   "hero": "Wukong",
+   "milestone": "Brave 20",
+   "effect": "Attack +320"
+  },
+  {
+   "hero": "Wukong",
+   "milestone": "Brave 40",
+   "effect": "Damage to Bosses +15%"
+  },
+  {
+   "hero": "Wukong",
+   "milestone": "Level 120",
+   "effect": "HP 10%"
+  },
+  {
+   "hero": "Wukong",
+   "milestone": "Level 20",
+   "effect": "HP +500"
+  },
+  {
+   "hero": "Wukong",
+   "milestone": "Level 60",
+   "effect": "Attack +8%"
+  },
+  {
+   "hero": "Zeus",
+   "milestone": "2☆",
+   "effect": "HP +8%"
+  },
+  {
+   "hero": "Zeus",
+   "milestone": "8☆",
+   "effect": "Dodge 5%"
+  },
+  {
+   "hero": "Zeus",
+   "milestone": "Brave 100",
+   "effect": "Attack +15%"
+  },
+  {
+   "hero": "Zeus",
+   "milestone": "Brave 20",
+   "effect": "Chain Lightning DMG +10%"
+  },
+  {
+   "hero": "Zeus",
+   "milestone": "Brave 40",
+   "effect": "S Hero Damage Reduction +5%"
+  },
+  {
+   "hero": "Zeus",
+   "milestone": "Level 120",
+   "effect": "HP 10%"
+  },
+  {
+   "hero": "Zeus",
+   "milestone": "Level 20",
+   "effect": "Summoned creature damage 5%"
+  },
+  {
+   "hero": "Zeus",
+   "milestone": "Level 60",
+   "effect": "HP +8%"
+  }
+ ]
+}

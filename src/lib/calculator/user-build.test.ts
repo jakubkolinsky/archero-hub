@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { calculateUserBuild, emptyCalculatorState, parseValue, referenceRows } from "./user-build.ts";
+import { calculateUserBuild, emptyCalculatorState, normalizeCalculatorState, parseValue, referenceRows } from "./user-build.ts";
 
 test("parseValue accepts thousands separators and decimals", () => {
   assert.equal(parseValue("1,200"), 1200);
@@ -12,14 +12,14 @@ test("parseValue accepts thousands separators and decimals", () => {
 });
 
 test("the reference rows reproduce the verified Attack through the UI path", () => {
-  const result = calculateUserBuild({ rows: referenceRows(), slotStats: {} }, []);
+  const result = calculateUserBuild({ ...emptyCalculatorState, rows: referenceRows() }, []);
   assert.equal(result.attack.attack, 251569);
   assert.equal(result.attack.attackValue, 157231);
   assert.equal(result.invalid.length, 0);
 });
 
 test("slot stats count only for the item they were entered for", () => {
-  const state = { rows: [], slotStats: { weapon: { itemId: "expedition-fists", attack: "6168", hp: "" } } };
+  const state = { ...emptyCalculatorState, slotStats: { weapon: { itemId: "expedition-fists", attack: "6168", hp: "" } } };
   const same = calculateUserBuild(state, [{ slotId: "weapon", slotLabel: "Weapon", itemId: "expedition-fists", itemName: "Expedition Fist" }]);
   assert.equal(same.attack.attack, 6168);
   const swapped = calculateUserBuild(state, [{ slotId: "weapon", slotLabel: "Weapon", itemId: "brightspear", itemName: "Brightspear" }]);
@@ -29,11 +29,11 @@ test("slot stats count only for the item they were entered for", () => {
 test("invalid text is reported and left out of totals", () => {
   const result = calculateUserBuild(
     {
+      ...emptyCalculatorState,
       rows: [
         { id: "a", stat: "hp", label: "Base", stage: "count", value: "600" },
         { id: "b", stat: "hp", label: "Typo", stage: "percent", value: "ten" },
       ],
-      slotStats: {},
     },
     [],
   );
@@ -46,4 +46,20 @@ test("an empty calculator totals zero", () => {
   assert.equal(result.attack.attack, 0);
   assert.equal(result.hp.maxHp, 0);
   assert.equal(result.entered, 0);
+});
+
+test("older saved state without guided answers still loads", () => {
+  const state = normalizeCalculatorState({ rows: [], slotStats: {} } as never);
+  assert.deepEqual(state.guided.outfits, {});
+  assert.equal(calculateUserBuild(state, []).attack.attack, 0);
+});
+
+test("guided answers add to the totals", () => {
+  const state = {
+    ...emptyCalculatorState,
+    guided: { ...emptyCalculatorState.guided, outfits: { "lucky-lion": { level: 0 } }, answers: { "gem-hp": "600" } },
+  };
+  const result = calculateUserBuild(state, []);
+  assert.equal(result.attack.attack, 200);
+  assert.equal(result.hp.maxHp, 600);
 });

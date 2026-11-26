@@ -1,5 +1,6 @@
 import { calculateAttack, type AttackBreakdown, type AttackContribution, type AttackStage } from "./attack.ts";
 import { calculateHp, type HpBreakdown, type HpContribution, type HpStage } from "./hp.ts";
+import { emptyGuidedState, guidedLines, splitLines, type GuidedState } from "./guided.ts";
 import { referenceBuild } from "./reference-build.ts";
 
 /**
@@ -22,9 +23,18 @@ export type SlotStats = Record<string, { itemId: string; attack: string; hp: str
 
 export type EquippedSlot = { slotId: string; slotLabel: string; itemId: string; itemName: string };
 
-export type CalculatorState = { rows: CalculatorRow[]; slotStats: SlotStats };
+export type CalculatorState = { rows: CalculatorRow[]; slotStats: SlotStats; guided: GuidedState };
 
-export const emptyCalculatorState: CalculatorState = { rows: [], slotStats: {} };
+export const emptyCalculatorState: CalculatorState = { rows: [], slotStats: {}, guided: emptyGuidedState };
+
+/** Fills in parts missing from older saved state. */
+export function normalizeCalculatorState(saved: Partial<CalculatorState> | null | undefined): CalculatorState {
+  return {
+    rows: Array.isArray(saved?.rows) ? saved.rows : [],
+    slotStats: saved?.slotStats ?? {},
+    guided: { ...emptyGuidedState, ...(saved?.guided ?? {}) },
+  };
+}
 
 export const attackStages: { stage: AttackStage; label: string; hint: string }[] = [
   { stage: "count", label: "Flat Attack", hint: "Hero, relics, dragons, sigil imprints, skins, wings…" },
@@ -56,7 +66,7 @@ export type CalculatorResult = {
   entered: number;
 };
 
-export function calculateUserBuild(state: CalculatorState, equipped: EquippedSlot[]): CalculatorResult {
+export function calculateUserBuild(state: CalculatorState, equipped: EquippedSlot[], heroName: string | null = null): CalculatorResult {
   const attack: AttackContribution[] = [];
   const hp: HpContribution[] = [];
   const invalid: string[] = [];
@@ -83,6 +93,12 @@ export function calculateUserBuild(state: CalculatorState, equipped: EquippedSlo
   for (const row of state.rows) {
     add(row.stat, row.label || "Unnamed line", "Player entry", row.stage, row.value);
   }
+
+  const guided = guidedLines(state.guided ?? emptyGuidedState, heroName);
+  const guidedSplit = splitLines(guided.lines);
+  attack.push(...guidedSplit.attack);
+  hp.push(...guidedSplit.hp);
+  invalid.push(...guided.invalid);
 
   return {
     attack: calculateAttack(attack),
